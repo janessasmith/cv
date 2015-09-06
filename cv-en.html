@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Resume Design by Janessa Smith</title>
+
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+
+    <!--css-->
+    <link rel="stylesheet" href="css/style_comp.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="css/style-cv.css" type="text/css" media="screen" />
+
+    <!--font-->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700,300italic' rel='stylesheet' type='text/css'>
+
+
+    <!-- modernizr-->
+    <script type="text/javascript" src="js/modernizr.js"></script>
+
+    <script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript" src="js/hashchange.js"></script>
+    <script type="text/javascript" src="js/jquery.knob.js"></script>
+    <script type="text/javascript" src="js/jquery.svg.min.js"></script>
+    <script type="text/javascript" src="js/jquery.svganim.min.js"></script>
+    <script type="text/javascript" src="js/jquery.nicescroll.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="js/jquery.ui.touch-punch.min.js"></script>
+</head>
+<body>
+    <!--************ loading ************-->
+    <div id="loading" class="loading"></div>
+    <!--************ loading ENDS ************-->
+
+    <!--************ html5 popup************-->
+    <div id="html5" class="html5">
+        <h3>NO HTML5 SUPPORT... :(<br/>PLEASE UPDATE TO A MODERN BROWSER & VISIT <a href="#">JANESSASMITH.COM</a> AGAIN</h3>
+        <ul>
+            <li><a href="https://www.google.com/intl/en/chrome/browser/" target="_blank">CHROME - (OPTIMIZED)</a></li>
+            <li><a href="http://www.mozilla.org/en-US/firefox/new/" target="_blank">MOZILLA</a></li>
+            <li><a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie" target="_blank">EXPLORER 11</a></li>
+        </ul>
+        <div><a href="#" target="_blank">NEED ANY HELP?</a></div>
+    </div>
+    <!--************ html5 popup ENDS************-->
+
+    <!--wrapper-->
+    <div class="wrapper">
+        <!--home-->
+        <section class="home-section">
+            <!--logo-->
+            <div class="logo-wrapper">
+                <div class="logo">
+                    <div class="logo-1">
+                        <div class="wall top-wall"></div>
+                        <div class="wall left-wall"></div>
+                        <div class="wall right-wall"></div>
+                        <div class="wall bottom-wall"></div>
+                        <div class="wall back"></div>
+                    </div>
+                    <div class="logo-2 unselect">
+                        <div class="wall top-wall"></div>
+                        <div class="wall left-wall"></div>
+                        <div class="wall right_wall"></div>
+                        <div class="wall bottom_wall"></div>
+                        <div class="wall back"></div>
+                    </div>
+                    <div class="logo-3">
+                        <div class="wall top-wall"></div>
+                        <div class="wall left-wall"></div>
+                        <div class="wall right-wall"></div>
+                        <div class="wall bottom-wall"></div>
+                        <div class="wall back"></div>
+                    </div>
+                </div>
+                <h1>Design By Janessa Smith</h1>
+            </div>
+            <!--circles-->
+            <div class="circles-wrapper">
+                <!--skills-->
+                <div class="circle skills">
+                    <svg id="sk-circle" class="sk-circle" width="174" height="174" xmlns="http://www.w3.org/2000/svg" version="1.1">
+                        <circle cx="90" cy="90" r="85" fill="none" stroke="black" stroke-width="2"/>
+                    </svg>
+                    <b class="circle-sk circle-inner"></b>
+                    <h2>Skills<span class="close-line"></span></h2>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script type="text/javascript">
+        //  --------------- html5 check ----------------  //
+        if (!Modernizr.canvas) {
+            $('.loading').style.display = "block";
+            $('.html5').style.display = "none";
+//            document.getElementById('html5').style.display = "block";
+//            document.getElementById('loading').style.display = "none";
+        }
+    </script>
+    <script type="text/javascript" src="js/style-cv.js"></script>
+</body>
+</html>

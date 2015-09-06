@@ -1,0 +1,18 @@
+//Families
+$ff-en: 'Open Sans';
+$ff-cn: 'Microsoft YaHei';
+$ff-local: sans-serif;
+
+$ff-def: $ff-en, $ff-cn, $ff-local;
+
+$ft-fm-code: Consolas, "Courier New", Courier;
+
+// Weight
+$fw-def:   300;
+$fw-light: 400;
+$fw-bold:  900;
+
+body {
+  font-family: $ff-def;
+  font-weight: $fw-def;
+}
