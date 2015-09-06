@@ -73,13 +73,13 @@ function loadOut() {
     //    duration: 500,
     //    easing: "easeOutCubic"
     //});
-    //$(".phil_bg").animate({left: "-100%"}, {queue: false, duration: 500, easing: "easeOutCubic"});
+    $(".sk-bg").animate({left: "-100%"}, {queue: false, duration: 500, easing: "easeOutCubic"});
     //$(".contact_bg").animate({left: "100%"}, {queue: false, duration: 500, easing: "easeOutCubic"});
     //if (hash == "#home" || hash == "#philosophy" || hash == "#contact") {
     //    $(".work_bg.l").animate({left: "-100%"}, {queue: false, duration: 500, easing: "easeInCubic"});
     //    $(".work_bg.r").animate({right: "-100%"}, {queue: false, duration: 500, easing: "easeInCubic"})
     //}
-    //$("#home_section").animate({left: "0%"}, {queue: false, duration: 1000, easing: "easeInOutCubic"});
+    $(".home-section").animate({left: "0%"}, {queue: false, duration: 1000, easing: "easeInOutCubic"});
     //$("#study_section").animate({left: "-100%"}, {queue: false, duration: 1000, easing: "easeInOutCubic"});
     //$("#portfolio_section").animate({left: "100%"}, {queue: false, duration: 1000, easing: "easeInOutCubic"});
     //if (hash == "#portfolio" || hash == "#case_studies") {
@@ -356,7 +356,7 @@ function skillHoverOut() {
 function infoOpen() {
     $(".info_bar").animate({scrollTop: 0}, 0);
     $(".info_bar").animate({left: 0}, {duration: 350, easing: "easeOutCubic"});
-    $("#home_section").animate({left: 480}, {duration: 350, easing: "easeOutCubic"});
+    $(".home-section").animate({left: 480}, {duration: 350, easing: "easeOutCubic"});
     setTimeout(function () {
         $(".info_bar > p").animate({paddingTop: 20}, {duration: 500, easing: "easeOutCubic"});
         circleIn("age", 500);
@@ -365,12 +365,12 @@ function infoOpen() {
         circleIn("shib", 500)
     }, 200);
     $(".info_btn").addClass("active");
-    $("#home_section").addClass("close_cursor");
+    $(".home-section").addClass("close_cursor");
     info = 1
 }
 function infoClose() {
     $(".info_bar").animate({left: -480}, {duration: 350, easing: "easeOutCubic"});
-    $("#home_section").animate({left: 0}, {duration: 350, easing: "easeOutCubic"});
+    $(".home-section").animate({left: 0}, {duration: 350, easing: "easeOutCubic"});
     setTimeout(function () {
         $(".info_bar > p").animate({paddingTop: 40}, 0);
         circleOut("age", 0);
@@ -379,7 +379,7 @@ function infoClose() {
         circleOut("shib", 0)
     }, 350);
     $(".info_btn").removeClass("active");
-    $("#home_section").removeClass("close_cursor");
+    $(".home-section").removeClass("close_cursor");
     info = 0
 }
 
@@ -754,7 +754,7 @@ $(document).ready(function () {
             infoClose()
         }
     });
-    $("body").on("click touchstart", "#home_section.close_cursor", function () {
+    $("body").on("click touchstart", ".home-section.close_cursor", function () {
         if (info == 1) {
             infoClose()
         }
