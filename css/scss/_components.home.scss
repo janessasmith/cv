@@ -107,6 +107,10 @@
       -moz-transform: skew(-12deg);
       transform: skew(-12deg);
     }
+    .contact-bg {
+      left: 100%;
+      background-color: #9ad8fc;
+    }
     .skills-list {
       width: 100%;
       text-align: center;
@@ -296,7 +300,7 @@
         left: 50%;
         margin-left: -30px;
         opacity: 0;
-        background: url(img/sprite.svg) no-repeat -3px -180px;
+        background: url(../img/sprite.svg) no-repeat -3px -180px;
       }
       .logo-hover {
         width: 100%;
@@ -626,6 +630,189 @@
           top: 50%;
           margin-top: -1px;
           border-top: 1px dashed #000;
+        }
+      }
+      //contact
+      .contact {
+        .stroke {
+          width: 0;
+          top: 0;
+        }
+        .stroke.t {
+          height: 0;
+          top: 10px;
+          left: 12px;
+          opacity: 0;
+        }
+        .stroke.r, .stroke.b, .stroke.l {
+          left: 100%;
+          -webkit-transform-origin: left;
+          -moz-transform-origin: left;
+          transform-origin: left;
+          -webkit-transform: rotate(90deg);
+          -moz-transform: rotate(90deg);
+          transform: rotate(90deg);
+        }
+        .square {
+          width: 150px;
+          height: 150px;
+          position: absolute;
+          top: 15px;
+          left: 15px;
+          background-color: #000;
+        }
+        .social {
+          opacity: 0;
+          position: absolute;
+          .strokes {
+            width: 30px;
+            height: 0;
+            margin-top: -1px;
+            border-top: 1px solid #000;
+            position: absolute;
+          }
+          .s-icon {
+            display: block;
+            width: 46px;
+            height: 46px;
+            margin-top: -23px;
+            background-image: url(../img/sprite.svg);
+            background-repeat: no-repeat;
+            background-size: 300px;
+            border: 1px solid #000;
+            border-radius: 50%;
+            -webkit-transition: all .15s ease-out;
+            -moz-transition: all .15s ease-out;
+            transition: all .15s ease-out;
+          }
+          .shibui .s-icon:hover, .mail .s-icon:hover {
+            left: -8px;
+            background-color: #fff;
+            border-radius: 0;
+          }
+
+          .twitter .s-icon:hover, .linkedin .s-icon:hover {
+            right: -8px;
+            background-color: #fff;
+            border-radius: 0;
+          }
+          .shibui {
+            top: 10px;
+            left: 10px;
+            -webkit-transform-origin: left bottom;
+            -moz-transform-origin: left bottom;
+            transform-origin: left bottom;
+            -webkit-transform: rotate(45deg) scale(0);
+            -moz-transform: rotate(45deg) scale(0);
+            transform: rotate(45deg) scale(0);
+            -webkit-transition: transform .1s ease-out .1s, opacity .1s ease-out .1s;
+            -moz-transition: transform .1s ease-out .1s, opacity .1s ease-out .1s;
+            transition: transform .1s ease-out .1s, opacity .1s ease-out .1s;
+            .strokes {
+              bottom: 0;
+              right: 0;
+            }
+            .s-icon {
+              top: 0;
+              left: 0;
+              background-position: 7px 8px;
+            }
+          }
+          .twitter {
+            top: 10px;
+            right: 10px;
+            -webkit-transform-origin: right bottom;
+            -moz-transform-origin: right bottom;
+            transform-origin: right bottom;
+            -webkit-transform: rotate(-45deg) scale(0);
+            -moz-transform: rotate(-45deg) scale(0);
+            transform: rotate(-45deg) scale(0);
+            -webkit-transition: transform .1s ease-out .2s, opacity .1s ease-out .2s;
+            -moz-transition: transform .1s ease-out .2s, opacity .1s ease-out .2s;
+            transition: transform .1s ease-out .2s, opacity .1s ease-out .2s;
+            .strokes {
+              bottom: 0;
+              left: 0;
+            }
+            .s-icon {
+              top: 0;
+              right: 0;
+              background-position: 6px -80px;
+            }
+          }
+          .mail {
+            bottom: 10px;
+            left: 10px;
+            -webkit-transform-origin: left top;
+            -moz-transform-origin: left top;
+            transform-origin: left top;
+            -webkit-transform: rotate(-45deg) scale(0);
+            -moz-transform: rotate(-45deg) scale(0);
+            transform: rotate(-45deg) scale(0);
+            -webkit-transition: transform .1s ease-out, opacity .1s ease-out;
+            -moz-transition: transform .1s ease-out, opacity .1s ease-out;
+            transition: transform .1s ease-out, opacity .1s ease-out;
+            .strokes {
+              bottom: 0;
+              right: 0;
+            }
+            .s-icon {
+              top: 0;
+              left: 0;
+              background-position: 6px -35px;
+            }
+          }
+          .linkedin {
+            bottom: 10px;
+            right: 10px;
+            -webkit-transform-origin: right top;
+            -moz-transform-origin: right top;
+            transform-origin: right top;
+            -webkit-transform: rotate(45deg) scale(0);
+            -moz-transform: rotate(45deg) scale(0);
+            transform: rotate(45deg) scale(0);
+            -webkit-transition: transform .1s ease-out, opacity .1s ease-out .3s;
+            -moz-transition: transform .1s ease-out, opacity .1s ease-out .3s;
+            transition: transform .1s ease-out, opacity .1s ease-out .3s;
+            .strokes {
+              bottom: 0;
+              left: 0;
+            }
+            .s-icon {
+              top: 0;
+              right: 0;
+              background-position: 6px -125px;
+            }
+          }
+          .shibui .s-cion, .linkedin .s-icon {
+            -webkit-transform: rotate(-45deg);
+            -moz-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+          }
+          .twitter .s-icon, .mail .s-icon {
+            -webkit-transform: rotate(45deg);
+            -moz-transform: rotate(45deg);
+            transform: rotate(45deg);
+          }
+          .shibui .s-icon, .mail .s-icon {
+            margin-left: -46px;
+          }
+          .twitter .s-icon, .linkedin .s-icon {
+            marign-right: -46px;
+          }
+          .shibui.active, .linkedin.active {
+            -webkit-transform: rotate(45deg) scale(1);
+            -moz-transform: rotate(45deg) scale(1);
+            transform: rotate(45deg) scale(1);
+            opacity: 1
+          }
+
+          .twitter.active, .mail.active {
+            -webkit-transform: rotate(-45deg) scale(1);
+            -moz-transform: rotate(-45deg) scale(1);
+            transform: rotate(-45deg) scale(1);
+            opacity: 1
+          }
         }
       }
     }

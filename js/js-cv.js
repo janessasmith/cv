@@ -74,7 +74,7 @@ function loadOut() {
     //    easing: "easeOutCubic"
     //});
     $(".sk-bg").animate({left: "-100%"}, {queue: false, duration: 500, easing: "easeOutCubic"});
-    //$(".contact_bg").animate({left: "100%"}, {queue: false, duration: 500, easing: "easeOutCubic"});
+    $(".contact-bg").animate({left: "100%"}, {queue: false, duration: 500, easing: "easeOutCubic"});
     if (hash == "#home" || hash == "#skills" || hash == "#contact") {
         $(".work-bg.l").animate({left: "-100%"}, {queue: false, duration: 500, easing: "easeInCubic"});
         $(".work-bg.r").animate({right: "-100%"}, {queue: false, duration: 500, easing: "easeInCubic"})
@@ -102,7 +102,7 @@ function loadOut() {
 function home() {
     if (isTouchDevice) {
         skillHoverOut();
-        //conHoverOut();
+        conHoverOut();
         workHoverOut()
     }
 }
@@ -133,7 +133,7 @@ function skills() {
         skillHoverIn()
     }
     $(".logo-wrapper").animate({marginTop: -50}, {duration: 500, easing: "easeOutCubic"}).addClass("zoom-out");
-    //$(".contact").animate({left: 120, top: -60}, {duration: 500, easing: "easeOutCubic"}).addClass("zoom-out");
+    $(".contact").animate({left: 120, top: -60}, {duration: 500, easing: "easeOutCubic"}).addClass("zoom-out");
     $(".work").animate({left: 180, top: -60}, {duration: 500, easing: "easeOutCubic"}).addClass("zoom-out");
     $(".skills").animate({left: 228, top: -60}, {
         duration: 500, easing: "easeOutCubic", complete: function () {
@@ -141,7 +141,7 @@ function skills() {
         }
     }).find(".skills .circle-inner").addClass("active");
     workHoverOut();
-    //conHoverOut()
+    conHoverOut()
 }
 
 function skillHoverIn() {
@@ -153,27 +153,29 @@ function skillHoverOut() {
     $(".skills").find("h2,.circle-inner").removeClass("hovered")
 }
 
-//function contact() {
-//    $(".contact").find("h2").addClass("active");
-//    $(".contact .close_line").addClass("active");
-//    $(".contact_bg").delay(500).animate({left: "50%"}, {duration: 500, easing: "easeOutCubic"});
-//    if (!(isTouchDevice)) {
-//        $(".contact .stroke").animate({width: 158, opacity: 1}, 0);
-//        $(".contact").find("h2,.circle_inner").addClass("hovered")
-//    } else {
-//        conHoverIn()
-//    }
-//    $("#logo_wrapper").animate({marginTop: -50}, {duration: 500, easing: "easeOutCubic"}).addClass("zoom_out");
-//    $(".philosophy").animate({left: -135}, {duration: 500, easing: "easeOutCubic"}).addClass("zoom_out");
-//    $(".work").animate({left: -190}, {duration: 500, easing: "easeOutCubic"}).addClass("zoom_out");
-//    $(".contact").animate({left: -226}, {
-//        duration: 500, easing: "easeOutCubic", complete: function () {
-//            $(".social").addClass("active")
-//        }
-//    }).find("h2").addClass("active");
-//    workHoverOut();
-//    skillHoverOut()
-//}
+//contact
+function contact() {
+    $(".contact").find("h2").addClass("active");
+    $(".contact .close-line").addClass("active");
+    $(".contact-bg").delay(500).animate({left: "50%"}, {duration: 500, easing: "easeOutCubic"});
+    if (!(isTouchDevice)) {
+        $(".contact .stroke").animate({width: 158, opacity: 1}, 0);
+        $(".contact").find("h2,.circle_inner").addClass("hovered")
+    } else {
+        conHoverIn()
+    }
+    $(".logo-wrapper").animate({marginTop: -50}, {duration: 500, easing: "easeOutCubic"}).addClass("zoom-out");
+    $(".skills").animate({left: -135}, {duration: 500, easing: "easeOutCubic"}).addClass("zoom-out");
+    $(".work").animate({left: -190}, {duration: 500, easing: "easeOutCubic"}).addClass("zoom-out");
+    $(".contact").animate({left: -226}, {
+        duration: 500, easing: "easeOutCubic", complete: function () {
+            $(".social").addClass("active")
+        }
+    }).find("h2").addClass("active");
+    workHoverOut();
+    skillHoverOut()
+}
+//work
 function work() {
     $(".work h2,.rotate,.work .circle-inner,.work .close-line").addClass("active");
     $(".work-bg.l").delay(500).animate({left: "-40%"}, {duration: 500, easing: "easeOutCubic"});
@@ -186,13 +188,13 @@ function work() {
     }
     $(".logo-wrapper").animate({marginTop: -50}, {duration: 500, easing: "easeOutCubic"}).addClass("zoom-out");
     $(".skills").animate({left: 40, top: -60}, {duration: 500, easing: "easeOutCubic"}).addClass("zoom-out");
-    //$(".contact").animate({left: -40, top: -60}, {duration: 500, easing: "easeOutCubic"}).addClass("zoom-out");
+    $(".contact").animate({left: -40, top: -60}, {duration: 500, easing: "easeOutCubic"}).addClass("zoom-out");
     $(".work").animate({top: 70}, {
         duration: 500, easing: "easeOutCubic", complete: function () {
             $(".work .strokes").addClass("active")
         }
     }).find(".work .circle-inner").addClass("active");
-    //conHoverOut();
+    conHoverOut();
     skillHoverOut()
 }
 //function case_studies() {
@@ -339,20 +341,20 @@ function workHoverOut() {
     $(".work .stroke.tr").delay(400).animate({width: 0, opacity: 0}, 80);
     $(".work").find("h2,.circle-inner").removeClass("hovered")
 }
-//function conHoverIn() {
-//    $(".contact .stroke.t").animate({width: 158, opacity: 1}, 120);
-//    $(".contact .stroke.r").delay(120).animate({width: 158}, 120);
-//    $(".contact .stroke.b").delay(240).animate({width: 158}, 120);
-//    $(".contact .stroke.l").delay(360).animate({width: 158}, 120);
-//    $(".contact").find("h2,.circle_inner").addClass("hovered")
-//}
-//function conHoverOut() {
-//    $(".contact .stroke.l").animate({width: 0}, 120);
-//    $(".contact .stroke.b").delay(120).animate({width: 0}, 120);
-//    $(".contact .stroke.r").delay(240).animate({width: 0}, 120);
-//    $(".contact .stroke.t").delay(360).animate({width: 0, opacity: 0}, 120);
-//    $(".contact").find("h2,.circle_inner").removeClass("hovered")
-//}
+function conHoverIn() {
+    $(".contact .stroke.t").animate({width: 158, opacity: 1}, 120);
+    $(".contact .stroke.r").delay(120).animate({width: 158}, 120);
+    $(".contact .stroke.b").delay(240).animate({width: 158}, 120);
+    $(".contact .stroke.l").delay(360).animate({width: 158}, 120);
+    $(".contact").find("h2,.circle-inner").addClass("hovered")
+}
+function conHoverOut() {
+    $(".contact .stroke.l").animate({width: 0}, 120);
+    $(".contact .stroke.b").delay(120).animate({width: 0}, 120);
+    $(".contact .stroke.r").delay(240).animate({width: 0}, 120);
+    $(".contact .stroke.t").delay(360).animate({width: 0, opacity: 0}, 120);
+    $(".contact").find("h2,.circle-inner").removeClass("hovered")
+}
 function infoOpen() {
     $(".info_bar").animate({scrollTop: 0}, 0);
     $(".info_bar").animate({left: 0}, {duration: 350, easing: "easeOutCubic"});
@@ -875,19 +877,19 @@ $(document).ready(function () {
         //listResize();
         if (hash == "#skills" || hash == "#work" || hash == "#contact") {
             if (hash == "#skills") {
-                //$(".contact").animate({left: 120, top: -60}, 0).addClass("zoom-out");
+                $(".contact").animate({left: 120, top: -60}, 0).addClass("zoom-out");
                 $(".work").animate({left: 180, top: -60}, 0).addClass("zoom-out");
                 $(".skills").animate({left: 228, top: -60}, 0)
             } else {
                 if (hash == "#work") {
                     $(".skills").animate({left: 40, top: -60}, 0).addClass("zoom-out");
-                    //$(".contact").animate({left: -40, top: -60}, 0).addClass("zoom-out");
+                    $(".contact").animate({left: -40, top: -60}, 0).addClass("zoom-out");
                     $(".work").animate({top: 70}, 0)
                 } else {
                     if (hash == "#contact") {
                         $(".skills").animate({left: -135}, 0).addClass("zoom-out");
                         $(".work").animate({left: -190}, 0).addClass("zoom-out");
-                        //$(".contact").animate({left: -226}, 0)
+                        $(".contact").animate({left: -226}, 0)
                     }
                 }
             }
