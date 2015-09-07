@@ -595,10 +595,10 @@ $(document).ready(function () {
             move = 0
         });
         $(".dragged .arrow").css("width", "8px");
-        $(".portfolio .dragged .arrow").css("left", "85%").css("opacity", "1");
+        $(".projects .dragged .arrow").css("left", "85%").css("opacity", "1");
         $(".study .dragged .arrow").css("right", "85%").css("opacity", "1");
-        $(".portfolio .dragged .arrow.b,.study .dragged .arrow.t").css("margin-top", "3px");
-        $(".portfolio .dragged .arrow.t,.study .dragged .arrow.b").css("margin-top", "-2px");
+        $(".projects .dragged .arrow.b,.study .dragged .arrow.t").css("margin-top", "3px");
+        $(".projects .dragged .arrow.t,.study .dragged .arrow.b").css("margin-top", "-2px");
         $(".study_list li").on("touchstart", function () {
             $(".study_list li").removeClass("active").addClass("unactive");
             $(this).removeClass("unactive").addClass("active");
@@ -773,7 +773,7 @@ $(document).ready(function () {
     $(".study .dragged").on("click", function () {
         window.location.hash = "#case_studies"
     });
-    $(".portfolio .dragged").on("click", function () {
+    $(".projects .dragged").on("click", function () {
         window.location.hash = "#portfolio"
     });
     $("#toggler").on("click", function () {
@@ -899,7 +899,7 @@ $(document).ready(function () {
     function a() {
         $(".work-bg.l").animate({marginLeft: 0}, {duration: 700, easing: "easeInOutCubic"});
         $(".work-bg.r").animate({marginRight: 0}, {duration: 700, easing: "easeInOutCubic"});
-        //$(".drag_line").animate({width: 0}, {duration: 700, easing: "easeInOutCubic"});
+        $(".drag-line").animate({width: 0}, {duration: 700, easing: "easeInOutCubic"});
         $(".logo-wrapper,.dragged").animate({left: 0}, {duration: 700, easing: "easeInOutCubic"})
     }
 
@@ -911,7 +911,7 @@ $(document).ready(function () {
                 $(".work_bg.l").css("margin-left", "" + xposMinus + "px");
                 $(".work_bg.r").css("margin-right", "" + xpos + "px");
                 $(".logo-wrapper").css("left", "" + xposMinus * 0.3 + "px");
-                $(this).find(".drag_line").css("width", "" + xposMinus + "px")
+                $(this).find(".drag-line").css("width", "" + xposMinus + "px")
             } else {
                 if (xpos > 0) {
                     return false
@@ -924,7 +924,7 @@ $(document).ready(function () {
             a()
         }
     });
-    $(".portfolio .dragged").draggable({
+    $(".projects .dragged").draggable({
         axis: "x", scroll: false, drag: function (b, c) {
             xpos = c.position.left;
             xposMinus = -(c.position.left);
@@ -932,7 +932,7 @@ $(document).ready(function () {
                 $(".work-bg.r").css("margin-right", "" + xpos + "px");
                 $(".work-bg.l").css("margin-left", "" + xposMinus + "px");
                 $(".logo-wrapper").css("left", "" + xposMinus * 0.3 + "px");
-                $(this).find(".drag_line").css("width", "" + xpos + "px")
+                $(this).find(".drag-line").css("width", "" + xpos + "px")
             } else {
                 if (xpos < 0) {
                     return false
