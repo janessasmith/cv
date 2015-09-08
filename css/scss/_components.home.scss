@@ -8,7 +8,7 @@
   top: 0;
   left: 0;
   z-index: 2001;
-  background: #fff url(img/loader.gif) no-repeat center center;
+  background: $loading-bg;
 }
 
 .html5 {
@@ -20,33 +20,33 @@
   left: 0;
   z-index: 2000;
   text-align: center;
-  color: #000;
-  background: #fff url(img/logo.jpg) no-repeat center 20px;
+  color: $dark_1;
+  background: $logo;
   a {
-    color: #878787;
+    color: $a-link;
     &:hover {
-      color: #000;
+      color: $dark_1;
     }
   }
   h3 {
     width: 370px;
     margin: 220px auto 0;
     padding: 10px;
-    color: #000;
+    color: $dark_1;
     position: relative;
   }
   ul {
     width: 370px;
     margin: auto;
     padding: 10px;
-    color: #fff;
-    background: #000;
+    color: $light_1;
+    background: $dark_1;
     position: relative;
     li a {
       width: 370px;
-      color: #fff;
+      color: $light_1;
       &:hover {
-        color: #878787;
+        color: $a-link;
       }
     }
   }
@@ -55,9 +55,9 @@
     margin: auto;
     padding: 10px;
     a {
-      color: #000;
+      color: $dark_1;
       &:hover {
-        color: #878787;
+        color: $a-link;
       }
     }
   }
@@ -90,11 +90,11 @@
     }
     .sk-bg {
       left: -100%;
-      background-color: #ce1a11;
+      background-color: $sk-bg;
     }
     .work-bg.l {
       left: -100%;
-      background-color: #ea4252;
+      background-color: $work-bg_l;
       -webkit-transform: skew(-12deg);
       -moz-transform: skew(-12deg);
       transform: skew(-12deg);
@@ -102,14 +102,14 @@
     .work-bg.r {
       left: auto;
       right: -100%;
-      background-color: #73d264;
+      background-color: $work-bg_r;
       -webkit-transform: skew(-12deg);
       -moz-transform: skew(-12deg);
       transform: skew(-12deg);
     }
     .contact-bg {
       left: 100%;
-      background-color: #9ad8fc;
+      background-color: $contact-bg;
     }
     .skills-list {
       width: 100%;
@@ -129,14 +129,14 @@
         div {
           display: inline-block;
           white-space: nowrap;
-          color: #ce1a11;
+          color: $sk-bg;
           position: relative;
           span {
             width: 50%;
             position: absolute;
             top: 0;
             left: 0;
-            color: #fff;
+            color: $light_1;
             overflow: hidden;
           }
         }
@@ -164,7 +164,7 @@
         -webkit-transition: -webkit-transform .25s ease-in-out;
         -moz-transition: -moz-transform .25s ease-in-out;
         .logo-1, .logo-2, .logo-3 {
-          background-color: #000;
+          background-color: $dark_1;
           -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
         }
@@ -175,16 +175,16 @@
           top: 7px;
           left: 0;
           .top-wall {
-            background-color: #3c4c87;
+            background-color: $logo-top-wall_1;
           }
           .right-wall {
-            background-color: #6c457e;
+            background-color: $logo-right-wall_1;
           }
           .bottom-wall {
-            background-color: #dc3688;
+            background-color: $logo-bottom-wall_1;
           }
           .left-wall {
-            background-color: #6c457e;
+            background-color: $logo-left-wall_1;
           }
         }
         .logo-2 {
@@ -194,16 +194,16 @@
           top: 100px;
           left: 0;
           .top-wall {
-            background-color: #c6c9dc;
+            background-color: $logo-top-wall_2;
           }
           .right-wall {
-            background-color: #751926;
+            background-color: $logo-right-wall_2;
           }
           .bottom-wall {
-             background-color: #feec28;
+             background-color: $logo-bottom-wall_2;
           }
           .left-wall {
-            background-color: #dc3786;
+            background-color: $logo-left-wall_2;
           }
         }
         .logo-3 {
@@ -213,16 +213,16 @@
           top: 108px;
           margin: 0 auto;
           .top-wall {
-            background-color: #78c092;
+            background-color: $logo-top-wall_3;
           }
           .right-wall {
-            background-color: #67913b;
+            background-color: $logo-right-wall_3;
           }
           .bottom-wall {
-            background-color: #afd9d5;
+            background-color: $logo-bottom-wall_3;
           }
           .left-wall {
-            background-color: #f2c4c4;
+            background-color: $logo-left-wall_3;
           }
         }
         .logo-1, .logo-3 {
@@ -289,7 +289,7 @@
           transform: translateZ(-84px);
           -webkit-transform: translateZ(-84px);
           -moz-transform: translateZ(-84px);
-          background-color: #8a8a88;
+          background-color: $wall-back;
         }
       }
       .logo-home {
@@ -300,7 +300,7 @@
         left: 50%;
         margin-left: -30px;
         opacity: 0;
-        background: url(../img/sprite.svg) no-repeat -3px -180px;
+        background: url(../../../cv/images/sprite.svg) no-repeat -3px -180px;
       }
       .logo-hover {
         width: 100%;
@@ -339,7 +339,7 @@
       }
       h1 {
         margin: 12px auto;
-        color: #000;
+        color: $dark_1;
         font-size: 36px;
         text-align: center;
       }
@@ -381,7 +381,7 @@
           -webkit-transition: all .15s ease-out;
           -moz-transition: all .15s ease-out;
           transition: all .15s ease-out;
-          border-left: 1px solid #000;
+          border-left: 1px solid $dark_1;
           position: absolute;
           top: 60px;
           left: 50%;
@@ -418,7 +418,7 @@
             position: absolute;
             top: 60px;
             left: 50%;
-            border-left: 1px solid #000;
+            border-left: 1px solid $dark_1;
             -webkit-transform: rotate(45deg) scale(0);
             -moz-transform: rotate(45deg) scale(0);
             transform: rotate(45deg) scale(0);
@@ -449,7 +449,7 @@
           position: absolute;
           top: 10px;
           left: 10px;
-          background-color: #000;
+          background-color: $dark_1;
           border-radius: 50%;
         }
         //work
@@ -472,7 +472,7 @@
       //work
       .stroke {
         position: absolute;
-        border: 1px solid #000;
+        border: 1px solid $dark_1;
       }
       .work {
         .stroke {
@@ -528,7 +528,7 @@
           position: absolute;
           top: 50%;
           opacity: 0;
-          border-top: 1px solid #000;
+          border-top: 1px solid $dark_1;
           -webkit-transform: scale(0);
           -moz-transform: scale(0);
           transform: scale(0);
@@ -606,10 +606,10 @@
           top: -50px;
           font-size: 20px;
           text-align: center;
-          color: #000;
-          background-color: #fff;
+          color: $dark_1;
+          background-color: $light_1;
           cursor: e-resize;
-          border: 1px solid #000;
+          border: 1px solid $dark_1;
           border-radius: 50%;
           .arrow {
             width: 29px;
@@ -617,7 +617,7 @@
             position: absolute;
             top: 50%;
             opacity: 0;
-            border-top: 1px solid #000;
+            border-top: 1px solid $dark_1;
             -webkit-transition: all .15s ease-out;
             -moz-transition: all .15s ease-out;
             transition: all .15s ease-out;
@@ -629,7 +629,7 @@
           position: absolute;
           top: 50%;
           margin-top: -1px;
-          border-top: 1px dashed #000;
+          border-top: 1px dashed $dark_1;
         }
       }
       //contact
@@ -659,7 +659,7 @@
           position: absolute;
           top: 15px;
           left: 15px;
-          background-color: #000;
+          background-color: $dark_1;
         }
         .social {
           opacity: 0;
@@ -668,7 +668,7 @@
             width: 30px;
             height: 0;
             margin-top: -1px;
-            border-top: 1px solid #000;
+            border-top: 1px solid $dark_1;
             position: absolute;
           }
           .s-icon {
@@ -676,10 +676,10 @@
             width: 46px;
             height: 46px;
             margin-top: -23px;
-            background-image: url(../img/sprite.svg);
+            background-image: url(../../../cv/images/sprite.svg);
             background-repeat: no-repeat;
             background-size: 300px;
-            border: 1px solid #000;
+            border: 1px solid $dark_1;
             border-radius: 50%;
             -webkit-transition: all .15s ease-out;
             -moz-transition: all .15s ease-out;
@@ -687,13 +687,13 @@
           }
           .shibui .s-icon:hover, .mail .s-icon:hover {
             left: -8px;
-            background-color: #fff;
+            background-color: $light_1;
             border-radius: 0;
           }
 
           .twitter .s-icon:hover, .linkedin .s-icon:hover {
             right: -8px;
-            background-color: #fff;
+            background-color: $light_1;
             border-radius: 0;
           }
           .shibui {
@@ -834,44 +834,44 @@
 @-moz-document url-prefix() {
   .logo-1 {
     .top-wall {
-      outline: 1px solid #3c4c87;
-    }
-    .left-wall {
-      outline: 1px solid #6c457e;
+      outline: 1px solid $logo-top-wall_1;
     }
     .right-wall {
-      outline: 1px solid #e98b43;
+      outline: 1px solid $logo-right-wall_1;
     }
     .bottom-wall {
-      outline: 1px solid #dc3688;
+      outline: 1px solid $logo-bottom-wall_1;
+    }
+    .left-wall {
+      outline: 1px solid $logo-left-wall_1;
     }
   }
   .logo-2 {
     .top-wall {
-      outline: 1px solid #c6c9dc;
-    }
-    .left-wall {
-      outline: 1px solid #dc3786;
+      outline: 1px solid $logo-top-wall_2;
     }
     .right-wall {
-      outline: 1px solid #751926;
+      outline: 1px solid $logo-right-wall_2;
     }
     .bottom-wall {
-      outline: 1px solid #feec28;
+      outline: 1px solid $logo-bottom-wall_2;
+    }
+    .left-wall {
+      outline: 1px solid $logo-left-wall_2;
     }
   }
   .logo-3 {
     .top-wall {
-      outline: 1px solid #78c092;
-    }
-    .left-wall {
-      outline: 1px solid #f2c4c4;
+      outline: 1px solid $logo-top-wall_3;
     }
     .right-wall {
-      outline: 1px solid #67913b;
+      outline: 1px solid $logo-right-wall_3;
     }
     .bottom-wall {
-      outline: 1px solid #afd9d5;
+      outline: 1px solid $logo-bottom-wall_3;
+    }
+    .left-wall {
+      outline: 1px solid $logo-left-wall_3;
     }
   }
 }
