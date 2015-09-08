@@ -1,3 +1,7 @@
+/**
+ * Created by ZhengLu on 2015/9/1.
+ */
+
 var isFirefox = typeof InstallTrigger !== "undefined"; // i don't know
 var loaded = 0; // i don't know
 var winWidth = $(window).width();   // visual area width of the current window of the brower
@@ -14,11 +18,11 @@ var isTouchDevice = Modernizr.touch ||
     deviceAgent.match(/ipod/i) ||
     deviceAgent.match(/blackberry/i) ||
     deviceAgent.match(/bada/i));
-//if (isTouchDevice) {
-//    //Do something touchy
-//} else {
-//    //Can't touch this
-//}
+if (isTouchDevice) {
+    //Do something touchy
+} else {
+    //Can't touch this
+}
 
 function loadOut() {
     // initialization
@@ -65,7 +69,7 @@ function loadOut() {
         easing: "easeOutCubic"
     });
 
-    // skills-list fadeout
+    //
     $(".skills-list").fadeOut({
         queue: false,
         duration: 100,
@@ -76,15 +80,6 @@ function loadOut() {
         }
     })
 }
-
-/**
- * Ä£¿éËµÃ÷
- * @module skills
- * @method circleIn() circleOut() skills() skillHoverIn() skillHoverOut()
- *
- * @date 2015-09-08
- * @author Janessa Smith
- */
 
 // skills
 function  circleIn(b, a) {
