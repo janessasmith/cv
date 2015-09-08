@@ -828,6 +828,16 @@
       -o-user-select: none;
       user-select: none;
     }
+    /*footer*/
+    .footer {
+      width: 100%;
+      text-align: center;
+      position: absolute;
+      bottom: 10px;
+      a {
+        color: $a-link;
+      }
+    }
   }
 }
 

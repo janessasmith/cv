@@ -6,35 +6,35 @@ var isFirefox = typeof InstallTrigger !== "undefined";
 var winWidth = $(window).width();
 var winHeight = $(window).height();
 var loaded = 0;
-var info = 0;
-var move = 0;
-var portfolioLoad = 0;
-var studyLoad = 0;
-var innerCase = 0;
-var portfolioPop = 0;
-var portfolioNum = 0;
-var contentType = "image";
+//var info = 0;
+//var move = 0;
+//var portfolioLoad = 0;
+//var studyLoad = 0;
+//var innerCase = 0;
+//var portfolioPop = 0;
+//var portfolioNum = 0;
+//var contentType = "image";
 var deviceAgent = navigator.userAgent.toLowerCase();
 var isTouchDevice = Modernizr.touch || (deviceAgent.match(/(iphone|ipod|ipad)/) || deviceAgent.match(/(android)/) || deviceAgent.match(/(iemobile)/) || deviceAgent.match(/iphone/i) || deviceAgent.match(/ipad/i) || deviceAgent.match(/ipod/i) || deviceAgent.match(/blackberry/i) || deviceAgent.match(/bada/i));
-(function (b, a) {
-    b.addTest("csstransformspreserve3d", function () {
-        var e = b.prefixed("transformStyle");
-        var d = "preserve-3d";
-        var c;
-        if (!e) {
-            return false
-        }
-        e = e.replace(/([A-Z])/g, function (g, f) {
-            return "-" + f.toLowerCase()
-        }).replace(/^ms-/, "-ms-");
-        b.testStyles("#modernizr{" + e + ":" + d + ";}", function (f, g) {
-            c = a.getComputedStyle ? getComputedStyle(f, null).getPropertyValue(e) : ""
-        });
-        return (c === d)
-    })
-}(Modernizr, window));
+//(function (b, a) {
+//    b.addTest("csstransformspreserve3d", function () {
+//        var e = b.prefixed("transformStyle");
+//        var d = "preserve-3d";
+//        var c;
+//        if (!e) {
+//            return false
+//        }
+//        e = e.replace(/([A-Z])/g, function (g, f) {
+//            return "-" + f.toLowerCase()
+//        }).replace(/^ms-/, "-ms-");
+//        b.testStyles("#modernizr{" + e + ":" + d + ";}", function (f, g) {
+//            c = a.getComputedStyle ? getComputedStyle(f, null).getPropertyValue(e) : ""
+//        });
+//        return (c === d)
+//    })
+//}(Modernizr, window));
 
-// circle
+// skills
 function circleIn(b, a) {
     circleR = $("#" + b).find("circle").attr("r");
     circleScope = (Math.PI) * 2 * circleR;
@@ -95,7 +95,7 @@ function loadOut() {
     //}
     $(".skills-list").fadeOut({
         queue: false, duration: 100, complete: function () {
-            window.clearInterval(skilllList)
+            window.clearInterval(skillList)
         }
     })
 }
@@ -108,8 +108,8 @@ function home() {
 }
 
 //skills show
-var skilllList = 0;
-function skilllListAnim() {
+var skillList = 0;
+function skillListAnim() {
     var a = $(".skills-list").offset().top;
     if (a > winHeight) {
         $(".skills-list").animate({bottom: "100%"}, 0)
@@ -122,9 +122,9 @@ function skills() {
     $(".skills h2,.skills .circle-inner,.skills .close-line").addClass("active");
     $(".sk-bg").delay(500).animate({left: "0%"}, {duration: 500, easing: "easeOutCubic"});
     $(".skills-list").delay(700).fadeIn(350, function () {
-        skilllList = window.setInterval(function () {
-            skilllListAnim()
-        }, 60)
+        skillList = window.setInterval(function () {
+            skillListAnim()
+        }, 100)
     });
     if (!(isTouchDevice)) {
         circleIn("sk-circle", 0);
@@ -355,35 +355,35 @@ function conHoverOut() {
     $(".contact .stroke.t").delay(360).animate({width: 0, opacity: 0}, 120);
     $(".contact").find("h2,.circle-inner").removeClass("hovered")
 }
-function infoOpen() {
-    $(".info_bar").animate({scrollTop: 0}, 0);
-    $(".info_bar").animate({left: 0}, {duration: 350, easing: "easeOutCubic"});
-    $(".home-section").animate({left: 480}, {duration: 350, easing: "easeOutCubic"});
-    setTimeout(function () {
-        $(".info_bar > p").animate({paddingTop: 20}, {duration: 500, easing: "easeOutCubic"});
-        circleIn("age", 500);
-        circleIn("awards", 500);
-        circleIn("kids", 500);
-        circleIn("shib", 500)
-    }, 200);
-    $(".info_btn").addClass("active");
-    $(".home-section").addClass("close_cursor");
-    info = 1
-}
-function infoClose() {
-    $(".info_bar").animate({left: -480}, {duration: 350, easing: "easeOutCubic"});
-    $(".home-section").animate({left: 0}, {duration: 350, easing: "easeOutCubic"});
-    setTimeout(function () {
-        $(".info_bar > p").animate({paddingTop: 40}, 0);
-        circleOut("age", 0);
-        circleOut("awards", 0);
-        circleOut("kids", 0);
-        circleOut("shib", 0)
-    }, 350);
-    $(".info_btn").removeClass("active");
-    $(".home-section").removeClass("close_cursor");
-    info = 0
-}
+//function infoOpen() {
+//    $(".info_bar").animate({scrollTop: 0}, 0);
+//    $(".info_bar").animate({left: 0}, {duration: 350, easing: "easeOutCubic"});
+//    $(".home-section").animate({left: 480}, {duration: 350, easing: "easeOutCubic"});
+//    setTimeout(function () {
+//        $(".info_bar > p").animate({paddingTop: 20}, {duration: 500, easing: "easeOutCubic"});
+//        circleIn("age", 500);
+//        circleIn("awards", 500);
+//        circleIn("kids", 500);
+//        circleIn("shib", 500)
+//    }, 200);
+//    $(".info_btn").addClass("active");
+//    $(".home-section").addClass("close_cursor");
+//    info = 1
+//}
+//function infoClose() {
+//    $(".info_bar").animate({left: -480}, {duration: 350, easing: "easeOutCubic"});
+//    $(".home-section").animate({left: 0}, {duration: 350, easing: "easeOutCubic"});
+//    setTimeout(function () {
+//        $(".info_bar > p").animate({paddingTop: 40}, 0);
+//        circleOut("age", 0);
+//        circleOut("awards", 0);
+//        circleOut("kids", 0);
+//        circleOut("shib", 0)
+//    }, 350);
+//    $(".info_btn").removeClass("active");
+//    $(".home-section").removeClass("close_cursor");
+//    info = 0
+//}
 
 $(document).ready(function () {
     if (winWidth < 720) {
@@ -410,7 +410,7 @@ $(document).ready(function () {
     });
     $(window).hashchange(function () {
         hash = location.hash;
-        document.title = "Design by Tomer Lerner -  " + (hash.replace(/^#/, ""));
+        document.title = "Designed by Janessa Smith -  " + (hash.replace(/^#/, ""));
         loadOut();
         if (hash === "") {
             window.location.hash = "#home"
@@ -426,15 +426,15 @@ $(document).ready(function () {
                     } else {
                         if (hash === "#work") {
                             work()
-                        } else {
-                            if (hash === "#case_studies") {
-                                case_studies()
-                            } else {
-                                if (hash === "#portfolio") {
-                                    portfolio()
-                                }
-                            }
-                        }
+                        } //else {
+                            //if (hash === "#case_studies") {
+                                //case_studies()
+                            //} else {
+                            //    //if (hash === "#portfolio") {
+                            //    //    portfolio()
+                            //    //}
+                            //}
+                        //}
                     }
                 }
             }
@@ -601,37 +601,37 @@ $(document).ready(function () {
         $(".study .dragged .arrow").css("right", "85%").css("opacity", "1");
         $(".projects .dragged .arrow.b,.study .dragged .arrow.t").css("margin-top", "3px");
         $(".projects .dragged .arrow.t,.study .dragged .arrow.b").css("margin-top", "-2px");
-        $(".study_list li").on("touchstart", function () {
-            $(".study_list li").removeClass("active").addClass("unactive");
-            $(this).removeClass("unactive").addClass("active");
-            $(this).find(".img").addClass("zoomed")
-        })
+        //$(".study_list li").on("touchstart", function () {
+        //    $(".study_list li").removeClass("active").addClass("unactive");
+        //    $(this).removeClass("unactive").addClass("active");
+        //    $(this).find(".img").addClass("zoomed")
+        //})
     } else {
         if (!(isTouchDevice)) {
-            $(".horiz_scroll").niceScroll({
-                cursorcolor: "#fff",
-                background: "#000",
-                touchbehavior: true,
-                oneaxismousemode: true,
-                cursoropacitymax: 1,
-                cursorwidth: 5,
-                cursorborderradius: 0,
-                cursorborder: "none",
-                autohidemode: false,
-                zindex: 20
-            });
-            $(".content,.study_inner").niceScroll({
-                cursorcolor: "#fff",
-                background: "#000",
-                touchbehavior: true,
-                cursoropacitymax: 1,
-                cursorwidth: 5,
-                cursorborderradius: 0,
-                cursorborder: "none",
-                autohidemode: false,
-                zindex: 30
-            });
-            $(".info_bar").niceScroll({touchbehavior: true}).hide();
+            //$(".horiz_scroll").niceScroll({
+            //    cursorcolor: "#fff",
+            //    background: "#000",
+            //    touchbehavior: true,
+            //    oneaxismousemode: true,
+            //    cursoropacitymax: 1,
+            //    cursorwidth: 5,
+            //    cursorborderradius: 0,
+            //    cursorborder: "none",
+            //    autohidemode: false,
+            //    zindex: 20
+            //});
+            //$(".content,.study_inner").niceScroll({
+            //    cursorcolor: "#fff",
+            //    background: "#000",
+            //    touchbehavior: true,
+            //    cursoropacitymax: 1,
+            //    cursorwidth: 5,
+            //    cursorborderradius: 0,
+            //    cursorborder: "none",
+            //    autohidemode: false,
+            //    zindex: 30
+            //});
+            //$(".info_bar").niceScroll({touchbehavior: true}).hide();
             $("body").on("mouseenter", ".logo-hover", function () {
                 if (hash == "#home") {
                     if (Modernizr.csstransformspreserve3d) {
@@ -688,49 +688,49 @@ $(document).ready(function () {
                     conHoverOut()
                 }
             });
-            $(".study_link").hover(function () {
-                if (!$(this).hasClass("active")) {
-                    circleIn("study_circle", 300)
-                }
-            }, function () {
-                if (!$(this).hasClass("active")) {
-                    circleOut("study_circle", 300)
-                }
-            });
-            $(".portfolio_link").hover(function () {
-                if (!$(this).hasClass("active")) {
-                    circleIn("portfolio_circle", 300)
-                }
-            }, function () {
-                if (!$(this).hasClass("active")) {
-                    circleOut("portfolio_circle", 300)
-                }
-            });
-            $(".next").hover(function () {
-                circleIn("next_circle", 200)
-            }, function () {
-                circleOut("next_circle", 200)
-            });
-            $(".prev").hover(function () {
-                circleIn("prev_circle", 200)
-            }, function () {
-                circleOut("prev_circle", 200)
-            });
-            $(".info_btn").hover(function () {
-                circleIn("info_circle", 400);
-                $(".info_inner,.info_btn span").addClass("hovered")
-            }, function () {
-                circleOut("info_circle", 400);
-                $(".info_inner,.info_btn span").removeClass("hovered")
-            });
-            $(".study_list li").on("mouseenter", function () {
-                $(".study_list li").addClass("unactive");
-                $(this).addClass("active")
-            });
-            $(".study_list li").on("mouseleave", function () {
-                $(".study_list li").removeClass("unactive");
-                $(this).removeClass("active")
-            })
+            //$(".study_link").hover(function () {
+            //    if (!$(this).hasClass("active")) {
+            //        circleIn("study_circle", 300)
+            //    }
+            //}, function () {
+            //    if (!$(this).hasClass("active")) {
+            //        circleOut("study_circle", 300)
+            //    }
+            //});
+            //$(".portfolio_link").hover(function () {
+            //    if (!$(this).hasClass("active")) {
+            //        circleIn("portfolio_circle", 300)
+            //    }
+            //}, function () {
+            //    if (!$(this).hasClass("active")) {
+            //        circleOut("portfolio_circle", 300)
+            //    }
+            //});
+            //$(".next").hover(function () {
+            //    circleIn("next_circle", 200)
+            //}, function () {
+            //    circleOut("next_circle", 200)
+            //});
+            //$(".prev").hover(function () {
+            //    circleIn("prev_circle", 200)
+            //}, function () {
+            //    circleOut("prev_circle", 200)
+            //});
+            //$(".info_btn").hover(function () {
+            //    circleIn("info_circle", 400);
+            //    $(".info_inner,.info_btn span").addClass("hovered")
+            //}, function () {
+            //    circleOut("info_circle", 400);
+            //    $(".info_inner,.info_btn span").removeClass("hovered")
+            //});
+            //$(".study_list li").on("mouseenter", function () {
+            //    $(".study_list li").addClass("unactive");
+            //    $(this).addClass("active")
+            //});
+            //$(".study_list li").on("mouseleave", function () {
+            //    $(".study_list li").removeClass("unactive");
+            //    $(this).removeClass("active")
+            //})
         }
     }
     $(".logo-hover").on("click", function () {
@@ -772,105 +772,105 @@ $(document).ready(function () {
             window.location.hash = "#home"
         }
     });
-    $(".study .dragged").on("click", function () {
-        window.location.hash = "#case_studies"
-    });
-    $(".projects .dragged").on("click", function () {
-        window.location.hash = "#portfolio"
-    });
-    $("#toggler").on("click", function () {
-        if (!$(this).hasClass("active")) {
-            menuOpen()
-        } else {
-            menuClose()
-        }
-    });
-    $(".info_btn").on("click", function () {
-        if (!$(this).hasClass("active")) {
-            infoOpen()
-        } else {
-            infoClose()
-        }
-    });
-    $("body").on("click touchstart", ".home-section.close_cursor", function () {
-        if (info == 1) {
-            infoClose()
-        }
-    });
-    $(".study_list li").find(".open").on("click", function (b) {
-        if (innerCase == 1) {
-            caseClosed()
-        }
-        b.preventDefault();
-        $(".study_list li").addClass("close").removeClass("open").find(".txt").addClass("close");
-        $(this).parent().addClass("open");
-        $(this).siblings(".img").addClass("zoomed").find(".load_ring").show();
-        $(this).parent().find("a.open,.txt").hide();
-        if (!(isTouchDevice)) {
-            $(".study_inner").getNiceScroll().hide()
-        }
-        var c = $(this).attr("href");
-        $(this).siblings(".study_inner").fadeIn(100).load(c, function () {
-            $(this).animate({scrollTop: 0}, 0);
-            $(this).find("img").load(function () {
-                $(".zoomed").delay(100).fadeOut(300, function () {
-                    if (!(isTouchDevice)) {
-                        $(".study_inner").getNiceScroll().resize().show()
-                    }
-                })
-            })
-        });
-        innerCase = 1
-    });
-    $("body").on("click", ".study_inner .back", function () {
-        caseClosed()
-    });
-    $("body").on("click", ".study_link", function () {
-        if (innerCase == 1) {
-            caseClosed()
-        }
-    });
-    $("body").on("click", ".down", function () {
-        var b = $(this).siblings(".image_wrapper").offset().top;
-        $(this).parent().animate({scrollTop: b - 47}, {duration: 500, easing: "easeInOutCubic"})
-    });
-    $(".portfolio_list li").find(".open, .video").click(function (b) {
-        b.preventDefault();
-        portfolioPop = 1;
-        if ($(this).hasClass("open")) {
-            contentType = "image"
-        } else {
-            if ($(this).hasClass("video")) {
-                contentType = "video"
-            }
-        }
-        $("#portfolio_inner").fadeIn(300);
-        if (!(isTouchDevice)) {
-            $(".content").getNiceScroll().hide()
-        }
-        portfolioNum = $(this).parent().index() + 1;
-        portfolio_page()
-    });
-    $(".portfolio_bg.close_cursor").on("click", function () {
-        portfolioPop = 0;
-        portfoliopopClose()
-    });
-    $("body").on("click", ".next, .prev", function () {
-        if (!(isTouchDevice)) {
-            $(".content").getNiceScroll().hide()
-        }
-        if ($(this).hasClass("next")) {
-            portfolioNum = portfolioNum + 1
-        } else {
-            if ($(this).hasClass("prev")) {
-                portfolioNum = portfolioNum - 1
-            }
-        }
-        $(".content").animate({opacity: 0}, 200, function () {
-            $(".portfolio_loader").show();
-            portfolio_page()
-        })
-    });
+    //$(".study .dragged").on("click", function () {
+    //    window.location.hash = "#case_studies"
+    //});
+    //$(".projects .dragged").on("click", function () {
+    //    window.location.hash = "#portfolio"
+    //});
+    //$("#toggler").on("click", function () {
+    //    if (!$(this).hasClass("active")) {
+    //        menuOpen()
+    //    } else {
+    //        menuClose()
+    //    }
+    //});
+    //$(".info_btn").on("click", function () {
+    //    if (!$(this).hasClass("active")) {
+    //        infoOpen()
+    //    } else {
+    //        infoClose()
+    //    }
+    //});
+    //$("body").on("click touchstart", ".home-section.close_cursor", function () {
+    //    if (info == 1) {
+    //        infoClose()
+    //    }
+    //});
+    //$(".study_list li").find(".open").on("click", function (b) {
+    //    if (innerCase == 1) {
+    //        caseClosed()
+    //    }
+    //    b.preventDefault();
+    //    $(".study_list li").addClass("close").removeClass("open").find(".txt").addClass("close");
+    //    $(this).parent().addClass("open");
+    //    $(this).siblings(".img").addClass("zoomed").find(".load_ring").show();
+    //    $(this).parent().find("a.open,.txt").hide();
+    //    if (!(isTouchDevice)) {
+    //        $(".study_inner").getNiceScroll().hide()
+    //    }
+    //    var c = $(this).attr("href");
+    //    $(this).siblings(".study_inner").fadeIn(100).load(c, function () {
+    //        $(this).animate({scrollTop: 0}, 0);
+    //        $(this).find("img").load(function () {
+    //            $(".zoomed").delay(100).fadeOut(300, function () {
+    //                if (!(isTouchDevice)) {
+    //                    $(".study_inner").getNiceScroll().resize().show()
+    //                }
+    //            })
+    //        })
+    //    });
+    //    innerCase = 1
+    //});
+    //$("body").on("click", ".study_inner .back", function () {
+    //    caseClosed()
+    //});
+    //$("body").on("click", ".study_link", function () {
+    //    if (innerCase == 1) {
+    //        caseClosed()
+    //    }
+    //});
+    //$("body").on("click", ".down", function () {
+    //    var b = $(this).siblings(".image_wrapper").offset().top;
+    //    $(this).parent().animate({scrollTop: b - 47}, {duration: 500, easing: "easeInOutCubic"})
+    //});
+    //$(".portfolio_list li").find(".open, .video").click(function (b) {
+    //    b.preventDefault();
+    //    portfolioPop = 1;
+    //    if ($(this).hasClass("open")) {
+    //        contentType = "image"
+    //    } else {
+    //        if ($(this).hasClass("video")) {
+    //            contentType = "video"
+    //        }
+    //    }
+    //    $("#portfolio_inner").fadeIn(300);
+    //    if (!(isTouchDevice)) {
+    //        $(".content").getNiceScroll().hide()
+    //    }
+    //    portfolioNum = $(this).parent().index() + 1;
+    //    portfolio_page()
+    //});
+    //$(".portfolio_bg.close_cursor").on("click", function () {
+    //    portfolioPop = 0;
+    //    portfoliopopClose()
+    //});
+    //$("body").on("click", ".next, .prev", function () {
+    //    if (!(isTouchDevice)) {
+    //        $(".content").getNiceScroll().hide()
+    //    }
+    //    if ($(this).hasClass("next")) {
+    //        portfolioNum = portfolioNum + 1
+    //    } else {
+    //        if ($(this).hasClass("prev")) {
+    //            portfolioNum = portfolioNum - 1
+    //        }
+    //    }
+    //    $(".content").animate({opacity: 0}, 200, function () {
+    //        $(".portfolio_loader").show();
+    //        portfolio_page()
+    //    })
+    //});
     $(window).on("resize", function () {
         winWidth = $(window).width();
         winHeight = $(window).height();
@@ -920,10 +920,10 @@ $(document).ready(function () {
                 }
             }
         }, stop: function (b, c) {
-            if (xpos < -20) {
-                window.location.hash = "#case_studies"
-            }
-            a()
+            //if (xpos < -20) {
+            //    window.location.hash = "#case_studies"
+            //}
+            //a()
         }
     });
     $(".projects .dragged").draggable({
@@ -941,10 +941,10 @@ $(document).ready(function () {
                 }
             }
         }, stop: function (b, c) {
-            if (xpos > 20) {
-                window.location.hash = "#portfolio"
-            }
-            a()
+            //if (xpos > 20) {
+            //    window.location.hash = "#portfolio"
+            //}
+            //a()
         }
     })
 });
@@ -958,7 +958,7 @@ $(window).load(function () {
             }
         }
         $(".circles-wrapper").delay(700).animate({marginTop: 0, opacity: 1}, {duration: 500, easing: "easeOutCubic"});
-        $(".info_btn").delay(1000).animate({top: 0, opacity: 1}, {duration: 500, easing: "easeOutCubic"});
+        //$(".info_btn").delay(1000).animate({top: 0, opacity: 1}, {duration: 500, easing: "easeOutCubic"});
         loaded = 1
     })
 });
