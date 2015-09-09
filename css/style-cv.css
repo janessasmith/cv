@@ -786,6 +786,65 @@ body {
       bottom: 10px; }
       .wrapper .home-section .footer a {
         color: #878787; }
+  .wrapper .info-btn {
+    width: 40px;
+    height: 40px;
+    margin-top: 20px;
+    position: absolute;
+    top: 100px;
+    left: 20px;
+    z-index: 100;
+    opacity: 0;
+    cursor: pointer;
+    border-radius: 50%;
+    -webkit-transition: transform .35s ease-out;
+    -moz-transition: transform .35s ease-out;
+    transition: transform .35s ease-out; }
+    .wrapper .info-btn.active {
+      -webkit-transform: rotate(-90deg);
+      -moz-transform: rotate(-90deg);
+      transform: rotate(-90deg); }
+    .wrapper .info-btn .info-inner {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: #000;
+      border-radius: 50%;
+      -webkit-transition: transform .2s ease-out, background-color .2s ease-out;
+      -moz-transition: transform .2s ease-out, background-color .2s ease-out;
+      transition: transform .2s ease-out, background-color .2s ease-out; }
+      .wrapper .info-btn .info-inner.hovered {
+        background-color: #fff;
+        -webkit-transform: scale(0.8);
+        -moz-transform: scale(0.8);
+        transform: scale(0.8); }
+    .wrapper .info-btn .info-circle {
+      position: absolute;
+      top: -3px;
+      left: -3px; }
+    .wrapper .info-btn span {
+      position: absolute;
+      left: 50%;
+      background-color: #fff;
+      -webkit-transition: background-color .24s ease-out;
+      -moz-transition: background-color .24s ease-out;
+      transition: background-color .24s ease-out; }
+      .wrapper .info-btn span.hovered {
+        background-color: #000; }
+    .wrapper .info-btn .info-dot {
+      width: 8px;
+      height: 8px;
+      margin-left: -4px;
+      top: 8px;
+      border-radius: 50%; }
+    .wrapper .info-btn .info-line {
+      width: 6px;
+      height: 14px;
+      margin-left: -3px;
+      top: 18px;
+      border-radius: 3px; }
 
 @-moz-document url-prefix() {
   .logo-1 .top-wall {

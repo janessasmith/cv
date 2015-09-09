@@ -64,7 +64,7 @@
 }
 
 //*********************************************************************//
-//                                home                                 //
+//                             wrapper                                 //
 //*********************************************************************//
 .wrapper {
   width: 100%;
@@ -73,6 +73,7 @@
   top: 0;
   left: 0;
   overflow-x: hidden;
+  // home-section
   .home-section {
     width: 100%;
     height: 100%;
@@ -432,7 +433,7 @@
             }
           }
         }
-        //skills
+        // skills
         .sk-circle {
           width: 180px;
           height: 180px;
@@ -452,7 +453,7 @@
           background-color: $dark_1;
           border-radius: 50%;
         }
-        //work
+        // work
         .rotate {
           width: 100%;
           height: 100%;
@@ -469,7 +470,7 @@
           }
         }
       }
-      //work
+      // work
       .stroke {
         position: absolute;
         border: 1px solid $dark_1;
@@ -521,7 +522,7 @@
             left: 0;
           }
         }
-        //work details
+        // work details
         .strokes {
           width: 200px;
           height: 0;
@@ -640,7 +641,7 @@
           border-top: 1px dashed $dark_1;
         }
       }
-      //contact
+      // contact
       .contact {
         .stroke {
           width: 0;
@@ -846,6 +847,75 @@
       a {
         color: $a-link;
       }
+    }
+  }
+  // info-btn
+  .info-btn {
+    width: 40px;
+    height: 40px;
+    margin-top: 20px;
+    position: absolute;
+    top: 100px;
+    left: 20px;
+    z-index: 100;
+    opacity: 0;
+    cursor: pointer;
+    border-radius: 50%;
+    -webkit-transition: transform .35s ease-out;
+    -moz-transition: transform .35s ease-out;
+    transition: transform .35s ease-out;
+    &.active {
+      -webkit-transform: rotate(-90deg);
+      -moz-transform: rotate(-90deg);
+      transform: rotate(-90deg);
+    }
+    .info-inner {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: $dark_1;
+      border-radius: 50%;
+      -webkit-transition: transform .2s ease-out, background-color .2s ease-out;
+      -moz-transition: transform .2s ease-out, background-color .2s ease-out;
+      transition: transform .2s ease-out, background-color .2s ease-out;
+      &.hovered {
+        background-color: $light_1;
+        -webkit-transform: scale(.8);
+        -moz-transform: scale(.8);
+        transform: scale(.8);
+      }
+    }
+    .info-circle {
+      position: absolute;
+      top: -3px;
+      left: -3px;
+    }
+    span {
+      position: absolute;
+      left: 50%;
+      background-color: $light_1;
+      -webkit-transition: background-color .24s ease-out;
+      -moz-transition: background-color .24s ease-out;
+      transition: background-color .24s ease-out;
+      &.hovered {
+        background-color: $dark_1;
+      }
+    }
+    .info-dot {
+      width: 8px;
+      height: 8px;
+      margin-left: -4px;
+      top: 8px;
+      border-radius: 50%;
+    }
+    .info-line {
+      width: 6px;
+      height: 14px;
+      margin-left: -3px;
+      top: 18px;
+      border-radius: 3px;
     }
   }
 }
