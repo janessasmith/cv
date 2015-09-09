@@ -354,7 +354,12 @@ $(document).ready(function() {
     });
     $(window).hashchange();
     if(isTouchDevice) {
-
+        // work drag
+        $(".dragged .arrow").css("width", "8px");
+        $(".projects .dragged .arrow").css("left", "85%").css("opacity", "1");
+        $(".study . dragged .arrow").css("right", "85%").css("opacity", "1");
+        $(".projects .dragged .arrow.b,.study .dragged .arrow.t").css("margin-top", "3px");
+        $(".projects .dragged .arrow.t,.study .dragged .arrow.b").css("margin-top", "-2px");
     } else {
         if(!(isTouchDevice)) {
             // skills hover
@@ -386,7 +391,16 @@ $(document).ready(function() {
                 if(!$(this).find("h2").hasClass("active")) {
                     conHoverOut();
                 }
-            })
+            });
+
+            // work drag
+            $(".strokes .dragged").hover(function() {
+                $(this).find(".arrow").addClass("hovered");
+                $(this).parent().addClass("hovered");
+            }, function() {
+                $(this).find(".arrow").removeClass("hovered");
+                $(this).parent().removeClass("hovered");
+            });
 
         }
     }

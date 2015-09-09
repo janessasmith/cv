@@ -563,12 +563,18 @@ body {
           .wrapper .home-section .circles-wrapper .work .strokes.study .dragged .drag-line {
             left: 100%; }
       .wrapper .home-section .circles-wrapper .work .strokes.projects .dragged .arrow.t, .wrapper .home-section .circles-wrapper .work .strokes.study .dragged .arrow.t {
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        transform: rotate(45deg); }
+      .wrapper .home-section .circles-wrapper .work .strokes.projects .dragged .arrow.b, .wrapper .home-section .circles-wrapper .work .strokes.study .dragged .arrow.b {
         -webkit-transform: rotate(-45deg);
         -moz-transform: rotate(-45deg);
         -ms-transform: rotate(-45deg);
         -o-transform: rotate(-45deg);
         transform: rotate(-45deg); }
-      .wrapper .home-section .circles-wrapper .work .strokes.projects .dragged .arrow.b, .wrapper .home-section .circles-wrapper .work .strokes.study .dragged .arrow.b {
+      .wrapper .home-section .circles-wrapper .work .strokes.projects .dragged .arrow.b, .wrapper .home-section .circles-wrapper .work .strokes.study .dragged .arrow.t {
         margin-top: 10px; }
       .wrapper .home-section .circles-wrapper .work .strokes.projects .dragged .arrow.t, .wrapper .home-section .circles-wrapper .work .strokes.study .dragged .arrow.b {
         margin-top: -10px; }

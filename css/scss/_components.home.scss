@@ -583,13 +583,20 @@
           }
         }
         .strokes.projects .dragged .arrow.t, .strokes.study .dragged .arrow.t {
+          -webkit-transform: rotate(45deg);
+          -moz-transform: rotate(45deg);
+          -ms-transform: rotate(45deg);
+          -o-transform: rotate(45deg);
+          transform: rotate(45deg);
+        }
+        .strokes.projects .dragged .arrow.b, .strokes.study .dragged .arrow.b {
           -webkit-transform: rotate(-45deg);
           -moz-transform: rotate(-45deg);
           -ms-transform: rotate(-45deg);
           -o-transform: rotate(-45deg);
           transform: rotate(-45deg);
         }
-        .strokes.projects .dragged .arrow.b, .strokes.study .dragged .arrow.b {
+        .strokes.projects .dragged .arrow.b, .strokes.study .dragged .arrow.t {
           margin-top: 10px;
         }
         .strokes.projects .dragged .arrow.t, .strokes.study .dragged .arrow.b {
