@@ -172,7 +172,7 @@ function skills() {
 /**
  * Ä£¿éËµÃ÷
  * @module work
- * @method
+ * @method work() workHoverIn() workHoverOut()
  *
  * @date 2015-09-08
  * @author Janessa Smith
