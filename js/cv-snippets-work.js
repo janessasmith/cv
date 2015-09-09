@@ -1,7 +1,3 @@
-/**
- * Created by ZhengLu on 2015/9/1.
- */
-
 var isFirefox = typeof InstallTrigger !== "undefined"; // i don't know
 var loaded = 0; // i don't know
 var winWidth = $(window).width();   // visual area width of the current window of the brower
@@ -18,11 +14,11 @@ var isTouchDevice = Modernizr.touch ||
     deviceAgent.match(/ipod/i) ||
     deviceAgent.match(/blackberry/i) ||
     deviceAgent.match(/bada/i));
-if (isTouchDevice) {
-    //Do something touchy
-} else {
-    //Can't touch this
-}
+//if (isTouchDevice) {
+//    //Do something touchy
+//} else {
+//    //Can't touch this
+//}
 
 function loadOut() {
     // initialization
@@ -69,7 +65,7 @@ function loadOut() {
         easing: "easeOutCubic"
     });
 
-    //
+    // skills-list fadeout
     $(".skills-list").fadeOut({
         queue: false,
         duration: 100,
@@ -80,6 +76,15 @@ function loadOut() {
         }
     })
 }
+
+/**
+ * 模块说明
+ * @module skills
+ * @method circleIn() circleOut() skills() skillHoverIn() skillHoverOut()
+ *
+ * @date 2015-09-08
+ * @author Janessa Smith
+ */
 
 // skills
 function  circleIn(b, a) {
@@ -161,11 +166,83 @@ function skills() {
     } else {
         skillHoverIn();
     }
+    workHoverOut();
 }
+
+/**
+ * 模块说明
+ * @module work
+ * @method
+ *
+ * @date 2015-09-08
+ * @author Janessa Smith
+ */
+
+// work
+function workHoverIn() {
+    $(".work .stroke.tr").animate({width: 95, opacity: 1}, 80);
+    $(".work .stroke.r").delay(80).animate({width: 95}, 80);
+    $(".work .stroke.br").delay(160).animate({width: 95}, 80);
+    $(".work .stroke.bl").delay(240).animate({width: 95}, 80);
+    $(".work .stroke.l").delay(320).animate({width: 95}, 80);
+    $(".work .stroke.tl").delay(400).animate({width: 95}, 80);
+    $(".work").find("h2, .circle-inner").addClass("hovered");
+}
+function workHoverOut() {
+    $(".work .stroke.tl").animate({width: 0}, 80);
+    $(".work .stroke.l").delay(80).animate({width: 0}, 80);
+    $(".work .stroke.bl").delay(160).animate({width: 0}, 80);
+    $(".work .stroke.br").delay(240).animate({width: 0}, 80);
+    $(".work .stroke.r").delay(320).animate({width: 0}, 80);
+    $(".work .stroke.tr").delay(400).animate({width: 0, opacity: 0}, 80);
+    $(".work").find("h2, .circle-inner").removeClass("hovered");
+}
+
+function work() {
+    $(".work h2, .rotate, .work .circle-inner, .close-line").addClass("active");
+    $(".work-bg.l").delay(500).animate({left: "-40%"}, {
+        duration: 500,
+        easing: "easeOutCubic"
+    });
+    $(".work-bg.r").delay(500).animate({right: "-40%"}, {
+        duration: 500,
+        easing: "easeOutCubic"
+    });
+    $(".logo-wrapper").animate({marginTop: -50}, {
+        duration: 500,
+        easing: "easeOutCubic"
+    }).addClass("zoom-out");
+    $(".skills").animate({top: -60, left: 40}, {
+        duration: 500,
+        easing: "easeOutCubic"
+    }).addClass("zoom-out");
+    $(".work").animate({top: 70}, {
+        duration: 500,
+        easing: "easeOutCubic",
+        complete: function() {
+            $(".work .strokes").addClass("active");
+        }
+    }).find(".work .circle-inner").addClass("active");
+    $(".contact").animate({top: -60, left: -40}, {
+        duration: 500,
+        easing: "easeOutCubic"
+    }).addClass("zoom-out");
+
+    if(!(isTouchDevice)) {
+        $(".work .stroke").animate({width: 95, opacity: 1}, 0);
+        $(".work").find("h2, .circle-inner").addClass("hovered")
+    } else {
+        workHoverIn();
+    }
+    skillHoverOut();
+}
+
+
 
 function home() {
     if (isTouchDevice) {
         skillHoverOut();
+        workHoverOut();
     }
 }
 
@@ -197,6 +274,10 @@ $(document).ready(function() {
             } else {
                 if(hash == "#skills") {
                     skills();
+                } else {
+                    if(hash == "#work") {
+                        work();
+                    }
                 }
             }
         }
@@ -216,6 +297,16 @@ $(document).ready(function() {
                     skillHoverOut();
                 }
             });
+            // work hover
+            $(".work").hover(function() {
+                if(!$(this).find("h2").hasClass("active")) {
+                    workHoverIn();
+                }
+            }, function() {
+                if(!$(this).find("h2").hasClass("active")) {
+                    workHoverOut();
+                }
+            });
         }
     }
     // skills click
@@ -226,6 +317,14 @@ $(document).ready(function() {
             window.location.hash = "#home";
         }
     });
+    // work click
+    $(".work h2").on("click", function() {
+        if(!$(this).hasClass("active")) {
+            window.location.hash = "#work";
+        } else {
+            window.location.hash = "#home";
+        }
+    })
 
 })
 
