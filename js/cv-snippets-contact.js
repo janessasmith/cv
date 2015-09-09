@@ -231,19 +231,19 @@ function work() {
 
     if(!(isTouchDevice)) {
         $(".work .stroke").animate({width: 95, opacity: 1}, 0);
-        $(".work").find("h2, .circle-inner").addClass("hovered")
+        $(".work").find("h2, .circle-inner").addClass("hovered");
     } else {
         workHoverIn();
     }
     skillHoverOut();
-    workHoverOut();
+    conHoverOut();
 }
 
 
 /**
  * Ä£¿éËµÃ÷
  * @module contact
- * @method
+ * @method contact() conHoverIn() conHoverOut()
  *
  * @date 2015-09-09
  * @author Janessa Smith
