@@ -20,15 +20,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="cv-en.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="cv-en.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cv-en.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.14202899">
-              <caret line="229" column="45" selection-start-line="229" selection-start-column="45" selection-end-line="229" selection-end-column="45" />
+            <state vertical-scroll-proportion="-15.0">
+              <caret line="241" column="32" selection-start-line="241" selection-start-column="32" selection-end-line="241" selection-end-column="32" />
               <folding>
                 <element signature="n#div#4;n#section#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#style#0;n#polygon#0;n#svg#0;n#b#0;n#div#1;n#div#5;n#section#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cv-snippets-contact.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/js/cv-snippets-contact.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.58800775">
+              <caret line="278" column="32" selection-start-line="278" selection-start-column="32" selection-end-line="278" selection-end-column="32" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -57,14 +67,14 @@
         <entry file="file://$PROJECT_DIR$/js/js-cv.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-11.466666">
-              <caret line="334" column="9" selection-start-line="334" selection-start-column="9" selection-end-line="334" selection-end-column="9" />
+              <caret line="156" column="9" selection-start-line="156" selection-start-column="9" selection-end-line="156" selection-end-column="9" />
               <folding>
-                <element signature="e#17971#26424#0" expanded="false" />
-                <element signature="e#18070#24225#0" expanded="false" />
-                <element signature="e#24292#25534#0" expanded="false" />
-                <element signature="e#25590#25753#0" expanded="false" />
-                <element signature="e#26462#31720#0" expanded="false" />
-                <element signature="e#31772#32396#0" expanded="false" />
+                <element signature="e#18005#26480#0" expanded="false" />
+                <element signature="e#18104#24276#0" expanded="false" />
+                <element signature="e#24343#25589#0" expanded="false" />
+                <element signature="e#25645#25809#0" expanded="false" />
+                <element signature="e#26518#31788#0" expanded="false" />
+                <element signature="e#31840#32468#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -93,8 +103,9 @@
         <option value="$PROJECT_DIR$/js/js-cv.js" />
         <option value="$PROJECT_DIR$/js/js-cv-01.js" />
         <option value="$PROJECT_DIR$/js/cv-snippets-skills.js" />
-        <option value="$PROJECT_DIR$/cv-en.html" />
         <option value="$PROJECT_DIR$/js/cv-snippets-work.js" />
+        <option value="$PROJECT_DIR$/cv-en.html" />
+        <option value="$PROJECT_DIR$/js/cv-snippets-contact.js" />
       </list>
     </option>
   </component>
@@ -193,7 +204,7 @@
     <property name="options.searchVisible" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/js/js-cv.js" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../angular-web-demo" />
     <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/js/js-cv.js" />
     <property name="FullScreen" value="false" />
   </component>
@@ -332,12 +343,12 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="608" column="8" selection-start-line="608" selection-start-column="8" selection-end-line="608" selection-end-column="8" />
           <folding>
-            <element signature="e#17971#26424#0" expanded="false" />
-            <element signature="e#18070#24225#0" expanded="false" />
-            <element signature="e#24292#25534#0" expanded="false" />
-            <element signature="e#25590#25753#0" expanded="false" />
-            <element signature="e#26462#31720#0" expanded="false" />
-            <element signature="e#31772#32396#0" expanded="false" />
+            <element signature="e#18005#26480#0" expanded="false" />
+            <element signature="e#18104#24276#0" expanded="false" />
+            <element signature="e#24343#25589#0" expanded="false" />
+            <element signature="e#25645#25809#0" expanded="false" />
+            <element signature="e#26518#31788#0" expanded="false" />
+            <element signature="e#31840#32468#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -380,12 +391,12 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="164" column="18" selection-start-line="164" selection-start-column="8" selection-end-line="164" selection-end-column="18" />
           <folding>
-            <element signature="e#17971#26424#0" expanded="false" />
-            <element signature="e#18070#24225#0" expanded="false" />
-            <element signature="e#24292#25534#0" expanded="false" />
-            <element signature="e#25590#25753#0" expanded="false" />
-            <element signature="e#26462#31720#0" expanded="false" />
-            <element signature="e#31772#32396#0" expanded="false" />
+            <element signature="e#18005#26480#0" expanded="false" />
+            <element signature="e#18104#24276#0" expanded="false" />
+            <element signature="e#24343#25589#0" expanded="false" />
+            <element signature="e#25645#25809#0" expanded="false" />
+            <element signature="e#26518#31788#0" expanded="false" />
+            <element signature="e#31840#32468#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -413,12 +424,12 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="81" column="20" selection-start-line="81" selection-start-column="8" selection-end-line="81" selection-end-column="20" />
           <folding>
-            <element signature="e#17971#26424#0" expanded="false" />
-            <element signature="e#18070#24225#0" expanded="false" />
-            <element signature="e#24292#25534#0" expanded="false" />
-            <element signature="e#25590#25753#0" expanded="false" />
-            <element signature="e#26462#31720#0" expanded="false" />
-            <element signature="e#31772#32396#0" expanded="false" />
+            <element signature="e#18005#26480#0" expanded="false" />
+            <element signature="e#18104#24276#0" expanded="false" />
+            <element signature="e#24343#25589#0" expanded="false" />
+            <element signature="e#25645#25809#0" expanded="false" />
+            <element signature="e#26518#31788#0" expanded="false" />
+            <element signature="e#31840#32468#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -552,21 +563,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/js-cv.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.466666">
-          <caret line="334" column="9" selection-start-line="334" selection-start-column="9" selection-end-line="334" selection-end-column="9" />
-          <folding>
-            <element signature="e#17971#26424#0" expanded="false" />
-            <element signature="e#18070#24225#0" expanded="false" />
-            <element signature="e#24292#25534#0" expanded="false" />
-            <element signature="e#25590#25753#0" expanded="false" />
-            <element signature="e#26462#31720#0" expanded="false" />
-            <element signature="e#31772#32396#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/cv-snippets-work.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -575,14 +571,45 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/js/jquery.ui.touch-punch.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/js-cv.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.466666">
+          <caret line="156" column="9" selection-start-line="156" selection-start-column="9" selection-end-line="156" selection-end-column="9" />
+          <folding>
+            <element signature="e#18005#26480#0" expanded="false" />
+            <element signature="e#18104#24276#0" expanded="false" />
+            <element signature="e#24343#25589#0" expanded="false" />
+            <element signature="e#25645#25809#0" expanded="false" />
+            <element signature="e#26518#31788#0" expanded="false" />
+            <element signature="e#31840#32468#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/cv-en.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.14202899">
-          <caret line="229" column="45" selection-start-line="229" selection-start-column="45" selection-end-line="229" selection-end-column="45" />
+        <state vertical-scroll-proportion="-15.0">
+          <caret line="241" column="32" selection-start-line="241" selection-start-column="32" selection-end-line="241" selection-end-column="32" />
           <folding>
             <element signature="n#div#4;n#section#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#polygon#0;n#svg#0;n#b#0;n#div#1;n#div#5;n#section#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/cv-snippets-contact.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.58800775">
+          <caret line="278" column="32" selection-start-line="278" selection-start-column="32" selection-end-line="278" selection-end-column="32" />
+          <folding />
         </state>
       </provider>
     </entry>
