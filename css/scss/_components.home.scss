@@ -849,6 +849,205 @@
       }
     }
   }
+
+  .study-loader {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 50;
+  }
+
+  // study-section
+  .study-section {
+    width: 100%;
+    height: 100%;
+    padding-top: 48px;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    overflow: hidden;
+    .bounce-loader-still {
+      width: 40px;
+      height: 80px;
+      position: relative;
+      top: 50%;
+      background: url(../../../cv/images/sprite.svg) no-repeat -253px -2px;
+    }
+    // study-list
+    .study-list {
+      width: 100%;
+      height: 100%;
+      margin: 0 auto;
+      position: relative;
+      white-space: nowrap;
+      letter-spacing: -3px;
+      overflow: hidden;
+      li {
+        display: inline-block;
+        width: 33.3%;
+        height: 100%;
+        overflow: hidden;
+        border-right: 1px solid $dark_1;
+        letter-spacing: 0;
+        -webkit-transition: width .25s ease-out, height .25s ease-out;
+        -moz-transition: width .25s ease-out, height .25s ease-out;
+        transition: width .25s ease-out, height .25s ease-out;
+        &:last-child {
+          border: none;
+        }
+        &.active {
+          width: 35.4%;
+          height: 100%;
+        }
+        &.unactive {
+          width: 32.3%;
+          height: 100%;
+        }
+        &.open {
+          width: 70%;
+          height: 100%;
+        }
+        &.close {
+          width: 15%;
+          height: 100%;
+        }
+        // study-case
+        .study-inner {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          text-align: center;
+          overflow-x: hidden;
+          overflow-y: auto;
+          -webkit-overflow-scrolling: touch;
+          img {
+            float: left;
+          }
+          h3 {
+            display: inline-block;
+            position: relative;
+            margin-bottom: 10px;
+            font-size: 48px;
+          }
+          p {
+            margin-bottom: 30px;
+            font-size: 26px;
+            font-style: italic;
+            line-height: 1.15;
+            letter-spacing: .3px;
+          }
+          .back {
+            width: 70px;
+            height: 70px;
+            margin: 20px auto;
+            position: relative;
+            background: url(../../../cv/images/sprite.svg) no-repeat -228px -326px;
+            cursor: pointer;
+            -webkit-transition: transform .15s ease-out;
+            -moz-transition: transform .15s ease-out;
+            transition: transform .15s ease-out;
+            &:hover {
+              -webkit-transform: rotate(90deg);
+              -moz-transform: rotate(90deg);
+              transform: rotate(90deg);
+            }
+            &.last {
+              margin-bottom: 100px;
+            }
+          }
+          .down {
+            width: 70px;
+            height: 70px;
+            margin: 20px auto;
+            position: relative;
+            background: url(../../../cv/images/sprite.svg) no-repeat -228px 390px;
+            cursor: pointer;
+            -webkit-transition: background-position .15s ease-out;
+            -moz-transition: background-position .15s ease-out;
+            transition: background-position .15s ease-out;
+          }
+          .visit {
+            display: block;
+            width: 130px;
+            margin: 30px auto 60px;
+            position: relative;
+            font-size: 28px;
+            color: $dark_1;
+            white-space: normal;
+            clear: both;
+            &:hover, .visit-link {
+              background-position: -160px -342px;
+            }
+            .visit-link {
+              float: right;
+              width: 40px;
+              height: 40px;
+              background: url(../../../cv/images/sprite.svg) no-repeat -170px -342px;
+              -webkit-transition: background-position .15s ease-out;
+              -moz-transition: background-position .15s ease-out;
+              transition: background-position .15s ease-out;
+            }
+          }
+        }
+        .study-img {
+          opacity: 0;
+          -webkit-transition: opacity .25s ease-out;
+          -moz-transition: opacity .25s ease-out;
+          transition: opacity .25s ease-out;
+          &.zoomed {
+            opacity: 1;
+            -webkit-transition: none;
+            -moz-transition: none;
+            transition: none;
+          }
+        }
+        .txt.close {
+          font-size: 15px;
+        }
+        &:hover {
+          .study-img {
+            opacity: 1;
+          }
+          .txt {
+            margin-top: -110px;
+          }
+        }
+      }
+    }
+    // study-loader
+    .study-loader {
+      background-color: $work-bg_l;
+    }
+  }
+  @keyframes bounce {
+    from {
+      -webkit-transform: rotateY(0);
+      -moz-transform: rotateY(9deg);
+      transform: rotateY(0);
+    }
+    to {
+      -webkit-transform: rotateY(360deg);
+      -moz-transform: rotateY(360deg);
+      transform: rotateY(360deg);
+    }
+  }
+
+  @-webkit-keyframes bounce {
+    from {
+      -webkit-transform: rotateY(0);
+      -moz-transform: rotateY(9deg);
+      transform: rotateY(0);
+    }
+    to {
+      -webkit-transform: rotateY(360deg);
+      -moz-transform: rotateY(360deg);
+      transform: rotateY(360deg);
+    }
+  }
   // info-btn
   .info-btn {
     width: 40px;

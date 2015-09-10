@@ -21,11 +21,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="cv-en.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="cv-en.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cv-en.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.44251207">
-              <caret line="261" column="64" selection-start-line="261" selection-start-column="64" selection-end-line="261" selection-end-column="64" />
+            <state vertical-scroll-proportion="-13.379311">
+              <caret line="251" column="28" selection-start-line="251" selection-start-column="28" selection-end-line="251" selection-end-column="28" />
               <folding>
                 <element signature="n#section#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#ul#0;n#section#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -39,23 +39,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cv-snippets-info-btn.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/cv-snippets-info-btn.js">
+      <file leaf-file-name="cv-snippets-study-section.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/cv-snippets-study-section.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="506" column="3" selection-start-line="506" selection-start-column="3" selection-end-line="506" selection-end-column="3" />
-              <folding>
-                <element signature="e#15697#16550#0" expanded="false" />
-              </folding>
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_components.home.scss" pinned="false" current-in-tab="false">
+      <file leaf-file-name="study-case_01.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/study/study-case_01.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_components.home.scss" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/scss/_components.home.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-15.827586">
-              <caret line="989" column="8" selection-start-line="989" selection-start-column="8" selection-end-line="989" selection-end-column="8" />
+            <state vertical-scroll-proportion="0.6985507">
+              <caret line="1047" column="33" selection-start-line="1047" selection-start-column="33" selection-end-line="1047" selection-end-column="33" />
               <folding>
                 <element signature="e#1477#24063#0" expanded="false" />
                 <element signature="e#1620#1729#0" expanded="false" />
@@ -74,7 +82,20 @@
                 <element signature="e#11894#12145#0" expanded="false" />
                 <element signature="e#13046#13379#0" expanded="false" />
                 <element signature="e#13445#13763#0" expanded="false" />
-                <element signature="e#24090#25789#0" expanded="false" />
+                <element signature="e#24584#28645#0" expanded="false" />
+                <element signature="e#29319#31018#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cv-snippets-info-btn.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/cv-snippets-info-btn.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="506" column="3" selection-start-line="506" selection-start-column="3" selection-end-line="506" selection-end-column="3" />
+              <folding>
+                <element signature="e#15697#16550#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -83,8 +104,8 @@
       <file leaf-file-name="_settings.colors.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/scss/_settings.colors.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-14.593221">
-              <caret line="38" column="23" selection-start-line="38" selection-start-column="23" selection-end-line="38" selection-end-column="23" />
+            <state vertical-scroll-proportion="-12.152542">
+              <caret line="32" column="19" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -110,23 +131,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="js-cv.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/js-cv.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="179" column="61" selection-start-line="179" selection-start-column="51" selection-end-line="179" selection-end-column="61" />
-              <folding>
-                <element signature="e#18005#26480#0" expanded="false" />
-                <element signature="e#18104#24276#0" expanded="false" />
-                <element signature="e#24343#25589#0" expanded="false" />
-                <element signature="e#25645#25809#0" expanded="false" />
-                <element signature="e#26518#31788#0" expanded="false" />
-                <element signature="e#31840#32468#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="cv-snippets-work.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/cv-snippets-work.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -144,6 +148,7 @@
       <list>
         <option value="SCSS" />
         <option value="JavaScript File" />
+        <option value="Html5" />
       </list>
     </option>
   </component>
@@ -164,8 +169,10 @@
         <option value="$PROJECT_DIR$/css/scss/_base.global.scss" />
         <option value="$PROJECT_DIR$/css/scss/_settings.colors.scss" />
         <option value="$PROJECT_DIR$/js/cv-snippets-info-btn.js" />
-        <option value="$PROJECT_DIR$/css/scss/_components.home.scss" />
+        <option value="$PROJECT_DIR$/study/study-case_01.html" />
+        <option value="$PROJECT_DIR$/js/cv-snippets-study-section.js" />
         <option value="$PROJECT_DIR$/cv-en.html" />
+        <option value="$PROJECT_DIR$/css/scss/_components.home.scss" />
       </list>
     </option>
   </component>
@@ -177,8 +184,8 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="631" />
-    <option name="y" value="478" />
+    <option name="x" value="799" />
+    <option name="y" value="68" />
     <option name="width" value="1924" />
     <option name="height" value="1176" />
   </component>
@@ -234,57 +241,21 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="study" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cv" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cv" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cv" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cv" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="style-cv.scss" />
-              <option name="myItemType" value="com.intellij.plugins.watcher.projectView.NestingTreeNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cv" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cv" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cv" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cv" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scss" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -303,6 +274,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/js/js-cv.js" />
     <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/js/js-cv.js" />
     <property name="FullScreen" value="false" />
+    <property name="DefaultHtmlFileTemplate" value="Html5" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -366,7 +338,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="631" y="478" width="1924" height="1176" extended-state="0" />
+    <frame x="799" y="68" width="1924" height="1176" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.4967978" order="1" side_tool="false" content_ui="combo" />
@@ -474,7 +446,8 @@
             <element signature="e#11894#12145#0" expanded="false" />
             <element signature="e#13046#13379#0" expanded="false" />
             <element signature="e#13445#13763#0" expanded="false" />
-            <element signature="e#24090#25789#0" expanded="false" />
+            <element signature="e#24584#28645#0" expanded="false" />
+            <element signature="e#29319#31018#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -603,7 +576,8 @@
             <element signature="e#11894#12145#0" expanded="false" />
             <element signature="e#13046#13379#0" expanded="false" />
             <element signature="e#13445#13763#0" expanded="false" />
-            <element signature="e#24090#25789#0" expanded="false" />
+            <element signature="e#24584#28645#0" expanded="false" />
+            <element signature="e#29319#31018#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -684,7 +658,8 @@
             <element signature="e#11894#12145#0" expanded="false" />
             <element signature="e#13046#13379#0" expanded="false" />
             <element signature="e#13445#13763#0" expanded="false" />
-            <element signature="e#24090#25789#0" expanded="false" />
+            <element signature="e#24584#28645#0" expanded="false" />
+            <element signature="e#29319#31018#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -830,14 +805,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/scss/_settings.colors.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.593221">
-          <caret line="38" column="23" selection-start-line="38" selection-start-column="23" selection-end-line="38" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/jquery.svg.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.1814672">
@@ -858,10 +825,68 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/css/img/tomer.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/img/loader_w.gif">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/img/hex.svg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/scss/_settings.colors.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.152542">
+          <caret line="32" column="19" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cv-en.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.379311">
+          <caret line="251" column="28" selection-start-line="251" selection-start-column="28" selection-end-line="251" selection-end-column="28" />
+          <folding>
+            <element signature="n#section#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#ul#0;n#section#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#4;n#section#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#5;n#section#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#polygon#0;n#svg#0;n#b#0;n#div#1;n#div#5;n#section#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#6;n#section#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#3;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/study/study-case_01.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/cv-snippets-study-section.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/css/scss/_components.home.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.827586">
-          <caret line="989" column="8" selection-start-line="989" selection-start-column="8" selection-end-line="989" selection-end-column="8" />
+        <state vertical-scroll-proportion="0.6985507">
+          <caret line="1047" column="33" selection-start-line="1047" selection-start-column="33" selection-end-line="1047" selection-end-column="33" />
           <folding>
             <element signature="e#1477#24063#0" expanded="false" />
             <element signature="e#1620#1729#0" expanded="false" />
@@ -880,23 +905,8 @@
             <element signature="e#11894#12145#0" expanded="false" />
             <element signature="e#13046#13379#0" expanded="false" />
             <element signature="e#13445#13763#0" expanded="false" />
-            <element signature="e#24090#25789#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cv-en.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.44251207">
-          <caret line="261" column="64" selection-start-line="261" selection-start-column="64" selection-end-line="261" selection-end-column="64" />
-          <folding>
-            <element signature="n#section#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#ul#0;n#section#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#4;n#section#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#5;n#section#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#polygon#0;n#svg#0;n#b#0;n#div#1;n#div#5;n#section#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#div#6;n#section#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#3;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="e#24584#28645#0" expanded="false" />
+            <element signature="e#29319#31018#0" expanded="false" />
           </folding>
         </state>
       </provider>
