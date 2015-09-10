@@ -873,5 +873,55 @@ body {
     outline: 1px solid #afd9d5; }
   .logo-3 .left-wall {
     outline: 1px solid #f2c4c4; } }
+.info-side {
+  width: 480px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: -480px;
+  text-align: center;
+  overflow: auto;
+  background-color: #28c4be; }
+  .info-side .avatar {
+    width: 150px;
+    height: 150px;
+    margin: 20px auto; }
+  .info-side h3 {
+    text-align: center;
+    font-size: 28px;
+    color: #45b29a; }
+  .info-side .intro {
+    margin-top: 10px;
+    padding: 40px 7px;
+    font-size: 22px;
+    color: #000; }
+  .info-side .info-circle {
+    width: 160px;
+    height: 160px;
+    margin: 20px auto;
+    position: relative; }
+    .info-side .info-circle:last-child {
+      margin-bottom: 80px; }
+    .info-side .info-circle svg {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1; }
+    .info-side .info-circle p {
+      padding-top: 45px;
+      position: relative;
+      z-index: 2;
+      font-size: 18px;
+      line-height: 1;
+      color: #000; }
+      .info-side .info-circle p span {
+        display: block;
+        font-size: 42px;
+        clear: both; }
+
+.close-cursor {
+  cursor: url(../../../cv/images/cur.png), auto; }
 
 /*# sourceMappingURL=style-cv.css.map */

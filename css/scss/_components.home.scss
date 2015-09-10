@@ -964,3 +964,66 @@
     }
   }
 }
+
+//*********************************************************************//
+//                           info-side                                 //
+//*********************************************************************//
+.info-side {
+  width: 480px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: -480px;
+  text-align: center;
+  overflow: auto;
+  background-color: $info-side_bg;
+  .avatar {
+    width: 150px;
+    height: 150px;
+    margin: 20px auto;
+  }
+  h3 {
+    text-align: center;
+    font-size: 28px;
+    color: $info-side_h3;
+  }
+  .intro {
+    margin-top: 10px;
+    padding: 40px 7px;
+    font-size: 22px;
+    color: $dark_1;
+  }
+  .info-circle {
+    width: 160px;
+    height: 160px;
+    margin: 20px auto;
+    position: relative;
+    &:last-child {
+      margin-bottom: 80px;
+    }
+    svg {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
+    p {
+      padding-top: 45px;
+      position: relative;
+      z-index: 2;
+      font-size: 18px;
+      line-height: 1;
+      color: $dark_1;
+      span {
+        display: block;
+        font-size: 42px;
+        clear: both;
+      }
+    }
+  }
+}
+.close-cursor {
+  cursor: url(../../../cv/images/cur.png), auto
+}

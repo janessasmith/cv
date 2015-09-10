@@ -1,5 +1,6 @@
 var isFirefox = typeof InstallTrigger !== "undefined"; // i don't know
 var loaded = 0; // i don't know
+var info = 0; // i don't know
 var winWidth = $(window).width();   // visual area width of the current window of the brower
 var winHeight = $(window).height(); // visual area height of the current window of the brower
 
@@ -305,19 +306,52 @@ function contact() {
 /**
  * Ä£¿éËµÃ÷
  * @module info-btn
- * @method
+ * @method infoOpen() infoClose()
  *
- * @date 2015-09-09
+ * @date 2015-09-10
  * @author Janessa Smith
  */
 
 //info-btn
 function infoOpen() {
+    $(".info-side").animate({scrollTop: 0}, 0);
+    $(".info-side").animate({left: 0}, {
+        duration: 350,
+        easing: "easeOutCubic"
+    });
+    $(".home-section").animate({left: 480}, {
+        duration: 350,
+        easing: "easeOutCubic"
+    });
+    setTimeout(function() {
+        $(".info-side .intro").animate({paddingTop: 20}, {
+            duration: 500,
+            easing: "easeOutCubic"
+        });
+        circleIn("age", 500);
+    }, 350);
     $(".info-btn").addClass("active");
+    $(".home-section").addClass("close-cursor");
+    info = 1;
 }
 function infoClose() {
+    $(".info-side").animate({left: -480}, {
+        duration: 350,
+        easing: "easeOutCubic"
+    });
+    $(".home-section").animate({left: 0}, {
+        duration: 350,
+        easing: "easeOutCubic"
+    });
+    setTimeout(function() {
+        $(".info-side .intro").animate({paddingTop: 40}, 0);
+        circleOut("age", 0);
+    }, 350);
     $(".info-btn").removeClass("active");
+    $(".home-section").removeClass("close-cursor");
+    info = 0;
 }
+
 
 function home() {
     if (isTouchDevice) {
@@ -424,7 +458,10 @@ $(document).ready(function() {
             }, function() {
                 circleOut("info-circle", 400);
                 $(".info-inner, .info-btn span").removeClass("hovered");
-            })
+            });
+
+            // info-side scrollbar
+            $(".info-side").niceScroll({touchbehavior: true}).hide();
         }
     }
     // skills click
@@ -459,9 +496,15 @@ $(document).ready(function() {
         } else {
             infoClose();
         }
-    })
+    });
 
-})
+    // i don't know
+    $("body").on("click touchstart", ".home-section.close-cursor", function() {
+        if(info == 1) {
+            infoClose();
+        }
+    });
+});
 
 
 $(window).load(function () {
