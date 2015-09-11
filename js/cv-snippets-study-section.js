@@ -1,6 +1,8 @@
 var isFirefox = typeof InstallTrigger !== "undefined"; // i don't know
-var loaded = 0; // i don't know
-var info = 0; // i don't know
+var loaded = 0;
+var info = 0;
+var studyLoad = 0;
+var innerCase = 0;
 var winWidth = $(window).width();   // visual area width of the current window of the brower
 var winHeight = $(window).height(); // visual area height of the current window of the brower
 
@@ -76,8 +78,22 @@ function loadOut() {
             window.clearInterval(skillList)
         }
     });
+    // study-section
+    $(".study-section").find(".study-loader").animate({left: "0%"}, {
+        duration: 500,
+        easing: "easeOutCubic"
+    });
+    $(".study-section").animate({left: "-100%"}, {
+        queue: false,
+        duration: 1000,
+        easing: "easeInOutCubic"
+    });
 
-    $(".study-section").find("")
+    if(hash == "#studies-case") {
+        $(".info-btn").fadeOut(200);
+    } else {
+        $(".info-btn").delay(1300).fadeIn(200);
+    }
 }
 
 /**
@@ -253,7 +269,41 @@ function work() {
  */
 
 // study-section
+function studiesCase() {
+    $(".home-section").animate({left: "100%"}, {
+        duration: 1000,
+        easing: "easeInOutCubic"
+    });
+    $(".study-section").animate({left: "0%"}, {
+        duration: 1000,
+        easing: "easeInOutCubic"
+    });
+    $(".study-section . study-loader").delay(100).animate({left: "100%"}, {
+        duration: 500,
+        easing: "easeInOutCubic",
+        complete: function() {
 
+        }
+    });
+    if(studyLoad == 0) {
+        $(".study-list li").each(function () {
+            var a = $(this).index() + 1;
+            $(this).find(".study-img").css("background-image", "url(../images/case_" + a + ".jpg)");
+        });
+    }
+    studyLoad = 1;
+}
+
+function caseClosed() {
+    $(".study-list li").removeClass("open close active unactive").find(".study-img").show()
+        .removeClass("zoomed").find(".load").hide();
+    $(".study-list li").find("a.open").show();
+    $(".study-inner").fadeOut(300);
+    if(!(isTouchDevice)) {
+        $(".study-inner").getNiceScroll().hide();
+    }
+    innerCase = 0;
+}
 
 
 /**
