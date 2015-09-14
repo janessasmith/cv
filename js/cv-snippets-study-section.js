@@ -26,7 +26,7 @@ var isTouchDevice = Modernizr.touch ||
 function loadOut() {
     // initialization
     if(loaded == 1) {
-        $(".circle h2, .close-line, .work h2, .rotate, .work .circle-inner, .work .strokes, .social").removeClass("active"); // i don't know
+        $(".circle h2, .close-line, .work h2, .rotate, .work .circle-inner, .work .strokes, .social").removeClass("active");
         $(".logo-wrapper, .circles-wrapper").animate({marginTop: 0, opacity: 1}, {
             queue: false,
             duration: 500,
@@ -219,7 +219,7 @@ function workHoverOut() {
 }
 
 function work() {
-    $(".work h2, .rotate, .work .circle-inner, .close-line").addClass("active");
+    $(".work h2, .rotate, .work .circle-inner, .work .close-line").addClass("active");
     $(".work-bg.l").delay(500).animate({left: "-40%"}, {
         duration: 500,
         easing: "easeOutCubic"
@@ -580,7 +580,7 @@ $(window).load(function () {
                 easing: "easeOutCubic"
             })
         } else {
-            if(hash == "#skills" || hash == "#work" || hash == "contact") {
+            if(hash == "#skills" || hash == "#work" || hash == "#contact") {
                 $(".logo-wrapper").animate({marginTop: -50, opacity: 1}, {
                     duration: 850,
                     easing: "easeOutCubic"
