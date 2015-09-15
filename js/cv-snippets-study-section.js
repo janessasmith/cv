@@ -89,7 +89,7 @@ function loadOut() {
         easing: "easeInOutCubic"
     });
 
-    if(hash == "#studies-case") {
+    if(hash == "#studies") {
         $(".info-btn").fadeOut(200);
     } else {
         $(".info-btn").delay(1300).fadeIn(200);
@@ -278,7 +278,7 @@ function studiesCase() {
         duration: 1000,
         easing: "easeInOutCubic"
     });
-    $(".study-section . study-loader").delay(100).animate({left: "100%"}, {
+    $(".study-section .study-loader").delay(100).animate({left: "100%"}, {
         duration: 500,
         easing: "easeInOutCubic",
         complete: function() {
@@ -286,9 +286,10 @@ function studiesCase() {
         }
     });
     if(studyLoad == 0) {
+        // study-list
         $(".study-list li").each(function () {
             var a = $(this).index() + 1;
-            $(this).find(".study-img").css("background-image", "url(../images/case_" + a + ".jpg)");
+            $(this).find(".study-img").css("background-image", "url(../../../cv/images/case_" + a + ".jpg)");
         });
     }
     studyLoad = 1;
@@ -298,6 +299,7 @@ function caseClosed() {
     $(".study-list li").removeClass("open close active unactive").find(".study-img").show()
         .removeClass("zoomed").find(".load").hide();
     $(".study-list li").find("a.open").show();
+    $(".study-list li").find(".txt").removeClass("close");
     $(".study-inner").fadeOut(300);
     if(!(isTouchDevice)) {
         $(".study-inner").getNiceScroll().hide();
@@ -460,6 +462,10 @@ $(document).ready(function() {
                     } else {
                         if(hash == "#contact") {
                             contact();
+                        } else {
+                            if(hash == "#studies") {
+                                studiesCase();
+                            }
                         }
                     }
                 }
@@ -474,6 +480,12 @@ $(document).ready(function() {
         $(".study . dragged .arrow").css("right", "85%").css("opacity", "1");
         $(".projects .dragged .arrow.b,.study .dragged .arrow.t").css("margin-top", "3px");
         $(".projects .dragged .arrow.t,.study .dragged .arrow.b").css("margin-top", "-2px");
+        // study-list show
+        $(".study-list li").on("touchstart", function() {
+            $(".study-list li").removeClass("active").addClass("unactive");
+            $(this).removeClass("unactive").addClass("active");
+            $(this).find(".study-img").addClass("zoomed");
+        })
     } else {
         if(!(isTouchDevice)) {
             // skills hover
@@ -527,6 +539,16 @@ $(document).ready(function() {
 
             // info-side scrollbar
             $(".info-side").niceScroll({touchbehavior: true}).hide();
+
+            // study-list hover
+            $(".study-list li").on("mouseenter", function() {
+                $(".study-list li").addClass("unactive");
+                $(this).addClass("active");
+            });
+            $(".study-list li").on("mouseleave", function() {
+                $(".study-list li").removeClass("unactive");
+                $(this).removeClass("active");
+            })
         }
     }
     // skills click
@@ -563,10 +585,94 @@ $(document).ready(function() {
         }
     });
 
-    // i don't know
+    // home-section close-curser
     $("body").on("click touchstart", ".home-section.close-cursor", function() {
         if(info == 1) {
             infoClose();
+        }
+    });
+
+    // study-section click
+    $(".study .dragged").on("click", function() {
+        window.location.hash = "#studies";
+    });
+
+    // study-list open
+    $(".study-list li").find(".open").on("click", function(b) {
+        if(innerCase == 1) {
+            caseClosed();
+        }
+        b.preventDefault()
+        $(".study-list li").addClass("close").removeClass("open")
+            .find(".txt").addClass("close");
+        $(this).parent().addClass("open");
+        $(this).siblings(".study-img").addClass("zoomed")
+            .find(".load").show();
+        $(this).parent().find("a.open, .txt").hide();
+
+        if(!(isTouchDevice)) {
+            $(".study-inner").getNiceScroll().hide();
+        }
+
+        var c = $(this).attr("href");
+        $(this).siblings(".study-inner").fadeIn(100).load(c, function() {
+            $(this).animate({scrollTop: 0}, 0);
+            $(this).find(".study-img").load(function() {
+                $(".zoomed").delay(100).fadeOut(300, function() {
+                    if(!(isTouchDevice)) {
+                        $(".study-inner").getNiceScroll().resize().show();
+                    }
+                });
+            });
+        });
+    });
+
+    // study-list back
+    $("body").on("click", "study-inner .back", function() {
+        caseClosed();
+    });
+
+    // studies dragged
+    function a() {
+        $(".work-bg.l").animate({marginLeft: 0}, {
+            duration: 700,
+            easing: "easeInOutCubic"
+        });
+        $(".work-bg.r").animate({marginRight: 0}, {
+            duration: 700,
+            easing: "easeInOutCubic"
+        });
+        $(".drag-line").animate({width: 0}, {
+            duration: 700,
+            easing: "easeInOutCubic"
+        });
+        $(".logo-wrapper .dragged").animate({left: 0}, {
+            duration: 700,
+            easing: "easeInOutCubic"
+        });
+    }
+
+    $(".study .dragged").draggable({
+        axis: "x",
+        scroll: false,
+        drag: function(b, c) {
+            xPos = c.position.left;
+            xPosMinus = -(c.position.left);
+            if(xPos < 0) {
+                $(".work-bg.l").css("margin-left", "" + xPosMinus + "px");
+                $(".work-bg.r").css("margin-right", "" + xPos + "px");
+                $(".logo-wrapper").css("left", "" + xPosMinus * 0.3 + "px");
+                $(this).find(".drag-line").css("width", "" + xPosMinus + "px");
+            } else {
+                if(xPos > 0) {
+                    return false;
+                }
+            }
+        }, stop: function(b, c) {
+            if(xPos < -20) {
+                window.location.hash = "#studies";
+            }
+            a();
         }
     });
 });
@@ -590,7 +696,7 @@ $(window).load(function () {
         $(".circles-wrapper").delay(700).animate({marginTop: 0, opacity: 1}, {
             duration: 500,
             easing: "easeOutCubic"
-        })
+        });
         $(".info-btn").delay(1000).animate({top: 0, opacity: 1}, {
             duration: 500,
             easing: "easeOutCubic"
