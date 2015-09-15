@@ -617,7 +617,7 @@ $(document).ready(function() {
         var c = $(this).attr("href");
         $(this).siblings(".study-inner").fadeIn(100).load(c, function() {
             $(this).animate({scrollTop: 0}, 0);
-            $(this).find(".study-img").load(function() {
+            $(this).find("img").load(function() {
                 $(".zoomed").delay(100).fadeOut(300, function() {
                     if(!(isTouchDevice)) {
                         $(".study-inner").getNiceScroll().resize().show();
@@ -625,10 +625,11 @@ $(document).ready(function() {
                 });
             });
         });
+        innerCase = 1;
     });
 
     // study-list back
-    $("body").on("click", "study-inner .back", function() {
+    $("body").on("click", ".study-inner .back", function() {
         caseClosed();
     });
 
