@@ -91,8 +91,19 @@ function loadOut() {
 
     if(hash == "#studies") {
         $(".info-btn").fadeOut(200);
+        $(".nav-header").delay(1000).animate({top: 0}, {
+            duration: 300,
+            easing: "easeOutCubic"
+        });
+        $(".menu").removeClass("open");
     } else {
         $(".info-btn").delay(1300).fadeIn(200);
+        $(".nav-header").delay(1000).animate({top: -48}, {
+            duration: 300,
+            easing: "easeOutCubic"
+        });
+        $(".menu-inner").removeClass("visible");
+        $(".menu").removeClass("open");
     }
 }
 
@@ -428,7 +439,12 @@ function infoClose() {
 
 // menu
 function menuOpen() {
-
+    $(".nav-header .menu").addClass("open");
+    $(".menu-inner").addClass("visible");
+}
+function menuClose() {
+    $(".nav-header .menu").removeClass("open");
+    $(".menu-inner").removeClass("visible");
 }
 
 
@@ -599,7 +615,13 @@ $(document).ready(function() {
 
     // menu click
     $(".nav-header .menu").on("click", function() {
-        $(this).toggleClass("open");
+        //$(this).toggleClass("open");
+        //$(".menu-inner").toggleClass("visible");
+        if(!$(this).hasClass("open")) {
+            menuOpen();
+        } else {
+            menuClose();
+        }
     });
 
     // home-section close-curser
