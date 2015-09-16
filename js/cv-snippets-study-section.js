@@ -281,9 +281,6 @@ function studiesCase() {
     $(".study-section .study-loader").delay(100).animate({left: "100%"}, {
         duration: 500,
         easing: "easeInOutCubic",
-        complete: function() {
-
-        }
     });
     if(studyLoad == 0) {
         // study-list
@@ -417,6 +414,21 @@ function infoClose() {
     $(".info-btn").removeClass("active");
     $(".home-section").removeClass("close-cursor");
     info = 0;
+}
+
+
+/**
+ * Ä£¿éËµÃ÷
+ * @module nav-header menu
+ * @method
+ *
+ * @date 2015-09-16
+ * @author Janessa Smith
+ */
+
+// menu
+function menuOpen() {
+
 }
 
 
@@ -585,6 +597,11 @@ $(document).ready(function() {
         }
     });
 
+    // menu click
+    $(".nav-header .menu").on("click", function() {
+        $(this).toggleClass("open");
+    });
+
     // home-section close-curser
     $("body").on("click touchstart", ".home-section.close-cursor", function() {
         if(info == 1) {
@@ -631,6 +648,15 @@ $(document).ready(function() {
     // study-list back
     $("body").on("click", ".study-inner .back", function() {
         caseClosed();
+    });
+
+    // study-list case down
+    $("body").on("click", ".down", function() {
+        var b = $(this).siblings(".image-wrapper").offset().top;
+        $(this).parent().animate({scrollTop: b - 47}, {
+            duration: 500,
+            easing: "easeInOutCubic"
+        });
     });
 
     // studies dragged

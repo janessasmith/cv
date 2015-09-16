@@ -848,7 +848,7 @@ body {
           opacity: 1; }
         .wrapper .study-section .study-list li:hover .txt {
           margin-top: -110px; }
-        .wrapper .study-section .study-list li a {
+        .wrapper .study-section .study-list li a.open {
           width: 70px;
           height: 70px;
           position: absolute;
@@ -858,6 +858,7 @@ body {
           margin-left: -35px;
           background-image: url(../../../cv/images/sprite.svg);
           background-color: #000;
+          background-position: 13px -445px;
           border-radius: 50%;
           opacity: 0;
           -webkit-transform: rotate(0) scale(0);
@@ -866,12 +867,10 @@ body {
           -webkit-transition: all .15s ease-out;
           -moz-transition: all .15s ease-out;
           transition: all .15s ease-out; }
-          .wrapper .study-section .study-list li a:hover {
+          .wrapper .study-section .study-list li a.open:hover {
             -webkit-transform: rotate(90deg) scale(1) !important;
             -moz-transform: rotate(90deg) scale(1) !important;
             transform: rotate(90deg) scale(1) !important; }
-          .wrapper .study-section .study-list li a.open {
-            background-position: 13px -445px; }
         .wrapper .study-section .study-list li .study-inner {
           width: 100%;
           height: 100%;
@@ -883,7 +882,9 @@ body {
           overflow-y: auto;
           -webkit-overflow-scrolling: touch; }
           .wrapper .study-section .study-list li .study-inner img {
-            float: left; }
+            float: left;
+            width: 100%;
+            height: auto; }
           .wrapper .study-section .study-list li .study-inner h3 {
             display: inline-block;
             position: relative;
@@ -916,11 +917,13 @@ body {
             height: 70px;
             margin: 20px auto;
             position: relative;
-            background: url(../../../cv/images/sprite.svg) no-repeat -228px 390px;
+            background: url(../../../cv/images/sprite.svg) no-repeat -228px -390px;
             cursor: pointer;
             -webkit-transition: background-position .15s ease-out;
             -moz-transition: background-position .15s ease-out;
             transition: background-position .15s ease-out; }
+            .wrapper .study-section .study-list li .study-inner .down:hover {
+              background-position: -228px -380px; }
           .wrapper .study-section .study-list li .study-inner .visit {
             display: block;
             width: 130px;
@@ -930,7 +933,7 @@ body {
             color: #000;
             white-space: normal;
             clear: both; }
-            .wrapper .study-section .study-list li .study-inner .visit:hover, .wrapper .study-section .study-list li .study-inner .visit .visit-link {
+            .wrapper .study-section .study-list li .study-inner .visit:hover .visit-link {
               background-position: -160px -342px; }
             .wrapper .study-section .study-list li .study-inner .visit .visit-link {
               float: right;
@@ -1152,5 +1155,142 @@ body {
 
 .close-cursor {
   cursor: url(../../../cv/images/cur.png), auto; }
+
+.nav-header {
+  width: 100%;
+  height: 48px;
+  position: fixed;
+  top: 0;
+  left: 0; }
+
+.menu {
+  width: 48px;
+  height: 48px;
+  position: relative; }
+  .menu .bit-1::before {
+    content: '';
+    width: 16px;
+    height: 5px;
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    -webkit-transform-origin: left bottom;
+    -moz-transform-origin: left bottom;
+    transform-origin: left bottom;
+    background-color: #2E313C;
+    -webkit-transition: transform .3s, top .3s;
+    -moz-transition: transform .3s, top .3s;
+    transition: transform .3s, top .3s; }
+  .menu .bit-1::after {
+    content: '';
+    width: 16px;
+    height: 5px;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    -webkit-transform-origin: right bottom;
+    -moz-transform-origin: right bottom;
+    transform-origin: right bottom;
+    background-color: #2E313C;
+    -webkit-transition: transform .3s, top .3s;
+    -moz-transition: transform .3s, top .3s;
+    transition: transform .3s, top .3s; }
+  .menu .bit-2 {
+    width: 32px;
+    height: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: #2E313C;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -webkit-transition: transform .3s .3s, width .3s .6s;
+    -moz-transition: transform .3s .3s, width .3s .6s;
+    transition: transform .3s .3s, width .3s .6s; }
+  .menu .bit-3::before {
+    content: '';
+    width: 16px;
+    height: 5px;
+    position: absolute;
+    bottom: 8px;
+    left: 8px;
+    -webkit-transform-origin: left top;
+    -moz-transform-origin: left top;
+    transform-origin: left top;
+    background-color: #2E313C;
+    -webkit-transition: transform .3s, bottom .3s;
+    -moz-transition: transform .3s, bottom .3s;
+    transition: transform .3s, bottom .3s; }
+  .menu .bit-3::after {
+    content: '';
+    width: 16px;
+    height: 5px;
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    -webkit-transform-origin: right top;
+    -moz-transform-origin: right top;
+    transform-origin: right top;
+    background-color: #2E313C;
+    -webkit-transition: transform .3s, bottom .3s;
+    -moz-transition: transform .3s, bottom .3s;
+    transition: transform .3s, bottom .3s; }
+  .menu.open .bit-1::before {
+    width: 21px;
+    top: 7px;
+    -webkit-transform-origin: left bottom;
+    -moz-transform-origin: left bottom;
+    transform-origin: left bottom;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    transform: rotate(45deg);
+    -webkit-transition: transform .3s .3s, width .3s .3s, top .3s .3s;
+    -moz-transition: transform .3s .3s, width .3s .3s, top .3s .3s;
+    transition: transform .3s .3s, width .3s .3s, top .3s .3s; }
+  .menu.open .bit-1:after {
+    width: 21px;
+    top: 7px;
+    -webkit-transform-origin: right bottom;
+    -moz-transform-origin: right bottom;
+    transform-origin: right bottom;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    -webkit-transition: transform .3s .3s, width .3s .3s, top .3s .3s;
+    -moz-transition: transform .3s .3s, width .3s .3s, top .3s .3s;
+    transition: transform .3s .3s, width .3s .3s, top .3s .3s; }
+  .menu.open .bit-2 {
+    width: 6px;
+    -webkit-transform: translate(-50%, -50%) rotate(45deg);
+    -moz-transform: translate(-50%, -50%) rotate(45deg);
+    transform: translate(-50%, -50%) rotate(45deg);
+    -webkit-transition: transform .3s .3s, width .3s;
+    -moz-transition: transform .3s .3s, width .3s;
+    transition: transform .3s .3s, width .3s; }
+  .menu.open .bit-3::before {
+    width: 21px;
+    bottom: 6px;
+    -webkit-transform-origin: left top;
+    -moz-transform-origin: left top;
+    transform-origin: left top;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    -webkit-transition: transform .3s .3s, width .3s .3s, bottom .3s .3s;
+    -moz-transition: transform .3s .3s, width .3s .3s, bottom .3s .3s;
+    transition: transform .3s .3s, width .3s .3s, bottom .3s .3s; }
+  .menu.open .bit-3::after {
+    width: 21px;
+    bottom: 6px;
+    -webkit-transform-origin: right top;
+    -moz-transform-origin: right top;
+    transform-origin: right top;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    transform: rotate(45deg);
+    -webkit-transition: transform .3s .3s, width .3s .3s, bottom .3s .3s;
+    -moz-transition: transform .3s .3s, width .3s .3s, bottom .3s .3s;
+    transition: transform .3s .3s, width .3s .3s, bottom .3s .3s; }
 
 /*# sourceMappingURL=style-cv.css.map */
