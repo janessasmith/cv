@@ -25,8 +25,8 @@ var isTouchDevice = Modernizr.touch ||
 
 function loadOut() {
     // initialization
-    if(loaded == 1) {
-        $(".circle h2, .close-line, .work h2, .rotate, .work .circle-inner, .work .strokes, .social").removeClass("active");
+    if (loaded == 1) {
+        $(".circle h2, .close-line, .work h2, .rotate, .work .circle-inner, .work .strokes, .social, .menu-work li a").removeClass("active");
         $(".logo-wrapper, .circles-wrapper").animate({marginTop: 0, opacity: 1}, {
             queue: false,
             duration: 500,
@@ -44,7 +44,7 @@ function loadOut() {
         duration: 500,
         easing: "easeOutCubic"
     })
-    if(hash == "#home" || hash == "#skills" || hash == "#contact") {
+    if (hash == "#home" || hash == "#skills" || hash == "#contact") {
         $(".work-bg.l").animate({left: "-100%"}, {
             queue: false,
             duration: 500,
@@ -73,7 +73,7 @@ function loadOut() {
         queue: false,
         duration: 100,
         // callback function
-        complete: function() {
+        complete: function () {
             // cancel timer set by setInterval() method
             window.clearInterval(skillList)
         }
@@ -89,7 +89,8 @@ function loadOut() {
         easing: "easeInOutCubic"
     });
 
-    if(hash == "#studies") {
+    // study-section #studies
+    if (hash == "#studies") {
         $(".info-btn").fadeOut(200);
         $(".nav-header").delay(1000).animate({top: 0}, {
             duration: 300,
@@ -117,7 +118,7 @@ function loadOut() {
  */
 
 // skills
-function  circleIn(b, a) {
+function circleIn(b, a) {
     circleR = $("#" + b).find("circle").attr("r");
     circleScope = (Math.PI) * 2 * circleR;
     $("#" + b).find("circle").attr("stroke-dasharray", circleScope);
@@ -148,7 +149,7 @@ var skillList = 0;
 // skills-list show
 function skillListAnim() {
     var sTop = $(".skills-list").offset().top; // relative to the top displacement
-    if(sTop > winHeight) {
+    if (sTop > winHeight) {
         $(".skills-list").animate({bottom: "100%"}, 0);
     } else {
         $(".skills-list").animate({bottom: "-=1%"}, {
@@ -164,9 +165,9 @@ function skills() {
         duration: 500,
         easing: "easeOutCubic"
     });
-    $(".skills-list").delay(700).fadeIn(350, function() {
+    $(".skills-list").delay(700).fadeIn(350, function () {
         // execute skillListAnim() method
-        skillList = window.setInterval(function() {
+        skillList = window.setInterval(function () {
             skillListAnim()
         }, 100)
     });
@@ -177,7 +178,7 @@ function skills() {
     $(".skills").animate({top: -60, left: 228}, {
         duration: 500,
         easing: "easeOutCubic",
-        complete: function() {
+        complete: function () {
             $(".skills .strokes").addClass("active");
         }
     }).find(".skills .circle-inner").addClass("active");
@@ -190,7 +191,7 @@ function skills() {
         easing: "easeOutCubic"
     }).addClass("zoom-out");
 
-    if(!(isTouchDevice)) {
+    if (!(isTouchDevice)) {
         circleIn("sk-circle", 0);
         $(".skills").find("h2, .circle-inner").addClass("hovered");
     } else {
@@ -250,7 +251,7 @@ function work() {
     $(".work").animate({top: 70}, {
         duration: 500,
         easing: "easeOutCubic",
-        complete: function() {
+        complete: function () {
             $(".work .strokes").addClass("active");
         }
     }).find(".work .circle-inner").addClass("active");
@@ -259,7 +260,7 @@ function work() {
         easing: "easeOutCubic"
     }).addClass("zoom-out");
 
-    if(!(isTouchDevice)) {
+    if (!(isTouchDevice)) {
         $(".work .stroke").animate({width: 95, opacity: 1}, 0);
         $(".work").find("h2, .circle-inner").addClass("hovered");
     } else {
@@ -293,7 +294,13 @@ function studiesCase() {
         duration: 500,
         easing: "easeInOutCubic",
     });
-    if(studyLoad == 0) {
+
+    // study-link
+    $(".study-link").addClass("active");
+    circleOut("project-circle", 300);
+    circleIn("study-circle", 300);
+
+    if (studyLoad == 0) {
         // study-list
         $(".study-list li").each(function () {
             var a = $(this).index() + 1;
@@ -306,10 +313,10 @@ function studiesCase() {
 function caseClosed() {
     $(".study-list li").removeClass("open close active unactive").find(".study-img").show()
         .removeClass("zoomed").find(".load").hide();
-    $(".study-list li").find("a.open").show();
+    $(".study-list li").find("a.open, .txt").show();
     $(".study-list li").find(".txt").removeClass("close");
     $(".study-inner").fadeOut(300);
-    if(!(isTouchDevice)) {
+    if (!(isTouchDevice)) {
         $(".study-inner").getNiceScroll().hide();
     }
     innerCase = 0;
@@ -363,12 +370,12 @@ function contact() {
     $(".contact").animate({left: -226}, {
         duration: 500,
         easing: "easeOutCubic",
-        complete: function() {
+        complete: function () {
             $(".social").addClass("active");
         }
     }).find("h2").addClass("active");
 
-    if(!(isTouchDevice)) {
+    if (!(isTouchDevice)) {
         $(".contact .stroke").animate({width: 158, opacity: 1}, 0);
         $(".contact").find("h2, .circle-inner").addClass("hovered");
     } else {
@@ -398,7 +405,7 @@ function infoOpen() {
         duration: 350,
         easing: "easeOutCubic"
     });
-    setTimeout(function() {
+    setTimeout(function () {
         $(".info-side .intro").animate({paddingTop: 20}, {
             duration: 500,
             easing: "easeOutCubic"
@@ -418,7 +425,7 @@ function infoClose() {
         duration: 350,
         easing: "easeOutCubic"
     });
-    setTimeout(function() {
+    setTimeout(function () {
         $(".info-side .intro").animate({paddingTop: 40}, 0);
         circleOut("age", 0);
     }, 350);
@@ -445,6 +452,8 @@ function menuOpen() {
 function menuClose() {
     $(".nav-header .menu").removeClass("open");
     $(".menu-inner").removeClass("visible");
+
+    $(".menu-work").delay(200).fadeIn(200);
 }
 
 
@@ -457,10 +466,10 @@ function home() {
 }
 
 
-$(document).ready(function() {
+$(document).ready(function () {
     // i don't know
     // svg
-    $("svg").find("circle").each(function() {
+    $("svg").find("circle").each(function () {
         strokeW = $(this).attr("stroke-width");
         circleR = $(this).attr("r");
         circleScope = (Math.PI) * 2 * circleR;
@@ -472,26 +481,26 @@ $(document).ready(function() {
         }
     })
     // hash
-    $(window).hashchange(function() {
+    $(window).hashchange(function () {
         hash = location.hash;
         document.title = "Designed by Janessa Smith -  " + (hash.replace(/^#/, ""));
         loadOut();
-        if(hash === "") {
+        if (hash === "") {
             window.location.hash = "#home";
         } else {
-            if(hash == "#home") {
+            if (hash == "#home") {
                 home();
             } else {
-                if(hash == "#skills") {
+                if (hash == "#skills") {
                     skills();
                 } else {
-                    if(hash == "#work") {
+                    if (hash == "#work") {
                         work();
                     } else {
-                        if(hash == "#contact") {
+                        if (hash == "#contact") {
                             contact();
                         } else {
-                            if(hash == "#studies") {
+                            if (hash == "#studies") {
                                 studiesCase();
                             }
                         }
@@ -501,7 +510,7 @@ $(document).ready(function() {
         }
     });
     $(window).hashchange();
-    if(isTouchDevice) {
+    if (isTouchDevice) {
         // work drag
         $(".dragged .arrow").css("width", "8px");
         $(".projects .dragged .arrow").css("left", "85%").css("opacity", "1");
@@ -509,95 +518,129 @@ $(document).ready(function() {
         $(".projects .dragged .arrow.b,.study .dragged .arrow.t").css("margin-top", "3px");
         $(".projects .dragged .arrow.t,.study .dragged .arrow.b").css("margin-top", "-2px");
         // study-list show
-        $(".study-list li").on("touchstart", function() {
+        $(".study-list li").on("touchstart", function () {
             $(".study-list li").removeClass("active").addClass("unactive");
             $(this).removeClass("unactive").addClass("active");
             $(this).find(".study-img").addClass("zoomed");
         })
     } else {
-        if(!(isTouchDevice)) {
+        if (!(isTouchDevice)) {
             // skills hover
-            $(".skills").hover(function() {
-                if(!$(this).find("h2").hasClass("active")) {
+            $(".skills").hover(function () {
+                if (!$(this).find("h2").hasClass("active")) {
                     skillHoverIn();
                 }
-            }, function() {
-                if(!$(this).find("h2").hasClass("active")) {
+            }, function () {
+                if (!$(this).find("h2").hasClass("active")) {
                     skillHoverOut();
                 }
             });
             // work hover
-            $(".work").hover(function() {
-                if(!$(this).find("h2").hasClass("active")) {
+            $(".work").hover(function () {
+                if (!$(this).find("h2").hasClass("active")) {
                     workHoverIn();
                 }
-            }, function() {
-                if(!$(this).find("h2").hasClass("active")) {
+            }, function () {
+                if (!$(this).find("h2").hasClass("active")) {
                     workHoverOut();
                 }
             });
             // contact hover
-            $(".contact").hover(function() {
-                if(!$(this).find("h2").hasClass("active")) {
+            $(".contact").hover(function () {
+                if (!$(this).find("h2").hasClass("active")) {
                     conHoverIn();
                 }
-            }, function() {
-                if(!$(this).find("h2").hasClass("active")) {
+            }, function () {
+                if (!$(this).find("h2").hasClass("active")) {
                     conHoverOut();
                 }
             });
 
             // work drag
-            $(".strokes .dragged").hover(function() {
+            $(".strokes .dragged").hover(function () {
                 $(this).find(".arrow").addClass("hovered");
                 $(this).parent().addClass("hovered");
-            }, function() {
+            }, function () {
                 $(this).find(".arrow").removeClass("hovered");
                 $(this).parent().removeClass("hovered");
             });
 
             // info-btn hover
-            $(".info-btn").hover(function() {
+            $(".info-btn").hover(function () {
                 circleIn("info-circle", 400);
                 $(".info-inner, .info-btn span").addClass("hovered");
-            }, function() {
+            }, function () {
                 circleOut("info-circle", 400);
                 $(".info-inner, .info-btn span").removeClass("hovered");
+            });
+
+            // study-list hover
+            $(".study-list li").on("mouseenter", function () {
+                $(".study-list li").addClass("unactive");
+                $(this).addClass("active");
+            });
+            $(".study-list li").on("mouseleave", function () {
+                $(".study-list li").removeClass("unactive");
+                $(this).removeClass("active");
+            });
+
+            // study-link hover
+            $(".study-link").hover(function () {
+                if (!$(this).hasClass("active")) {
+                    circleIn("study-circle", 300);
+                }
+            }, function () {
+                if (!$(this).hasClass("active")) {
+                    circleOut("study-circle", 300);
+                }
+            });
+            // project-link hover
+            $(".project-link").hover(function () {
+                if (!$(this).hasClass("active")) {
+                    circleIn("project-circle", 300);
+                }
+            }, function () {
+                if (!$(this).hasClass("active")) {
+                    circleOut("project-circle", 300);
+                }
             });
 
             // info-side scrollbar
             $(".info-side").niceScroll({touchbehavior: true}).hide();
 
-            // study-list hover
-            $(".study-list li").on("mouseenter", function() {
-                $(".study-list li").addClass("unactive");
-                $(this).addClass("active");
+            // study-inner scroll
+            $(".study-inner").niceScroll({
+                cursorcolor: "#fff",
+                background: "#000",
+                touchbehavior: true,
+                cursoropacitymax: 1,
+                cursorwidth: 5,
+                cursorborderradius: 0,
+                cursorborder: "none",
+                autohidemode: false,
+                zindex: 30
             });
-            $(".study-list li").on("mouseleave", function() {
-                $(".study-list li").removeClass("unactive");
-                $(this).removeClass("active");
-            })
         }
     }
     // skills click
-    $(".skills h2").on("click", function() {
-        if(!$(this).hasClass("active")) {
+    $(".skills h2").on("click", function () {
+        if (!$(this).hasClass("active")) {
             window.location.hash = "#skills";
         } else {
             window.location.hash = "#home";
         }
     });
     // work click
-    $(".work h2").on("click", function() {
-        if(!$(this).hasClass("active")) {
+    $(".work h2").on("click", function () {
+        if (!$(this).hasClass("active")) {
             window.location.hash = "#work";
         } else {
             window.location.hash = "#home";
         }
     });
     // contact click
-    $(".contact h2").on("click", function() {
-        if(!$(this).hasClass("active")) {
+    $(".contact h2").on("click", function () {
+        if (!$(this).hasClass("active")) {
             window.location.hash = "#contact";
         } else {
             window.location.hash = "#home";
@@ -605,8 +648,8 @@ $(document).ready(function() {
     });
 
     // info-btn click
-    $(".info-btn").on("click", function() {
-        if(!$(this).hasClass("active")) {
+    $(".info-btn").on("click", function () {
+        if (!$(this).hasClass("active")) {
             infoOpen();
         } else {
             infoClose();
@@ -614,10 +657,10 @@ $(document).ready(function() {
     });
 
     // menu click
-    $(".nav-header .menu").on("click", function() {
+    $(".nav-header .menu").on("click", function () {
         //$(this).toggleClass("open");
         //$(".menu-inner").toggleClass("visible");
-        if(!$(this).hasClass("open")) {
+        if (!$(this).hasClass("open")) {
             menuOpen();
         } else {
             menuClose();
@@ -625,20 +668,20 @@ $(document).ready(function() {
     });
 
     // home-section close-curser
-    $("body").on("click touchstart", ".home-section.close-cursor", function() {
-        if(info == 1) {
+    $("body").on("click touchstart", ".home-section.close-cursor", function () {
+        if (info == 1) {
             infoClose();
         }
     });
 
     // study-section click
-    $(".study .dragged").on("click", function() {
+    $(".study .dragged").on("click", function () {
         window.location.hash = "#studies";
     });
 
     // study-list open
-    $(".study-list li").find(".open").on("click", function(b) {
-        if(innerCase == 1) {
+    $(".study-list li").find(".open").on("click", function (b) {
+        if (innerCase == 1) {
             caseClosed();
         }
         b.preventDefault()
@@ -649,16 +692,16 @@ $(document).ready(function() {
             .find(".load").show();
         $(this).parent().find("a.open, .txt").hide();
 
-        if(!(isTouchDevice)) {
+        if (!(isTouchDevice)) {
             $(".study-inner").getNiceScroll().hide();
         }
 
         var c = $(this).attr("href");
-        $(this).siblings(".study-inner").fadeIn(100).load(c, function() {
+        $(this).siblings(".study-inner").fadeIn(100).load(c, function () {
             $(this).animate({scrollTop: 0}, 0);
-            $(this).find("img").load(function() {
-                $(".zoomed").delay(100).fadeOut(300, function() {
-                    if(!(isTouchDevice)) {
+            $(this).find("img").load(function () {
+                $(".zoomed").delay(100).fadeOut(300, function () {
+                    if (!(isTouchDevice)) {
                         $(".study-inner").getNiceScroll().resize().show();
                     }
                 });
@@ -668,12 +711,19 @@ $(document).ready(function() {
     });
 
     // study-list back
-    $("body").on("click", ".study-inner .back", function() {
+    $("body").on("click", ".study-inner .back", function () {
         caseClosed();
     });
 
+    // i don't know
+    $("body").on("click", ".study-link", function () {
+        if (innerCase == 1) {
+            caseClosed();
+        }
+    });
+
     // study-list case down
-    $("body").on("click", ".down", function() {
+    $("body").on("click", ".down", function () {
         var b = $(this).siblings(".image-wrapper").offset().top;
         $(this).parent().animate({scrollTop: b - 47}, {
             duration: 500,
@@ -704,21 +754,21 @@ $(document).ready(function() {
     $(".study .dragged").draggable({
         axis: "x",
         scroll: false,
-        drag: function(b, c) {
+        drag: function (b, c) {
             xPos = c.position.left;
             xPosMinus = -(c.position.left);
-            if(xPos < 0) {
+            if (xPos < 0) {
                 $(".work-bg.l").css("margin-left", "" + xPosMinus + "px");
                 $(".work-bg.r").css("margin-right", "" + xPos + "px");
                 $(".logo-wrapper").css("left", "" + xPosMinus * 0.3 + "px");
                 $(this).find(".drag-line").css("width", "" + xPosMinus + "px");
             } else {
-                if(xPos > 0) {
+                if (xPos > 0) {
                     return false;
                 }
             }
-        }, stop: function(b, c) {
-            if(xPos < -20) {
+        }, stop: function (b, c) {
+            if (xPos < -20) {
                 window.location.hash = "#studies";
             }
             a();
@@ -728,14 +778,14 @@ $(document).ready(function() {
 
 
 $(window).load(function () {
-    $(".loading").delay(1200).fadeOut(300, function() {
-        if(hash == "#home") {
+    $(".loading").delay(1200).fadeOut(300, function () {
+        if (hash == "#home") {
             $(".logo-wrapper").animate({marginTop: 0, opacity: 1}, {
                 duration: 850,
                 easing: "easeOutCubic"
             })
         } else {
-            if(hash == "#skills" || hash == "#work" || hash == "#contact") {
+            if (hash == "#skills" || hash == "#work" || hash == "#contact") {
                 $(".logo-wrapper").animate({marginTop: -50, opacity: 1}, {
                     duration: 850,
                     easing: "easeOutCubic"
