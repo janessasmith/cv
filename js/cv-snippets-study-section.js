@@ -304,14 +304,14 @@ function studiesCase() {
         // study-list
         $(".study-list li").each(function () {
             var a = $(this).index() + 1;
-            $(this).find(".study-img").css("background-image", "url(../../../cv/images/case_" + a + ".jpg)");
+            $(this).find(".img").css("background-image", "url(../../../cv/images/case_" + a + ".jpg)");
         });
     }
     studyLoad = 1;
 }
 
 function caseClosed() {
-    $(".study-list li").removeClass("open close active unactive").find(".study-img").show()
+    $(".study-list li").removeClass("open close active unactive").find(".img").show()
         .removeClass("zoomed").find(".load").hide();
     $(".study-list li").find("a.open, .txt").show();
     $(".study-list li").find(".txt").removeClass("close");
@@ -521,7 +521,7 @@ $(document).ready(function () {
         $(".study-list li").on("touchstart", function () {
             $(".study-list li").removeClass("active").addClass("unactive");
             $(this).removeClass("unactive").addClass("active");
-            $(this).find(".study-img").addClass("zoomed");
+            $(this).find(".img").addClass("zoomed");
         })
     } else {
         if (!(isTouchDevice)) {
@@ -609,6 +609,17 @@ $(document).ready(function () {
             $(".info-side").niceScroll({touchbehavior: true}).hide();
 
             // study-inner scroll
+            //$(".study-inner").niceScroll({
+            //    cursorcolor: "#fff",
+            //    background: "#000",
+            //    touchbehavior: true,
+            //    cursoropacitymax: 1,
+            //    cursorwidth: 5,
+            //    cursorborderradius: 0,
+            //    cursorborder: "none",
+            //    autohidemode: false,
+            //    zindex: 30
+            //});
             $(".study-inner").niceScroll({
                 cursorcolor: "#fff",
                 background: "#000",
@@ -688,7 +699,7 @@ $(document).ready(function () {
         $(".study-list li").addClass("close").removeClass("open")
             .find(".txt").addClass("close");
         $(this).parent().addClass("open");
-        $(this).siblings(".study-img").addClass("zoomed")
+        $(this).siblings(".img").addClass("zoomed")
             .find(".load").show();
         $(this).parent().find("a.open, .txt").hide();
 
