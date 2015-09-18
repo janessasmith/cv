@@ -1,10 +1,14 @@
 var isFirefox = typeof InstallTrigger !== "undefined"; // i don't know
 var loaded = 0;
 var info = 0;
-var studyLoad = 0;
-var innerCase = 0;
+
 var winWidth = $(window).width();   // visual area width of the current window of the brower
 var winHeight = $(window).height(); // visual area height of the current window of the brower
+
+var studyLoad = 0;
+var innerCase = 0;
+var proLoad = 0;
+var contentType = "image"; // i don't know
 
 // determine if the client is a touch device
 var deviceAgent = navigator.userAgent.toLowerCase();
@@ -78,8 +82,8 @@ function loadOut() {
             window.clearInterval(skillList)
         }
     });
-    // study-section
-    $(".study-section").find(".study-loader").animate({left: "0%"}, {
+    // study-section & project-section
+    $(".study-section, .project-section").find(".study-loader").animate({left: "0%"}, {
         duration: 500,
         easing: "easeOutCubic"
     });
@@ -88,9 +92,14 @@ function loadOut() {
         duration: 1000,
         easing: "easeInOutCubic"
     });
+    $(".project-section").animate({left: "100%"}, {
+        queue: false,
+        duration: 1000,
+        easing: "easeInOutCubic"
+    });
 
     // study-section #studies
-    if (hash == "#studies") {
+    if (hash == "#studies" || hash == "#project") {
         $(".info-btn").fadeOut(200);
         $(".nav-header").delay(1000).animate({top: 0}, {
             duration: 300,
@@ -274,7 +283,7 @@ function work() {
 /**
  * 模块说明
  * @module study-section
- * @method
+ * @method studiesCase() caseClosed()
  *
  * @date 2015-09-10
  * @author Janessa Smith
@@ -320,6 +329,67 @@ function caseClosed() {
         $(".study-inner").getNiceScroll().hide();
     }
     innerCase = 0;
+}
+
+
+/**
+ * 模块说明
+ * @module project-section
+ * @method
+ *
+ * @date 2015-09-18
+ * @author Janessa Smith
+ */
+
+function proListResize() {
+    var a = $(".project-list li").outerHeight();
+    $(".project-list li").css("width", a * 1.153);
+    $(".project-list").css("width", ((a * 1.153 * $(".project-list li").length) / 2) + 110);
+
+    if(!(isTouchDevice)) {
+        // horiz-scroll
+        $(".horiz-scroll").getNiceScroll().resize();
+    }
+}
+
+function projectLoad() {
+    proListResize();
+    $(".project-list li").each(function() {
+        var a = $(this).index() + 1;
+        $(this).find(".img").css("background-image", "url(../../../cv/images/project/work_" + a + ".jpg)");
+    })
+}
+
+
+function project() {
+    $(".project-link").addClass("active");
+    circleOut("study-circle", 300);
+    circleIn("project-circle", 300);
+    $(".home-section").animate({left: "-100%"}, {
+        duration: 1000,
+        easing: "easeInOutCubic"
+    });
+    $(".project-section").animate({left: "0%"}, {
+        duration: 1000,
+        easing: "easeInOutCubic"
+    });
+
+    // i don't know
+    $(".project-section .study-loader").delay(100).animate({left: "-100%"}, {
+        duration: 500,
+        easing: "easeInOutCubic",
+        complete: function() {
+            $(".nav-header").animate({top: 0}, {
+                duration: 300,
+                easing: "easeInOutCubic"
+            });
+        }
+    });
+
+    if(proLoad == 0) {
+        projectLoad();
+    }
+    proLoad = 1;
 }
 
 
@@ -488,20 +558,24 @@ $(document).ready(function () {
         if (hash === "") {
             window.location.hash = "#home";
         } else {
-            if (hash == "#home") {
+            if (hash === "#home") {
                 home();
             } else {
-                if (hash == "#skills") {
+                if (hash === "#skills") {
                     skills();
                 } else {
-                    if (hash == "#work") {
+                    if (hash === "#work") {
                         work();
                     } else {
-                        if (hash == "#contact") {
+                        if (hash === "#contact") {
                             contact();
                         } else {
-                            if (hash == "#studies") {
+                            if (hash === "#studies") {
                                 studiesCase();
+                            } else {
+                                if(hash === "#project") {
+                                    project();
+                                }
                             }
                         }
                     }
@@ -690,7 +764,12 @@ $(document).ready(function () {
         window.location.hash = "#studies";
     });
 
-    // study-list open
+    // project-section click
+    $(".projects .dragged").on("click", function() {
+        window.location.hash = "#project";
+    });
+
+    // study-list click
     $(".study-list li").find(".open").on("click", function (b) {
         if (innerCase == 1) {
             caseClosed();
@@ -762,6 +841,7 @@ $(document).ready(function () {
         });
     }
 
+    // study drag
     $(".study .dragged").draggable({
         axis: "x",
         scroll: false,
@@ -784,6 +864,44 @@ $(document).ready(function () {
             }
             a();
         }
+    });
+
+    // projects drag
+    $(".projects .dragged").draggable({
+        axis: "x",
+        scroll: false,
+        drag: function(b, c) {
+            xPos = c.position.left;
+            xPosMinus = -(c.position.left);
+            if(xPos > 0) {
+                $(".work-bg.l").css("margin-right", "" + xPos + "px");
+                $(".work-bg.r").css("margin-left", "" + xPosMinus + "px");
+                $(".logo-wrapper").css("left", "" + xPosMinus * .3 + "px");
+                $(this).find(".drag-line").css("width", "" + xPos + "px");
+            } else {
+                if(xPos < 0) {
+                    return false;
+                }
+            }
+        }, stop: function(b, c) {
+            if(xPos > 20) {
+                window.location.hash = "#project";
+            }
+            a();
+        }
+    });
+
+    // project-list click
+    $(".project-list li").find(".open, .video").click(function(b) {
+        b.preventDefault();
+        if($(this).hasClass("active")) {
+            contentType = "image";
+        } else {
+            if($(this).hasClass("video")) {
+                contentType = "video";
+            }
+        }
+
     });
 });
 
