@@ -683,17 +683,6 @@ $(document).ready(function () {
             $(".info-side").niceScroll({touchbehavior: true}).hide();
 
             // study-inner scroll
-            //$(".study-inner").niceScroll({
-            //    cursorcolor: "#fff",
-            //    background: "#000",
-            //    touchbehavior: true,
-            //    cursoropacitymax: 1,
-            //    cursorwidth: 5,
-            //    cursorborderradius: 0,
-            //    cursorborder: "none",
-            //    autohidemode: false,
-            //    zindex: 30
-            //});
             $(".study-inner").niceScroll({
                 cursorcolor: "#fff",
                 background: "#000",
@@ -835,7 +824,7 @@ $(document).ready(function () {
             duration: 700,
             easing: "easeInOutCubic"
         });
-        $(".logo-wrapper .dragged").animate({left: 0}, {
+        $(".logo-wrapper, .dragged").animate({left: 0}, {
             duration: 700,
             easing: "easeInOutCubic"
         });
@@ -874,8 +863,8 @@ $(document).ready(function () {
             xPos = c.position.left;
             xPosMinus = -(c.position.left);
             if(xPos > 0) {
-                $(".work-bg.l").css("margin-right", "" + xPos + "px");
-                $(".work-bg.r").css("margin-left", "" + xPosMinus + "px");
+                $(".work-bg.r").css("margin-right", "" + xPos + "px");
+                $(".work-bg.l").css("margin-left", "" + xPosMinus + "px");
                 $(".logo-wrapper").css("left", "" + xPosMinus * .3 + "px");
                 $(this).find(".drag-line").css("width", "" + xPos + "px");
             } else {
