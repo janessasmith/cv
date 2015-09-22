@@ -2,15 +2,6 @@
 //                 study-section & project-section                     //
 //*********************************************************************//
 
-.study-loader {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 50;
-}
-
 .section-inner {
   width: 100%;
   height: 100%;
@@ -88,10 +79,33 @@
   }
 }
 
+// inner-loader
+.inner-loader {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 50;
+}
+
+// bounce
+.bounce-loader-still {
+  width: 40px;
+  height: 80px;
+  position: relative;
+  top: 50%;
+  margin: -40px auto 0;
+  background: url(../../../cv/images/sprite.svg) no-repeat -253px -2px;
+}
+
 // study-section
 .study-section {
   padding-top: 48px;
   left: -100%;
+  .inner-loader {
+    background-color: $work-bg_l;
+  }
 }
 
 // study-list
@@ -268,18 +282,9 @@
   }
 }
 
-// study-loader
-.study-loader {
+// inner-loader
+.inner-loader {
   background-color: $work-bg_l;
-}
-
-// bounce
-.bounce-loader-still {
-  width: 40px;
-  height: 80px;
-  position: relative;
-  top: 50%;
-  background: url(../../../cv/images/sprite.svg) no-repeat -253px -2px;
 }
 
 .horiz-scroll {
@@ -297,6 +302,9 @@
 // project-section
 .project-section {
   left: 100%;
+  .inner-loader {
+    background-color: $work-bg_r;
+  }
 }
 
 // project-list

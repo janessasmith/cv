@@ -83,7 +83,7 @@ function loadOut() {
         }
     });
     // study-section & project-section
-    $(".study-section, .project-section").find(".study-loader").animate({left: "0%"}, {
+    $(".study-section, .project-section").find(".inner-loader").animate({left: "0%"}, {
         duration: 500,
         easing: "easeOutCubic"
     });
@@ -299,7 +299,9 @@ function studiesCase() {
         duration: 1000,
         easing: "easeInOutCubic"
     });
-    $(".study-section .study-loader").delay(100).animate({left: "100%"}, {
+
+    // study-section inner-loader
+    $(".study-section .inner-loader").delay(100).animate({left: "100%"}, {
         duration: 500,
         easing: "easeInOutCubic",
     });
@@ -374,8 +376,8 @@ function project() {
         easing: "easeInOutCubic"
     });
 
-    // i don't know
-    $(".project-section .study-loader").delay(100).animate({left: "-100%"}, {
+    // project-section inner-loader
+    $(".project-section .inner-loader").delay(100).animate({left: "-100%"}, {
         duration: 500,
         easing: "easeInOutCubic",
         complete: function() {
