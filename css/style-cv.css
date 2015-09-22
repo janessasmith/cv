@@ -1259,34 +1259,16 @@ body {
         opacity: 0; }
       .project-list li:hover .hex {
         background-size: 107%; }
-      .project-list li:hover a.open {
-        top: 0;
-        left: 85%;
-        opacity: 1;
-        -webkit-transform: rotate(0) scale(1);
-        -moz-transform: rotate(0) scale(1);
-        transform: rotate(0) scale(1); }
-      .project-list li:hover a.open.center, .project-list li:hover a.video {
+      .project-list li:hover a.link {
         top: 50%;
         left: 50%;
         opacity: 1;
         -webkit-transform: rotate(0) scale(1);
         -moz-transform: rotate(0) scale(1);
         transform: rotate(0) scale(1); }
-      .project-list li:hover a.link {
-        top: 73%;
-        left: 15%;
-        opacity: 1;
-        -webkit-transform: rotate(0) sacle(1);
-        -moz-transform: rotate(0) sacle(1);
-        transform: rotate(0) sacle(1); }
-    .project-list li a.open, .project-list li a.open.center {
-      background-position: 13px -445px; }
     .project-list li a.link {
       background-position: 12px -512px; }
-    .project-list li a.video {
-      background-position: 15px -581px; }
-      .project-list li a.video:hover {
+      .project-list li a.link:hover {
         -webkit-transform: rotate(120deg) scale(1) !important;
         -moz-transform: rotate(120deg) scale(1) !important;
         transform: rotate(120deg) scale(1) !important; }

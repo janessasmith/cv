@@ -371,15 +371,8 @@
       .hex {
         background-size: 107%;
       }
-      a.open {
-        top: 0;
-        left: 85%;
-        opacity: 1;
-        -webkit-transform: rotate(0) scale(1);
-        -moz-transform: rotate(0) scale(1);
-        transform: rotate(0) scale(1);
-      }
-      a.open.center, a.video {
+
+      a.link {
         top: 50%;
         left: 50%;
         opacity: 1;
@@ -387,23 +380,10 @@
         -moz-transform: rotate(0) scale(1);
         transform: rotate(0) scale(1);
       }
-      a.link {
-        top: 73%;
-        left: 15%;
-        opacity: 1;
-        -webkit-transform: rotate(0) sacle(1);
-        -moz-transform: rotate(0) sacle(1);
-        transform: rotate(0) sacle(1);
-      }
     }
-    a.open, a.open.center {
-      background-position: 13px -445px;
-    }
+
     a.link {
       background-position: 12px -512px;
-    }
-    a.video {
-      background-position: 15px -581px;
       &:hover {
         -webkit-transform: rotate(120deg) scale(1) !important;
         -moz-transform: rotate(120deg) scale(1) !important;
