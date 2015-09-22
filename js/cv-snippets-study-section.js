@@ -343,17 +343,6 @@ function caseClosed() {
  * @author Janessa Smith
  */
 
-function proListResize() {
-    var a = $(".project-list li").outerHeight();
-    $(".project-list li").css("width", a * 1.153);
-    $(".project-list").css("width", ((a * 1.153 * $(".project-list li").length) / 2) + 110);
-
-    if(!(isTouchDevice)) {
-        // horiz-scroll
-        $(".horiz-scroll").getNiceScroll().resize();
-    }
-}
-
 function projectLoad() {
     proListResize();
     $(".project-list li").each(function() {
@@ -392,6 +381,23 @@ function project() {
         projectLoad();
     }
     proLoad = 1;
+}
+
+function proListResize() {
+    var a = $(".project-list li").outerHeight();
+    $(".project-list li").css("width", a * 1.153);
+    //$(".project-list").css("width", ((a * 1.153 * $(".project-list li").length) / 2) + 110);
+
+    $(".project-list").css("width", ((a * 1.153 * $(".project-list li").length) / 2) + 110);
+
+    /*if(!(isTouchDevice)) {
+        // horiz-scroll
+        $(".horiz-scroll").getNiceScroll().resize();
+    }*/
+
+    if (!(isTouchDevice)) {
+        $(".horiz-scroll").getNiceScroll().resize()
+    }
 }
 
 
@@ -696,6 +702,20 @@ $(document).ready(function () {
                 autohidemode: false,
                 zindex: 30
             });
+
+            // horiz-scroll scroll
+            $(".horiz-scroll").niceScroll({
+                cursorcolor: "#fff",
+                background: "#000",
+                touchbehavior: true,
+                oneaxismousemode: true,
+                cursoropacitymax: 1,
+                cursorwidth: 5,
+                cursorborderradius: 0,
+                cursorborder: "none",
+                autohidemode: false,
+                zindex: 20
+            });
         }
     }
     // skills click
@@ -811,6 +831,33 @@ $(document).ready(function () {
             easing: "easeInOutCubic"
         });
     });
+
+    // i don't know
+    $(window).on("resize", function() {
+        winWidth = $(window).width();
+        winHeight = $(window).height();
+        proListResize();
+
+        if(hash == "#skills" || hash == "#work" || hash == "#contact") {
+            if(hash == "#skills") {
+                $(".skills").animate({top: -60, left: 228}, 0);
+                $(".work").animate({top: -60, left: 180}, 0).addClass("zoom-out");
+                $(".contact").animate({top: -60, left: 120}, 0).addClass("zoom-out");
+            } else {
+                if(hash == "#work") {
+                    $(".work").animate({top: 70}, 0);
+                    $(".skills").animate({top: -60, left: 40}, 0).addClass("zoom-out");
+                    $(".contact").animate({top: -60, left: -40}, 0).addClass("zoom-out");
+                } else {
+                    if(hash == "#contact") {
+                        $(".contact").animate({left: -226}, 0);
+                        $(".skills").animate({left: -135}, 0).addClass("zoom-out");
+                        $(".work").animate({left: -190}, 0).addClass("zoom-out");
+                    }
+                }
+            }
+        }
+    })
 
     // studies dragged
     function a() {

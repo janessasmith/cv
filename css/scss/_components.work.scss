@@ -318,6 +318,7 @@
     height: 33%;
     margin: 1.1% 0;
     position: relative;
+    z-index: 1;
     background-color: $light_1;
     &:nth-child(even) {
       top: 20%;
