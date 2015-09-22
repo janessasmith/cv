@@ -24,8 +24,8 @@
       <file leaf-file-name="cv-en.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cv-en.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="4.118644">
-              <caret line="434" column="31" selection-start-line="434" selection-start-column="31" selection-end-line="434" selection-end-column="31" />
+            <state vertical-scroll-proportion="-6.4576273">
+              <caret line="272" column="25" selection-start-line="272" selection-start-column="25" selection-end-line="272" selection-end-column="25" />
               <folding>
                 <element signature="n#ul#0;n#section#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#div#4;n#section#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -38,10 +38,30 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cv-snippets-study-section.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="style-cv.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/style-cv.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-1.6551725">
+              <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_settings.fonts.scss" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/css/scss/_settings.fonts.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.4173913">
+              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cv-snippets-study-section.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/cv-snippets-study-section.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.35589942">
+            <state vertical-scroll-proportion="-12.266666">
               <caret line="302" column="33" selection-start-line="302" selection-start-column="33" selection-end-line="302" selection-end-column="33" />
               <folding />
             </state>
@@ -145,16 +165,16 @@
         <option value="$PROJECT_DIR$/css/style-cv.scss" />
         <option value="$PROJECT_DIR$/css/scss/_components.nav.scss" />
         <option value="$PROJECT_DIR$/css/scss/text.scss" />
-        <option value="$PROJECT_DIR$/css/scss/_settings.fonts.scss" />
         <option value="$PROJECT_DIR$/css/scss/_base.global.scss" />
         <option value="$USER_HOME$/Desktop/平凉页面-张伟/平凉页面/js/plCharacter.js" />
         <option value="E:/zhenglu/zl工作/中国平凉/中国平凉切片/平凉页面-新增平凉人物和视频中心（2015.9.18）/领导信息.html" />
         <option value="E:/zhenglu/zl工作/中国平凉/中国平凉切片/平凉页面-新增平凉人物和视频中心（2015.9.18）/css/style.css" />
         <option value="E:/zhenglu/zl工作/中国平凉/中国平凉切片/平凉页面-新增平凉人物和视频中心（2015.9.18）/js/jc.js" />
         <option value="$PROJECT_DIR$/css/scss/_components.home.scss" />
-        <option value="$PROJECT_DIR$/cv-en.html" />
         <option value="$PROJECT_DIR$/css/scss/_components.work.scss" />
         <option value="$PROJECT_DIR$/js/cv-snippets-study-section.js" />
+        <option value="$PROJECT_DIR$/cv-en.html" />
+        <option value="$PROJECT_DIR$/css/scss/_settings.fonts.scss" />
       </list>
     </option>
   </component>
@@ -211,6 +231,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="cv" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cv" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cv" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -760,13 +794,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/scss/_settings.fonts.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.24138">
-          <caret line="16" column="23" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://E:/FarBox/zhenglu.farbox.com/template/css/style.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-11.79661">
@@ -778,13 +805,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/style-cv.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.137931">
-          <caret line="5" column="30" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
         </state>
       </provider>
     </entry>
@@ -862,10 +882,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/js/cv-snippets-study-section.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.266666">
+          <caret line="302" column="33" selection-start-line="302" selection-start-column="33" selection-end-line="302" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/style-cv.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.6551725">
+          <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/cv-en.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="4.118644">
-          <caret line="434" column="31" selection-start-line="434" selection-start-column="31" selection-end-line="434" selection-end-column="31" />
+        <state vertical-scroll-proportion="-6.4576273">
+          <caret line="272" column="25" selection-start-line="272" selection-start-column="25" selection-end-line="272" selection-end-column="25" />
           <folding>
             <element signature="n#ul#0;n#section#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#4;n#section#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -877,10 +913,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/cv-snippets-study-section.js">
+    <entry file="file://$PROJECT_DIR$/css/scss/_settings.fonts.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.35589942">
-          <caret line="302" column="33" selection-start-line="302" selection-start-column="33" selection-end-line="302" selection-end-column="33" />
+        <state vertical-scroll-proportion="0.4173913">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding />
         </state>
       </provider>
