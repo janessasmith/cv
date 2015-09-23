@@ -64,19 +64,19 @@
   .txt.close {
     font-size: 15px;
   }
-  .load {
-    width: 30px;
-    height: 30px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin: -15px 0 0 -15px;
-    background: $dark_1 url(../../../cv/images/sprite.svg) no-repeat 1px -416px;
-    border-radius: 50%;
-    -webkit-animation: spin 1s infinite;
-    -moz-animation: spin 1s infinite;
-    animation: spin 1s infinite;
-  }
+  //.load {
+  //  width: 30px;
+  //  height: 30px;
+  //  position: absolute;
+  //  top: 50%;
+  //  left: 50%;
+  //  margin: -15px 0 0 -15px;
+  //  background: $dark_1 url(../../../cv/images/sprite.svg) no-repeat 1px -416px;
+  //  border-radius: 50%;
+  //  -webkit-animation: spin 1s infinite;
+  //  -moz-animation: spin 1s infinite;
+  //  animation: spin 1s infinite;
+  //}
 }
 
 // inner-loader
@@ -90,14 +90,14 @@
 }
 
 // bounce
-.bounce-loader-still {
-  width: 40px;
-  height: 80px;
-  position: relative;
-  top: 50%;
-  margin: -40px auto 0;
-  background: url(../../../cv/images/sprite.svg) no-repeat -253px -2px;
-}
+//.bounce-loader-still {
+//  width: 40px;
+//  height: 80px;
+//  position: relative;
+//  top: 50%;
+//  margin: -40px auto 0;
+//  background: url(../../../cv/images/sprite.svg) no-repeat -253px -2px;
+//}
 
 // study-section
 .study-section {

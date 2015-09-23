@@ -8,7 +8,7 @@
   top: -48px;
   left: 0;
   z-index: 3001;
-  background-color: #fafafa;
+  background-color: $nav-bg;
   // menu
   .menu {
     float: left;
@@ -219,7 +219,7 @@
   -moz-backface-visibility: hidden;
   backface-visibility: hidden;
   overflow: hidden;
-  background-color: #fafafa;
+  background-color: $nav-bg;
   &.visible {
     display: table;
     opacity: 1;
@@ -239,11 +239,11 @@
       a {
         display: block;
         position: relative;
-        font-size: 20px;
+        font-size: 38px;
         text-transform: uppercase;
         letter-spacing: 3px;
         text-align: center;
-        line-height: 60px;
+        line-height: 83px;
         color: $dark_1;
         -webkit-transition: all .2s ease-in-out;
         -moz-transition: all .2s ease-in-out;

@@ -115,6 +115,8 @@ function loadOut() {
         $(".menu-inner").removeClass("visible");
         $(".menu").removeClass("open");
     }
+    // footer hide
+    $(".footer").hide();
 }
 
 /**
@@ -322,8 +324,11 @@ function studiesCase() {
 }
 
 function caseClosed() {
+    //$(".study-list li").removeClass("open close active unactive").find(".img").show()
+    //    .removeClass("zoomed").find(".load").hide();
     $(".study-list li").removeClass("open close active unactive").find(".img").show()
-        .removeClass("zoomed").find(".load").hide();
+        .removeClass("zoomed").hide();
+
     $(".study-list li").find("a.open, .txt").show();
     $(".study-list li").find(".txt").removeClass("close");
     $(".study-inner").fadeOut(300);
@@ -789,8 +794,10 @@ $(document).ready(function () {
         $(".study-list li").addClass("close").removeClass("open")
             .find(".txt").addClass("close");
         $(this).parent().addClass("open");
-        $(this).siblings(".img").addClass("zoomed")
-            .find(".load").show();
+        //$(this).siblings(".img").addClass("zoomed")
+        //    .find(".load").show();
+
+        $(this).siblings(".img").addClass("zoomed").show();
         $(this).parent().find("a.open, .txt").hide();
 
         if (!(isTouchDevice)) {

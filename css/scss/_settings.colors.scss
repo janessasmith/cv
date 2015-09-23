@@ -2,38 +2,21 @@
 $light_1: #fff;       // white
 $dark_1:  #000;       //black
 
-//loading
-$loading-bg: $light_1 url(../../../cv/images/loader.gif) no-repeat center;
-
-//sprite
-
-//logo
-$logo: $light_1 url(../../../cv/images/logo.jpg) no-repeat center 20px;
-
-$logo-top-wall_1:    #3c4c87;
-$logo-top-wall_2:    #c6c9dc;
-$logo-top-wall_3:    #78c092;
-$logo-right-wall_1:  #e98b43;
-$logo-right-wall_2:  #751926;
-$logo-right-wall_3:  #67913b;
-$logo-bottom-wall_1: #dc3688;
-$logo-bottom-wall_2: #feec28;
-$logo-bottom-wall_3: #afd9d5;
-$logo-left-wall_1:   #6c457e;
-$logo-left-wall_2:   #dc3786;
-$logo-left-wall_3:   #f2c4c4;
-
-$wall-back: #8a8a88;
-
-//link
+// link
 $a-link: #878787;
 
-//skills & work & contact bg
+// skills & work & contact bg
 $sk-bg: #ce1a11;
-$work-bg_l: #ea4252;
-$work-bg_r: #73d264;
+$work-bg_l: #FFDE00; //#ea4252
+$work-bg_r: #76B36D; //#73d264
 $contact-bg: #9ad8fc;
 
-//info
-$info-side_bg: #28c4be;
-$info-side_h3: #45b29a;
+// info
+$info-side_bg: #D4F7F3; //#28c4be
+$info-side_h3: #58979D; //#45b29a
+
+// nav
+$nav-bg: #FAFAFA;
+
+
+$logo-color: #0518FF;

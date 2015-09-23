@@ -3,12 +3,38 @@
 //*********************************************************************//
 .loading {
   width: 100%;
+  max-width: 1000px;
   height: 100%;
+  max-height: 700px;
   position: fixed;
-  top: 0;
-  left: 0;
+  top: 12%;
+  left: 50%;
+  margin-left: -500px;
   z-index: 2001;
-  background: $loading-bg;
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+  .loading-title {
+    position: absolute;
+    top: 348px;
+    left: 314px;
+    div {
+      float: left;
+      margin-right: .1em;
+      font-size: 7.85em;
+    }
+  }
+  .loading-tabs {
+    position: absolute;
+    top: 568px;
+    left: 355px;
+    div {
+      float: left;
+      margin-right: 38px;
+      font-size: 18px;
+    }
+  }
 }
 
 .html5 {
@@ -21,7 +47,6 @@
   z-index: 2000;
   text-align: center;
   color: $dark_1;
-  background: $logo;
   a {
     color: $a-link;
     &:hover {
@@ -157,188 +182,16 @@
     transition: transform .5s ease-out;
     cursor: pointer;
     .logo {
-      width: 60px;
-      height: 220px;
+      width: 161px;
+      height: 128px;
       margin: 0 auto;
       position: relative;
+      background: url(../../../cv/images/logo-new.png) no-repeat;
       -webkit-transform-style: preserve-3d;
       transform-style: preserve-3d;
       transition: transform .25s ease-in-out;
       -webkit-transition: -webkit-transform .25s ease-in-out;
       -moz-transition: -moz-transform .25s ease-in-out;
-      .logo-1, .logo-2, .logo-3 {
-        background-color: $dark_1;
-        -webkit-transform-style: preserve-3d;
-        transform-style: preserve-3d;
-      }
-      .logo-1 {
-        position: absolute;
-        width: 15px;
-        height: 100px;
-        top: 7px;
-        left: 0;
-        .top-wall {
-          background-color: $logo-top-wall_1;
-        }
-        .right-wall {
-          background-color: $logo-right-wall_1;
-        }
-        .bottom-wall {
-          background-color: $logo-bottom-wall_1;
-        }
-        .left-wall {
-          background-color: $logo-left-wall_1;
-        }
-      }
-      .logo-2 {
-        position: absolute;
-        width: 60px;
-        height: 15px;
-        top: 100px;
-        left: 0;
-        .top-wall {
-          background-color: $logo-top-wall_2;
-        }
-        .right-wall {
-          background-color: $logo-right-wall_2;
-        }
-        .bottom-wall {
-          background-color: $logo-bottom-wall_2;
-        }
-        .left-wall {
-          background-color: $logo-left-wall_2;
-        }
-      }
-      .logo-3 {
-        width: 15px;
-        height: 100px;
-        position: relative;
-        top: 108px;
-        margin: 0 auto;
-        .top-wall {
-          background-color: $logo-top-wall_3;
-        }
-        .right-wall {
-          background-color: $logo-right-wall_3;
-        }
-        .bottom-wall {
-          background-color: $logo-bottom-wall_3;
-        }
-        .left-wall {
-          background-color: $logo-left-wall_3;
-        }
-      }
-      .logo-1, .logo-3 {
-        transform: skewY(-44deg);
-        -webkit-transform: skewY(-44deg);
-        -moz-transform: skewY(-44deg);
-      }
-      .wall {
-        position: absolute;
-      }
-      .top-wall, .bottom-wall {
-        width: 100%;
-        height: 84px;
-      }
-      .left-wall, .right-wall {
-        width: 84px;
-        height: 100%;
-      }
-      .top-wall {
-        top: 0;
-        left: 0;
-        transform-origin: top;
-        -webkit-transform-origin: top;
-        -moz-transform-origin: top;
-        transform: rotateX(-90deg);
-        -webkit-transform: rotateX(-90deg);
-        -moz-transform: rotateX(-90deg);
-      }
-      .left-wall {
-        top: 0;
-        left: 0;
-        transform-origin: left;
-        -webkit-transform-origin: left;
-        -moz-transform-origin: left;
-        transform: rotateY(90deg);
-        -webkit-transform: rotateY(90deg);
-        -moz-transform: rotateY(90deg);
-      }
-      .right-wall {
-        top: 0;
-        right: 0;
-        transform-origin: right;
-        -webkit-transform-origin: right;
-        -moz-transform-origin: right;
-        transform: rotateY(-90deg);
-        -webkit-transform: rotateY(-90deg);
-        -moz-transform: rotateY(-90deg);
-      }
-      .bottom-wall {
-        bottom: 0;
-        left: 0;
-        transform-origin: bottom;
-        -webkit-transform-origin: bottom;
-        -moz-transform-origin: bottom;
-        transform: rotateX(90deg);
-        -webkit-transform: rotateX(90deg);
-        -moz-transform: rotateX(90deg);
-      }
-      .wall.back {
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        transform: translateZ(-84px);
-        -webkit-transform: translateZ(-84px);
-        -moz-transform: translateZ(-84px);
-        background-color: $wall-back;
-      }
-    }
-    .logo-home {
-      width: 60px;
-      height: 60px;
-      position: absolute;
-      bottom: 40px;
-      left: 50%;
-      margin-left: -30px;
-      opacity: 0;
-      background: url(../../../cv/images/sprite.svg) no-repeat -3px -180px;
-    }
-    .logo-hover {
-      width: 100%;
-      height: 80%;
-      position: absolute;
-      top: 0;
-      left: 0;
-      -webkit-transform: translateZ(150px);
-      -moz-transform: translateZ(150px);
-      transform: translateZ(150px);
-    }
-    .logo-flip_1 {
-      -webkit-transform: rotateY(90deg) rotateX(0) translateZ(30px);
-      -moz-transform: rotateY(90deg) rotateX(0) translateZ(30px);
-      transform: rotateY(90deg) rotateX(0) translateZ(30px);
-    }
-    .logo-flip_2 {
-      -webkit-transform: rotateY(-90deg) rotateX(0) translateZ(30px);
-      -moz-transform: rotateY(-90deg) rotateX(0) translateZ(30px);
-      transform: rotateY(-90deg) rotateX(0) translateZ(30px);
-    }
-    .logo-flip_3 {
-      -webkit-transform: rotateY(0) rotateX(90deg) translateZ(30px);
-      -moz-transform: rotateY(0) rotateX(90deg) translateZ(30px);
-      transform: rotateY(0) rotateX(90deg) translateZ(30px);
-    }
-    .logo-flip_4 {
-      -webkit-transform: rotateY(0) rotateX(-90deg) translateZ(30px);
-      -moz-transform: rotateY(0) rotateX(-90deg) translateZ(30px);
-      transform: rotateY(0) rotateX(-90deg) translateZ(30px);
-    }
-    .logo-flip_5 {
-      -webkit-transform: rotateY(180deg) rotateX(0) translateZ(30px);
-      -moz-transform: rotateY(180deg) rotateX(0) translateZ(30px);
-      transform: rotateY(180deg) rotateX(0) translateZ(30px);
     }
     h1 {
       margin: 12px auto;
@@ -928,51 +781,6 @@
 
 .hide {
   display: none;
-}
-
-@-moz-document url-prefix() {
-  .logo-1 {
-    .top-wall {
-      outline: 1px solid $logo-top-wall_1;
-    }
-    .right-wall {
-      outline: 1px solid $logo-right-wall_1;
-    }
-    .bottom-wall {
-      outline: 1px solid $logo-bottom-wall_1;
-    }
-    .left-wall {
-      outline: 1px solid $logo-left-wall_1;
-    }
-  }
-  .logo-2 {
-    .top-wall {
-      outline: 1px solid $logo-top-wall_2;
-    }
-    .right-wall {
-      outline: 1px solid $logo-right-wall_2;
-    }
-    .bottom-wall {
-      outline: 1px solid $logo-bottom-wall_2;
-    }
-    .left-wall {
-      outline: 1px solid $logo-left-wall_2;
-    }
-  }
-  .logo-3 {
-    .top-wall {
-      outline: 1px solid $logo-top-wall_3;
-    }
-    .right-wall {
-      outline: 1px solid $logo-right-wall_3;
-    }
-    .bottom-wall {
-      outline: 1px solid $logo-bottom-wall_3;
-    }
-    .left-wall {
-      outline: 1px solid $logo-left-wall_3;
-    }
-  }
 }
 
 //*********************************************************************//

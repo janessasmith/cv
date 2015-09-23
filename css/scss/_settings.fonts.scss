@@ -1,3 +1,16 @@
+@font-face {
+  font-family: 'Open Sans Condensed';
+  src: url('../../../cv/font/OpenSans-CondLight.eot');
+  src: url('../../../cv/font/OpenSans-CondLight.eot?#iefix') format('embedded-opentype'),
+  url('../../../cv/font/OpenSans-CondLight.woff') format('woff'),
+  url('../../../cv/font/OpenSans-CondLight.woff2') format('woff2'),
+  url('../../../cv/font/OpenSans-CondLight.ttf') format('truetype'),
+  url('../../../cv/font/OpenSans-CondLight.svg#opensanscondensed') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 //Families
 $ff-en: 'Open Sans Condensed';
 $ff-cn: 'Microsoft YaHei';
