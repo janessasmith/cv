@@ -1,4 +1,8 @@
-js-test/
+logs/*
+!.gitkeep
+node_modules/
 tmp
-.DS_Store
 .idea
+.DS_Store
+angular-phonecat-snapshots
+bower_components/
