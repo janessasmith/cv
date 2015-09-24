@@ -798,6 +798,40 @@ body {
 .close-cursor {
   cursor: url(../../../cv/images/cur.png), auto; }
 
+@media only screen and (max-width: 1080px) {
+  .loading {
+    max-width: 800px;
+    max-height: 768px;
+    margin-left: -400px;
+    top: 0; }
+    .loading .loading-title {
+      left: 250px; }
+      .loading .loading-title div {
+        font-size: 6.25em; }
+    .loading .loading-tabs {
+      top: 557px;
+      left: 278px; }
+      .loading .loading-tabs div {
+        margin-right: 28px;
+        font-size: 16px; } }
+@media only screen and (max-width: 420px) {
+  .loading {
+    max-width: 300px;
+    max-height: 214px;
+    margin-left: -150px;
+    margin-top: -107px;
+    top: 50%; }
+    .loading .loading-title {
+      top: 100px;
+      left: 96px; }
+      .loading .loading-title div {
+        font-size: 2.25em; }
+    .loading .loading-tabs {
+      top: 168px;
+      left: 80px; }
+      .loading .loading-tabs div {
+        margin-right: 8px;
+        font-size: 12px; } }
 @media only screen and (max-height: 830px) {
   .home-section .logo-wrapper {
     top: 16%; }
@@ -1374,3 +1408,5 @@ body {
             left: -20px; }
           .menu-inner .menu-list ul a b.r {
             right: -20px; }
+
+/*# sourceMappingURL=style-cv.css.map */

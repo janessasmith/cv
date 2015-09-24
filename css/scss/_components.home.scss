@@ -859,38 +859,84 @@
   cursor: url(../../../cv/images/cur.png), auto;
 }
 
-
-@media only screen and (max-height: 830px) {
-    .home-section {
-      .logo-wrapper {
-        top: 16%;
-      }
-      .circles-wrapper {
-        top: 20%;
+@media only screen and (max-width: 1080px) {
+  .loading {
+    max-width: 800px;
+    max-height: 768px;
+    margin-left: -400px;
+    top: 0;
+    .loading-title {
+      left: 250px;
+      div {
+        font-size: 6.25em;
       }
     }
+    .loading-tabs {
+      top: 557px;
+      left: 278px;
+      div {
+        margin-right: 28px;
+        font-size: 16px;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 420px) {
+  .loading {
+    max-width: 300px;
+    max-height: 214px;
+    margin-left: -150px;
+    margin-top: -107px;
+    top: 50%;
+    .loading-title {
+      top: 100px;
+      left: 96px;
+      div {
+        font-size: 2.25em;
+      }
+    }
+    .loading-tabs {
+       top: 168px;
+       left: 80px;
+       div {
+         margin-right: 8px;
+         font-size: 12px;
+       }
+     }
+  }
+}
+
+@media only screen and (max-height: 830px) {
+  .home-section {
+    .logo-wrapper {
+      top: 16%;
+    }
+    .circles-wrapper {
+      top: 20%;
+    }
+  }
 }
 
 @media only screen and (max-height: 700px) {
-    .home-section {
-      .logo-wrapper {
-        top: 10%;
-      }
-      .circles-wrapper {
-        top: 13%;
-      }
+  .home-section {
+    .logo-wrapper {
+      top: 10%;
     }
+    .circles-wrapper {
+      top: 13%;
+    }
+  }
 }
 
 @media only screen and (max-height: 620px) {
-    .home-section {
-      .logo-wrapper {
-        top: 7%;
-      }
-      .circles-wrapper {
-        top: 9%;
-      }
+  .home-section {
+    .logo-wrapper {
+      top: 7%;
     }
+    .circles-wrapper {
+      top: 9%;
+    }
+  }
 }
 @media only screen and (max-height: 820px) {
   .work .strokes {

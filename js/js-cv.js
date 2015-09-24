@@ -1,4 +1,4 @@
-var isFirefox = typeof InstallTrigger !== "undefined"; // i don't know
+var isFirefox = typeof InstallTrigger !== "undefined";
 var loaded = 0;
 var info = 0;
 
@@ -8,7 +8,7 @@ var winHeight = $(window).height(); // visual area height of the current window 
 var studyLoad = 0;
 var innerCase = 0;
 var proLoad = 0;
-var contentType = "image"; // i don't know
+var contentType = "image";
 
 // determine if the client is a touch device
 var deviceAgent = navigator.userAgent.toLowerCase();
@@ -129,7 +129,7 @@ function circleIn(b, a) {
     circleScope = (Math.PI) * 2 * circleR;
     $("#" + b).find("circle").attr("stroke-dasharray", circleScope);
     $("#" + b).find("circle").animate({svgStrokeDashOffset: 0}, a)
-}// i don't know
+}
 function circleOut(b, a) {
     strokeW = $("#" + b).find("circle").attr("stroke-width");
     circleR = $("#" + b).find("circle").attr("r");
@@ -140,7 +140,7 @@ function circleOut(b, a) {
     } else {
         $("#" + b).find("circle").stop().animate({svgStrokeDashOffset: circleScope}, a)
     }
-}// i don't know
+}
 
 function skillHoverIn() {
     circleIn("sk-circle", 480);
@@ -550,7 +550,6 @@ function home() {
 
 
 $(document).ready(function () {
-    // i don't know
     // svg
     $("svg").find("circle").each(function () {
         strokeW = $(this).attr("stroke-width");
@@ -823,7 +822,6 @@ $(document).ready(function () {
         caseClosed();
     });
 
-    // i don't know
     $("body").on("click", ".study-link", function () {
         if (innerCase == 1) {
             caseClosed();
@@ -839,7 +837,6 @@ $(document).ready(function () {
         });
     });
 
-    // i don't know
     $(window).on("resize", function() {
         winWidth = $(window).width();
         winHeight = $(window).height();
