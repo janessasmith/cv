@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head lang="en">
-    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
     <title>CV Designed by Janessa Smith</title>
 
     <meta name="keywords" content="Janessa Smith,Web Front-End Developer,Interactive,Animation,3D"/>
@@ -275,10 +275,12 @@
                         <span>
                             <b class="l"></b>
                             <b class="r"></b>
-                            DEMO
+                            Website
                         </span>
                     <br/>
                     Websit Animate
+                    <br/>
+                    HTML5 CSS3 SASS JQuery
                 </div>
                 <a href="study/study-case_01.html" class="open"></a>
             </li>
@@ -292,12 +294,12 @@
                         <span>
                             <b class="l"></b>
                             <b class="r"></b>
-                            DEMO
+                            移动端Web App开发
                         </span>
                     <br/>
-                    Websit Animate
+                    Web App, Responsive web, HTML5
                 </div>
-                <a href="study/study-case_01.html" class="open"></a>
+                <a href="study/study-case_02.html" class="open"></a>
             </li>
             <!--study-case_03-->
             <li class="unselect">
@@ -309,12 +311,12 @@
                         <span>
                             <b class="l"></b>
                             <b class="r"></b>
-                            DEMO
+                            JS/JQuery Demo(不断更新中)
                         </span>
                     <br/>
                     Websit Animate
                 </div>
-                <a href="study/study-case_01.html" class="open"></a>
+                <a href="study/study-case_03.html" class="open"></a>
             </li>
         </ul>
         <div class="inner-loader">
@@ -690,20 +692,41 @@
 <div class="info-side">
     <figure>
         <img class="avatar" src="images/me.svg" alt="Janessa Smith"/>
+        <h3>Hello</h3>
+
+        <p class="intro first">My name is Janessa Smith, Chinese name is ZhengLu. I'm a Front-end developer based in Chengdu, China. I have a passion for web design and love to
+            create for web and mobile devices. I enjoys creating beautiful user experiences.</p>
+        <p class="intro">I love Sass and like interior design, dark and vintage fashion, music, movie, traveling, fancy
+            food and dogs.</p>
+        <p class="intro">This website built by Janessa Smith with HTML5, SVG, CSS3, Sass, JQuery</p>
+        <!--job-->
+        <div class="info-circle">
+            <svg id="job" width="160" height="160" xmlns="http://www.w3.org/2000/svg" version="1.1">
+                <circle cx="80" cy="80" r="79" fill="none" stroke="#58979D" stroke-width="1"/>
+            </svg>
+            <p class="job">
+                <span>Front-End</span>Developer
+            </p>
+        </div>
+        <!--age-->
+        <div class="info-circle">
+            <svg id="age" width="160" height="160" xmlns="http://www.w3.org/2000/svg" version="1.1">
+                <circle cx="80" cy="80" r="79" fill="none" stroke="#58979D" stroke-width="1"/>
+            </svg>
+            <p>
+                <span>23</span>years old
+            </p>
+        </div>
+        <!--living-->
+        <div class="info-circle">
+            <svg id="living" width="160" height="160" xmlns="http://www.w3.org/2000/svg" version="1.1">
+                <circle cx="80" cy="80" r="79" fill="none" stroke="#58979D" stroke-width="1"/>
+            </svg>
+            <p>
+                <span>Chengdu</span>living
+            </p>
+        </div>
     </figure>
-    <h3>Hi.</h3>
-
-    <p class="intro">I'm a Front-end developer based in Chengdu, China. I have a passion for web design and love to
-        create for web and mobile devices.</p>
-
-    <div class="info-circle">
-        <svg id="age" width="160" height="160" xmlns="http://www.w3.org/2000/svg" version="1.1">
-            <circle cx="80" cy="80" r="79" fill="none" stroke="white" stroke-width="1"/>
-        </svg>
-        <p>
-            <span>23</span>years old
-        </p>
-    </div>
 </div>
 <!--info-side Ends-->
 <!--nav-header-->
@@ -762,20 +785,19 @@
     </div>
 </div>
 <!--menu-inner Ends-->
-<script type="text/javascript">
-    //  --------------- html5 check ----------------  //
-    if (!Modernizr.canvas) {
-        $('.loading').style.display = "block";
-        $('.html5').style.display = "none";
-//            document.getElementById('html5').style.display = "block";
-//            document.getElementById('loading').style.display = "none";
-    }
-</script>
-<!--<script type="text/javascript" src="js/js-cv.js"></script>-->
+<!--<script type="text/javascript">-->
+    <!--//  -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; html5 check &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;  //-->
+    <!--if (!Modernizr.canvas) {-->
+        <!--$('.loading').style.display = "block";-->
+        <!--$('.html5').style.display = "none";-->
+<!--//            document.getElementById('html5').style.display = "block";-->
+<!--//            document.getElementById('loading').style.display = "none";-->
+    <!--}-->
+<!--</script>-->
 <!--<script type="text/javascript" src="js/cv-snippets-skills.js"></script>-->
 <!--<script type="text/javascript" src="js/cv-snippets-work.js"></script>-->
 <!--<script type="text/javascript" src="js/cv-snippets-contact.js"></script>-->
 <!--<script type="text/javascript" src="js/cv-snippets-info-btn.js"></script>-->
-<script type="text/javascript" src="js/cv-snippets-study-section.js"></script>
+<script type="text/javascript" src="js/js-cv.js"></script>
 </body>
 </html>

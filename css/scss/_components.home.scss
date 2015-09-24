@@ -541,9 +541,10 @@
           height: 46px;
           margin-top: -23px;
           position: absolute;
-          background-image: url(../../../cv/images/sprite.svg);
+          background-image: url(../../../cv/images/social-icon.png);
+          //background-image: url(../../../cv/images/sprite.svg);
           background-repeat: no-repeat;
-          background-size: 300px;
+          //background-size: 300px;
           border: 1px solid $dark_1;
           border-radius: 50%;
           -webkit-transition: all .15s ease-out;
@@ -581,7 +582,9 @@
         .s-icon {
           top: 0;
           left: 0;
-          background-position: 7px 8px;
+          //background-position: 7px 8px;
+          background-position: 3px 3px;
+          background-size: 38px;
         }
       }
       .twitter {
@@ -603,7 +606,9 @@
         .s-icon {
           top: 0;
           right: 0;
-          background-position: 6px -80px;
+          //background-position: 6px -80px;
+          background-position: 2px -46px;
+          background-size: 41px;
         }
       }
       .mail {
@@ -625,7 +630,9 @@
         .s-icon {
           top: 0;
           left: 0;
-          background-position: 6px -35px;
+          //background-position: 6px -35px;
+          background-position: 7px -61px;
+          background-size: 30px;
         }
       }
       .linkedin {
@@ -647,7 +654,9 @@
         .s-icon {
           top: 0;
           right: 0;
-          background-position: 6px -125px;
+          //background-position: 6px -125px;
+          background-position: 7px -101px;
+          background-size: 31px;
         }
       }
       .shibui .s-icon, .linkedin .s-icon {
@@ -802,12 +811,13 @@
   }
   h3 {
     text-align: center;
-    font-size: 28px;
+    font-size: 72px;
     color: $info-side_h3;
   }
   .intro {
     margin-top: 10px;
-    padding: 40px 7px;
+    padding: 5px 20px;
+    text-align: left;
     font-size: 22px;
     color: $dark_1;
   }
@@ -837,6 +847,7 @@
       span {
         display: block;
         font-size: 42px;
+        margin-bottom: 5px;
         clear: both;
       }
     }

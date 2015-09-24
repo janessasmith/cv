@@ -218,9 +218,9 @@
   }
   p {
     margin-bottom: 30px;
-    font-size: 26px;
+    font-size: 20px;
     font-style: italic;
-    line-height: 1.15;
+    line-height: 1.35;
     letter-spacing: .3px;
   }
   .back {
@@ -392,6 +392,18 @@
     }
   }
 }
+@media only screen and (min-width: 1200px) {
+  .study-inner {
+    .mobile {
+      img {
+        display: block;
+        float: none;
+        width: 90%;
+        margin: 10px auto;
+      }
+    }
+  }
+}
 
 @media only screen and (max-width: 1080px) {
   .study-inner {
@@ -401,7 +413,7 @@
     }
     p {
       margin-bottom: 25px;
-      font-size: 22px;
+      font-size: 18px;
     }
   }
 }
