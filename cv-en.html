@@ -54,7 +54,6 @@
 <body>
 <!--************ loading ************-->
 <div id="loading" class="loading">
-
     <svg version="1.1" id="START" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1000px" height="700px"
          viewBox="0 0 1000 700" enable-background="new 0 0 1000 700" xml:space="preserve">
         <g>
@@ -93,7 +92,8 @@
 
 <!--************ html5 popup************-->
 <div id="html5" class="html5">
-    <h3>NO HTML5 SUPPORT... :(<br/>PLEASE UPDATE TO A MODERN BROWSER & VISIT <a href="#">JANESSASMITH.COM</a> AGAIN</h3>
+    <h3>NO HTML5 SUPPORT... :(<br/>
+        PLEASE UPDATE TO A MODERN BROWSER & VISIT <a href="http://hazelu.farbox.com/cv/cv-en.html">HAZELU.FARBOX.COM</a>　AGAIN</h3>
     <ul>
         <li><a href="https://www.google.com/intl/en/chrome/browser/" target="_blank">CHROME - (OPTIMIZED)</a></li>
         <li><a href="http://www.mozilla.org/en-US/firefox/new/" target="_blank">MOZILLA</a></li>
@@ -105,7 +105,7 @@
 <!--************ html5 popup ENDS************-->
 
 <!--wrapper-->
-<div class="wrapper">
+<div id="wrapper" class="wrapper">
     <!--home-->
     <section class="home-section">
         <!--circles show-->
@@ -761,7 +761,7 @@
 </div>
 <!--nav-header Ends-->
 <!--menu-inner-->
-<div class="menu-inner">
+<div id="menu-inner" class="menu-inner">
     <div class="menu-list">
         <ul>
             <li>
@@ -785,19 +785,16 @@
     </div>
 </div>
 <!--menu-inner Ends-->
-<!--<script type="text/javascript">-->
-    <!--//  -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; html5 check &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;  //-->
-    <!--if (!Modernizr.canvas) {-->
-        <!--$('.loading').style.display = "block";-->
-        <!--$('.html5').style.display = "none";-->
-<!--//            document.getElementById('html5').style.display = "block";-->
-<!--//            document.getElementById('loading').style.display = "none";-->
-    <!--}-->
-<!--</script>-->
-<!--<script type="text/javascript" src="js/cv-snippets-skills.js"></script>-->
-<!--<script type="text/javascript" src="js/cv-snippets-work.js"></script>-->
-<!--<script type="text/javascript" src="js/cv-snippets-contact.js"></script>-->
-<!--<script type="text/javascript" src="js/cv-snippets-info-btn.js"></script>-->
+<script type="text/javascript">
+    //  --------------- html5 check ----------------  //
+    if (!Modernizr.canvas) {
+        document.getElementById("html5").style.display = "block";
+        document.getElementById("loading").style.display = "none";
+        document.getElementById("wrapper").style.display = "none";
+        document.getElementById("menu-inner").style.display = "none";
+
+    }
+</script>
 <script type="text/javascript" src="js/js-cv.js"></script>
 </body>
 </html>

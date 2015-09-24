@@ -1,11 +1,7 @@
 logs/*
 !.gitkeep
-node_modules/
-bower_components/
+js-test/
 tmp
 .DS_Store
 .idea
-js/cv-snippets-contact.js
-js/cv-snippets-info-btn.js
-js/cv-snippets-skills.js
-js/cv-snippets-work.js
+
