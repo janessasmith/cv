@@ -1,7 +1,0 @@
-logs/*
-!.gitkeep
-js-test/
-tmp
-.DS_Store
-.idea
-
