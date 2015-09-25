@@ -24,6 +24,11 @@ var isTouchDevice = Modernizr.touch ||
 
 function loadOut() {
     // initialization
+
+    // loading
+    $(".scene-show h1").addClass("fadein-left");
+    $(".scene-show p").addClass("fadein-right");
+
     if (loaded == 1) {
         $(".circle h2, .close-line, .work h2, .rotate, .work .circle-inner, .work .strokes, .social, .menu-work li a").removeClass("active");
         $(".logo-wrapper, .circles-wrapper").animate({marginTop: 0, opacity: 1}, {

@@ -90,14 +90,15 @@
 }
 
 // bounce
-//.bounce-loader-still {
-//  width: 40px;
-//  height: 80px;
-//  position: relative;
-//  top: 50%;
-//  margin: -40px auto 0;
-//  background: url(../../../cv/images/sprite.svg) no-repeat -253px -2px;
-//}
+.bounce-loader-still {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  top: 50%;
+  margin: -100px auto 0;
+  background: url(../../../cv/images/logo-lightning.svg);
+  background-size: 100px 100px;
+}
 
 // study-section
 .study-section {
