@@ -64,19 +64,6 @@
   .txt.close {
     font-size: 15px;
   }
-  //.load {
-  //  width: 30px;
-  //  height: 30px;
-  //  position: absolute;
-  //  top: 50%;
-  //  left: 50%;
-  //  margin: -15px 0 0 -15px;
-  //  background: $dark_1 url(../../../cv/images/sprite.svg) no-repeat 1px -416px;
-  //  border-radius: 50%;
-  //  -webkit-animation: spin 1s infinite;
-  //  -moz-animation: spin 1s infinite;
-  //  animation: spin 1s infinite;
-  //}
 }
 
 // inner-loader
@@ -168,16 +155,16 @@
       }
     }
     a.open {
-      width: 70px;
-      height: 70px;
+      width: 64px;
+      height: 64px;
       position: absolute;
       top: 50%;
       left: 50%;
-      margin-top: -35px;
-      margin-left: -35px;
-      background-image: url(../../../cv/images/sprite.svg);
+      margin-top: -32px;
+      margin-left: -32px;
       background-color: $dark_1;
-      background-position: 13px -445px;
+      background-image: url(../../../cv/images/arrows.png);
+      background-position:  0 0;
       border-radius: 50%;
       opacity: 0;
       -webkit-transform: rotate(0) scale(0);
@@ -225,11 +212,12 @@
     letter-spacing: .3px;
   }
   .back {
-    width: 70px;
-    height: 70px;
+    width: 64px;
+    height: 64px;
     margin: 20px auto;
     position: relative;
-    background: url(../../../cv/images/sprite.svg) no-repeat -228px -326px;
+    background-image: url(../../../cv/images/arrows.png);
+    background-position: 0 -64px;
     cursor: pointer;
     -webkit-transition: transform .15s ease-out;
     -moz-transition: transform .15s ease-out;
@@ -244,17 +232,18 @@
     }
   }
   .down {
-    width: 70px;
-    height: 70px;
+    width: 64px;
+    height: 64px;
     margin: 20px auto;
     position: relative;
-    background: url(../../../cv/images/sprite.svg) no-repeat -228px -390px;
+    background-image: url(../../../cv/images/arrows.png);
+    background-position: 0 -128px;
     cursor: pointer;
     -webkit-transition: background-position .15s ease-out;
     -moz-transition: background-position .15s ease-out;
     transition: background-position .15s ease-out;
     &:hover {
-      background-position: -228px -380px;
+      background-position: 0 -120px;
     }
   }
   .visit {
@@ -268,14 +257,15 @@
     clear: both;
     &:hover {
       .visit-link {
-        background-position: -160px -342px;
+        background-position: 0px -206px;
       }
     }
     .visit-link {
       float: right;
-      width: 40px;
+      width: 60px;
       height: 40px;
-      background: url(../../../cv/images/sprite.svg) no-repeat -170px -342px;
+      background-image: url(../../../cv/images/arrows.png);
+      background-position: -8px -206px;
       -webkit-transition: background-position .15s ease-out;
       -moz-transition: background-position .15s ease-out;
       transition: background-position .15s ease-out;
@@ -337,16 +327,15 @@
       transition: background-size .15s ease-out;
     }
     a {
-      width: 70px;
-      height: 70px;
+      width: 64px;
+      height: 64px;
       position: absolute;
       top: 50%;
       left: 50%;
-      margin-top: -35px;
-      margin-left: -35px;
-      background-image: url(../../../cv/images/sprite.svg);
+      margin-top: -32px;
+      margin-left: -32px;
       background-color: $dark_1;
-      background-position: 13px -445px;
+      background-image: url(../../../cv/images/arrows.png);
       border-radius: 50%;
       opacity: 0;
       -webkit-transform: rotate(0) scale(0);
@@ -384,7 +373,7 @@
     }
 
     a.link {
-      background-position: 12px -512px;
+      background-position: 0 -256px;
       &:hover {
         -webkit-transform: rotate(120deg) scale(1) !important;
         -moz-transform: rotate(120deg) scale(1) !important;

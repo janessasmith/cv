@@ -568,7 +568,7 @@ $(document).ready(function () {
     // hash
     $(window).hashchange(function () {
         hash = location.hash;
-        document.title = "Designed by Janessa Smith -  " + (hash.replace(/^#/, ""));
+        document.title = "CV - Janessa Smith";
         loadOut();
         if (hash === "") {
             window.location.hash = "#home";
