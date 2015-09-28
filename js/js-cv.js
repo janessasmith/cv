@@ -115,8 +115,6 @@ function loadOut() {
         $(".menu-inner").removeClass("visible");
         $(".menu").removeClass("open");
     }
-    // footer hide
-    $(".footer").hide();
 }
 
 /**
