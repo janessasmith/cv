@@ -33,6 +33,9 @@ h1, h2, h3, h4, h5, h6 {
 a {
   text-decoration:none;
   outline:none;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
 }
 a img {
   border:none;
@@ -80,7 +83,6 @@ q:before, q:after {
   content:"";
   visibility:hidden;
 }
-
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;

@@ -29,7 +29,10 @@ h1, h2, h3, h4, h5, h6 {
 
 a {
   text-decoration: none;
-  outline: none; }
+  outline: none;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out; }
 
 a img {
   border: none; }
@@ -90,6 +93,7 @@ q:before, q:after {
   font-weight: normal;
   font-style: normal; }
 body {
+  font-size: 1em;
   font-family: "Open Sans Condensed", "Microsoft YaHei", sans-serif;
   font-weight: 300; }
 
@@ -120,7 +124,7 @@ body {
         -moz-animation-fill-mode: both;
         animation-fill-mode: both; }
       .loading .scene-show .cell h1 {
-        font-size: 48px;
+        font-size: 2.8em;
         margin: 0 auto; }
       .loading .scene-show .cell .loading-logo {
         width: 100px;
@@ -140,7 +144,7 @@ body {
         transform: translate3d(0, 0, 0); }
       .loading .scene-show .cell p {
         margin: 13px auto 0;
-        font-size: 24px;
+        font-size: 1.5em;
         clear: both; }
 
 @-webkit-keyframes logo-anim {
@@ -350,7 +354,7 @@ body {
     position: absolute;
     bottom: 100%; }
     .home-section .skills-list li {
-      font-size: 58px;
+      font-size: 3.25em;
       margin: 50px auto;
       position: relative; }
       .home-section .skills-list li.first {
@@ -374,7 +378,7 @@ body {
     margin: 100px auto 0;
     opacity: .000001;
     position: relative;
-    top: 27%;
+    top: 20%;
     -webkit-transition: -webkit-transform .5s ease-out;
     -moz-transition: -moz-transform .5s ease-out;
     transition: transform .5s ease-out;
@@ -389,13 +393,13 @@ body {
     .home-section .logo-wrapper h1 {
       margin: 12px auto;
       color: #000;
-      font-size: 36px;
+      font-size: 2em;
       text-align: center; }
   .home-section .circles-wrapper {
     margin: -50px auto;
     text-align: center;
     position: relative;
-    top: 30%;
+    top: 25%;
     opacity: 0; }
     .home-section .circles-wrapper .circle {
       display: inline-block;
@@ -434,7 +438,7 @@ body {
           -moz-transform: rotate(45deg) scale(1);
           transform: rotate(45deg) scale(1); }
       .home-section .circles-wrapper .circle h2 {
-        font-size: 22px;
+        font-size: 1.375em;
         text-align: center;
         line-height: 180px;
         color: #fafafa;
@@ -612,7 +616,7 @@ body {
       height: 100px;
       position: absolute;
       top: -50px;
-      font-size: 20px;
+      font-size: 1.25em;
       text-align: center;
       color: #000;
       background-color: #fff;
@@ -798,6 +802,7 @@ body {
   .home-section .footer {
     width: 100%;
     text-align: center;
+    font-size: .875em;
     position: absolute;
     bottom: 10px; }
     .home-section .footer a {
@@ -888,16 +893,17 @@ body {
   .info-side .avatar {
     width: 150px;
     height: 150px;
-    margin: 20px auto; }
+    margin: 20px auto 0; }
   .info-side h3 {
     text-align: center;
-    font-size: 72px;
+    font-size: 4em;
+    line-height: 60px;
     color: #58979D; }
   .info-side .intro {
     margin-top: 10px;
     padding: 5px 20px;
     text-align: left;
-    font-size: 22px;
+    font-size: 1.5em;
     color: #000; }
   .info-side .info-circle {
     width: 160px;
@@ -917,14 +923,21 @@ body {
       padding-top: 45px;
       position: relative;
       z-index: 2;
-      font-size: 18px;
+      font-size: 1.125em;
       line-height: 1;
       color: #000; }
       .info-side .info-circle p span {
         display: block;
-        font-size: 42px;
+        font-size: 2.25em;
         margin-bottom: 5px;
         clear: both; }
+
+.info-hover {
+  color: #45b29a;
+  border-bottom: 1px solid #45b29a; }
+  .info-hover:hover {
+    color: #29685a;
+    border-bottom: 1px solid #29685a; }
 
 .close-cursor {
   cursor: url(../../../cv/images/cur.png), auto; }
@@ -1443,10 +1456,11 @@ body {
     float: left;
     position: relative;
     top: 11px;
-    margin-left: 60px;
+    margin-left: 30px;
     text-align: center; }
     .nav-header .menu-work li {
       float: left;
+      line-height: 1;
       position: relative; }
       .nav-header .menu-work li:first-child {
         border-right: 1px solid #000; }
@@ -1454,11 +1468,11 @@ body {
         display: block;
         position: relative;
         padding: 0 20px;
-        font-size: 18px;
+        font-size: 1em;
         color: #000; }
         .nav-header .menu-work li a svg {
           position: absolute;
-          top: 8px; }
+          top: 3px; }
           .nav-header .menu-work li a svg.left {
             left: 0; }
           .nav-header .menu-work li a svg.right {
@@ -1502,11 +1516,11 @@ body {
       .menu-inner .menu-list ul a {
         display: block;
         position: relative;
-        font-size: 30px;
+        font-size: 1.5em;
         text-transform: uppercase;
         letter-spacing: 3px;
         text-align: center;
-        line-height: 83px;
+        line-height: 70px;
         color: #000;
         -webkit-transition: all .2s ease-in-out;
         -moz-transition: all .2s ease-in-out;

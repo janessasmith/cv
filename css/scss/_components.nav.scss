@@ -167,10 +167,11 @@
     float: left;
     position: relative;
     top: 11px;
-    margin-left: 60px;
+    margin-left: 30px;
     text-align: center;
     li {
       float: left;
+      line-height: 1;
       position: relative;
       &:first-child {
         border-right: 1px solid $dark_1;
@@ -179,11 +180,11 @@
         display: block;
         position: relative;
         padding: 0 20px;
-        font-size: 18px;
+        font-size: 1em;
         color: $dark_1;
         svg {
           position: absolute;
-          top: 8px;
+          top: 3px;
           &.left {
             left: 0;
           }
@@ -239,11 +240,11 @@
       a {
         display: block;
         position: relative;
-        font-size: 30px;
+        font-size: 1.5em;
         text-transform: uppercase;
         letter-spacing: 3px;
         text-align: center;
-        line-height: 83px;
+        line-height: 70px;
         color: $dark_1;
         -webkit-transition: all .2s ease-in-out;
         -moz-transition: all .2s ease-in-out;

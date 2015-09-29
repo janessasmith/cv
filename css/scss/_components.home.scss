@@ -30,7 +30,7 @@
         animation-fill-mode: both;
       }
       h1 {
-        font-size: 48px;
+        font-size: 2.8em;
         margin: 0 auto;
       }
       .loading-logo {
@@ -52,7 +52,7 @@
       }
       p {
         margin: 13px auto 0;
-        font-size: 24px;
+        font-size: 1.5em;
         clear: both;
       }
     }
@@ -331,7 +331,7 @@
     position: absolute;
     bottom: 100%;
     li {
-      font-size: 58px;
+      font-size: 3.25em;
       margin: 50px auto;
       position: relative;
       &.first {
@@ -362,7 +362,7 @@
     margin: 100px auto 0;
     opacity: .000001;
     position: relative;
-    top: 27%;
+    top: 20%;
     -webkit-transition: -webkit-transform .5s ease-out;
     -moz-transition: -moz-transform .5s ease-out;
     transition: transform .5s ease-out;
@@ -378,7 +378,7 @@
     h1 {
       margin: 12px auto;
       color: $dark_1;
-      font-size: 36px;
+      font-size: 2em;
       text-align: center;
     }
   }
@@ -387,7 +387,7 @@
     margin: -50px auto;
     text-align: center;
     position: relative;
-    top: 30%;
+    top: 25%;
     opacity: 0;
     .circle {
       display: inline-block;
@@ -430,7 +430,7 @@
         }
       }
       h2 {
-        font-size: 22px;
+        font-size: 1.375em;
         text-align: center;
         line-height: 180px;
         color: rgba(250, 250, 250, 1);
@@ -650,7 +650,7 @@
         height: 100px;
         position: absolute;
         top: -50px;
-        font-size: 20px;
+        font-size: 1.25em;
         text-align: center;
         color: $dark_1;
         background-color: $light_1;
@@ -875,6 +875,7 @@
   .footer {
     width: 100%;
     text-align: center;
+    font-size: .875em;
     position: absolute;
     bottom: 10px;
     a {
@@ -983,18 +984,19 @@
   .avatar {
     width: 150px;
     height: 150px;
-    margin: 20px auto;
+    margin: 20px auto 0;
   }
   h3 {
     text-align: center;
-    font-size: 72px;
+    font-size: 4em;
+    line-height: 60px;
     color: $info-side_h3;
   }
   .intro {
     margin-top: 10px;
     padding: 5px 20px;
     text-align: left;
-    font-size: 22px;
+    font-size: 1.5em;
     color: $dark_1;
   }
   .info-circle {
@@ -1017,16 +1019,26 @@
       padding-top: 45px;
       position: relative;
       z-index: 2;
-      font-size: 18px;
+      font-size: 1.125em;
       line-height: 1;
       color: $dark_1;
       span {
         display: block;
-        font-size: 42px;
+        font-size: 2.25em;
         margin-bottom: 5px;
         clear: both;
       }
     }
+  }
+}
+
+// info-side a hover
+.info-hover {
+  color: $info-side_a;
+  border-bottom: 1px solid $info-side_a;
+  &:hover {
+    color: $info-side_a_hover;
+    border-bottom: 1px solid $info-side_a_hover;
   }
 }
 
