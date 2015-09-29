@@ -354,7 +354,7 @@ body {
     position: absolute;
     bottom: 100%; }
     .home-section .skills-list li {
-      font-size: 3.25em;
+      font-size: 3.5em;
       margin: 50px auto;
       position: relative; }
       .home-section .skills-list li.first {
@@ -1468,11 +1468,11 @@ body {
         display: block;
         position: relative;
         padding: 0 20px;
-        font-size: 1em;
+        font-size: 1.2em;
         color: #000; }
         .nav-header .menu-work li a svg {
           position: absolute;
-          top: 3px; }
+          top: 5px; }
           .nav-header .menu-work li a svg.left {
             left: 0; }
           .nav-header .menu-work li a svg.right {
@@ -1516,7 +1516,7 @@ body {
       .menu-inner .menu-list ul a {
         display: block;
         position: relative;
-        font-size: 1.5em;
+        font-size: 1.8em;
         text-transform: uppercase;
         letter-spacing: 3px;
         text-align: center;
@@ -1540,4 +1540,3 @@ body {
           .menu-inner .menu-list ul a b.r {
             right: -20px; }
 
-/*# sourceMappingURL=style-cv.css.map */

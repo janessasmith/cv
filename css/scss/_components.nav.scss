@@ -180,11 +180,11 @@
         display: block;
         position: relative;
         padding: 0 20px;
-        font-size: 1em;
+        font-size: 1.2em;
         color: $dark_1;
         svg {
           position: absolute;
-          top: 3px;
+          top: 5px;
           &.left {
             left: 0;
           }
@@ -240,7 +240,7 @@
       a {
         display: block;
         position: relative;
-        font-size: 1.5em;
+        font-size: 1.8em;
         text-transform: uppercase;
         letter-spacing: 3px;
         text-align: center;
